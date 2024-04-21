@@ -55,11 +55,11 @@
         ➢ 3 soit en relation avec X<br>
         ➢ 4 soit en relation avec Y<br><br>
         <figure>
-            <img class="pimg" src="../fig29.png" alt="Représentation par un graphe d’une relation entre 2 ensembles">
+            <img class="pimg" src="../img/fig29.png" alt="Représentation par un graphe d’une relation entre 2 ensembles">
             <figcaption>Figure 29 : Représentation par un graphe d’une relation entre 2 ensembles</figcaption>
         </figure>
         <figure>
-            <img class="pimg" src="../fig30.png" alt="Représentation sous forme de tableau d’une relation entre 2 ensembles">
+            <img class="pimg" src="../img/fig30.png" alt="Représentation sous forme de tableau d’une relation entre 2 ensembles">
             <figcaption>Figure 30 : Représentation sous forme de tableau d’une relation entre 2 ensembles</figcaption>
         </figure>
         Le produit cartésien étant un opérateur n-aire permet la généralisation de la notion de
@@ -157,11 +157,11 @@ nav0.addEventListener('click',function () {
         ➢ 3 soit en relation avec X<br>
         ➢ 4 soit en relation avec Y<br><br>
         <figure>
-            <img class="pimg" src="../fig29.png" alt="Représentation par un graphe d’une relation entre 2 ensembles">
+            <img class="pimg" src="../img/fig29.png" alt="Représentation par un graphe d’une relation entre 2 ensembles">
             <figcaption>Figure 29 : Représentation par un graphe d’une relation entre 2 ensembles</figcaption>
         </figure>
         <figure>
-            <img class="pimg" src="../fig30.png" alt="Représentation sous forme de tableau d’une relation entre 2 ensembles">
+            <img class="pimg" src="../img/fig30.png" alt="Représentation sous forme de tableau d’une relation entre 2 ensembles">
             <figcaption>Figure 30 : Représentation sous forme de tableau d’une relation entre 2 ensembles</figcaption>
         </figure>
         Le produit cartésien étant un opérateur n-aire permet la généralisation de la notion de
@@ -435,7 +435,7 @@ L’association disparait et l’identifiant du père migre dans les attributs d
 une clé étrangère.<br><br>
 Exemple<br>
 <figure>
-            <img  src="../fig31.png" alt="Passage d’une association « père-fils » au modèle relationnel">
+            <img  src="../img/fig31.png" alt="Passage d’une association « père-fils » au modèle relationnel">
             Approvisionnement (<span>Identifiant</span>, DateA, #NINEA)<br>
 Fournisseur (<span>NINEA</span>, Désignation, Adresse, TélléphoneF, EmailF, SiteWeb)<br><br>
             <figcaption>Figure 31 : Passage d’une association « père-fils » au modèle relationnel</figcaption>
@@ -451,7 +451,7 @@ L’association devient une relation avec pour attributs :<br>
 La clé primaire de la relation est la concaténation de toutes les clés étrangères<br><br>
 Exemple<br>
 <figure>
-            <img  src="../fig32.png" alt="Passage d’une association « Plusieurs à Plusieurs » au modèle relationnel">
+            <img  src="../img/fig32.png" alt="Passage d’une association « Plusieurs à Plusieurs » au modèle relationnel">
             Approvisionnement (<span>Identifiant</span>, DateA)<br>
 Produit (<span>CodeP</span>, LibelléP, QuantitéStock, SeuilAlerte)<br>
 FairePartie (<span>#Identifiant, #CodeP</span>, Quantité)<br><br>
@@ -465,7 +465,7 @@ Exemple<br>
 Dans ce système d’orientation des bacheliers dans les universités, on suppose que l’Etat
 n’oriente pas tous les bacheliers.<br><br>
 <figure>
-            <img  src="../fig33.png" alt="Passage d’une association « au plus un : (0,1) à (1,1) » au modèle relationnel">
+            <img  src="../img/fig33.png" alt="Passage d’une association « au plus un : (0,1) à (1,1) » au modèle relationnel">
             Bachelier (<span>INE</span>, Nom, Prenom, EmailPerso, Telephone)<br>
 Orientation (Numéro, Université, Filière, #INE)<br><br>
             <figcaption>Figure 33 : Passage d’une association « au plus un : (0,1) à (1,1) » au modèle relationnel</figcaption>
@@ -479,7 +479,7 @@ On se place dans un contexte où chaque personnel doit avoir une seule voiture a
 par l’entreprise durant sa mission. L’entreprise commande les voitures indépendamment du
 personnel et c’est un tirage au sort qui détermine leur affectation.<br><br>
 <figure>
-            <img  src="../fig34.png" alt="Passage d’une association « un à un : (1,1) à (1,1) avec indépendance existentielle entre les entités » au modèle relationnel">
+            <img  src="../img/fig34.png" alt="Passage d’une association « un à un : (1,1) à (1,1) avec indépendance existentielle entre les entités » au modèle relationnel">
             Personnel (<span>Numéro</span>, Nom, Prenom, Email, Telephone)<br>
 CoompteUVS (<span>Code</span>, Marque, Type)<br>
 Affecter (<span>#Numéro, #Code</span>)<br><br>
@@ -494,7 +494,7 @@ Dans le système de l’UVS, il faut être orienté avant la création du compte
 compte ne saurait exister sans étudiant.<br><br>
 <figure>
     
-            <img  src="../fig35.png" alt="Passage d’une association « un à un : (1,1) à (1,1) avec dépendance existentielle entre les entités » au modèle relationnel">
+            <img  src="../img/fig35.png" alt="Passage d’une association « un à un : (1,1) à (1,1) avec dépendance existentielle entre les entités » au modèle relationnel">
             Etudiant (<span>INE</span>, Nom, Prenom, EmailPerso, Telephone)<br>
 CoompteUVS (<span>Login</span>, Password, EmailUVS, #INE)<br><br>
             <figcaption>Figure 35 : Passage d’une association « un à un : (1,1) à (1,1) avec dépendance existentielle entre les entités » au modèle relationnel</figcaption>
@@ -507,13 +507,13 @@ pour les distinguer.<br><br>
 Exemple<br>
 <figure>
     Système de parrainage où chaque filleul n’a qu’un seul parrain.<br>
-            <img  src="../fig351.png" alt="Passage d’une association « un à un : (1,1) à (1,1) avec dépendance existentielle entre les entités » au modèle relationnel">
+            <img  src="../img/fig351.png" alt="Passage d’une association « un à un : (1,1) à (1,1) avec dépendance existentielle entre les entités » au modèle relationnel">
             Personne (<span>NumeroCNI</span>, Nom, Prénom, DateNaissance, #NumeroCNIParrain)<br><br>
             <figcaption>Figure 35 : Passage d’une association « un à un : (1,1) à (1,1) avec dépendance existentielle entre les entités » au modèle relationnel</figcaption>
         </figure>
         <figure>
             Système de parrainage où un filleul peut avoirs plusieurs parrains.<br>
-            <img  src="../fig36.png" alt="Passage d’une association récursive ou réflexive au modèle relationnel">
+            <img  src="../img/fig36.png" alt="Passage d’une association récursive ou réflexive au modèle relationnel">
             Personne (<span>NumeroCNI</span>, Nom, Prénom, DateNaissance, #NumeroCNIParrain)<br>
 Etre_Parrain (<span>#NumeroCNIParrain, #NumeroCNIFilleul</span>)<br><br>
             <figcaption>Figure 36 : Passage d’une association récursive ou réflexive au modèle relationnel</figcaption>
@@ -529,7 +529,7 @@ Exemple<br>
 Dans cet exemple, la spécialisation est complète car un ordinateur est soit un laptop
 (ordinateur portable), soit un desktop (ordinateur de bureau)<br><br>
 <figure>
-            <img  src="../fig37.png" alt="Passage d’une spécialisation complète au modèle relationnel">
+            <img  src="../img/fig37.png" alt="Passage d’une spécialisation complète au modèle relationnel">
             Desktop (<span>Code</span>, Processeur, Mémoire, DisqueDur, TypeUnitéCentrale)<br>
 Laptop (<span>Code</span>, Processeur, Mémoire, DisqueDur, Autonomie)<br><br>
             <figcaption>Figure 37 : Passage d’une spécialisation complète au modèle relationnel</figcaption>
@@ -544,7 +544,7 @@ Exemple<br>
 Dans cet exemple, la spécialisation est incomplète car un appareil peut être ni un
 ordinateur, ni une cuisinière.<br><br>
 <figure>
-            <img  src="../fig38.png" alt="Passage d’une spécialisation complète au modèle relationnel">
+            <img  src="../img/fig38.png" alt="Passage d’une spécialisation complète au modèle relationnel">
             Appareil (<span>Code</span>, Nom, DateFabrication)<br>
 Ordinateur (<span>Code</span>, Nom, DateFabrication, Processeur, Mémoire, DisqueDur)<br>
 Laptop (<span>Code</span>, Nom, DateFabrication, NombreFeux)<br><br>
