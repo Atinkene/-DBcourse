@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/seq.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>SIMAC | Séquense</title>
+</head>
+<body>
+   <header>
+        <nav>
+            <ul class="logoContainer">
+                <a id="" href="#">Base de donnée</a>  
+            </ul>
+            <ul class="navContainer">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./seq1.html">Séquences</a></li>
+                <li><a id="" href="#">Exercices</a></li>
+                <li><a id="" href="./apropos.html">A propos</a></li>
+                <li><a href="./pdf.html">Voir le PDF</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="part seqences">
+        <nav>
+            <ul class="seqContent">
+                <li class="liste"><a id="seq1" class="seq clic" href="./seq1.html"><div class="">Des données à une base de donnée</div></a></li>
+                <li class="liste"><a id="seq2" class="seq" href="./seq2.html"><div class="">Généralité sur les bases de donnée</div></a></li>
+                <li class="liste"><a id="seq3" class="seq" href="./seq3.html"><div class="">Modélisation conceptuelle des données : Modèle Entité-Association</div></a></li>
+                <li class="liste"><a id="seq4" class="seq" href="./seq4.html"><div class="">Modélisation logique des donnés : Modèle Relationnel</div></a></li>
+                <li class="liste"><a id="seq5" class="seq" href="./seq5.html"><div class="">Interrogation d’une base de données : Algèbre relationnelle</div></a></li>
+                <li class="liste"><a id="seq6" class="seq" href="./seq6.html"><div class="">Implémentation d’une base de données : Modèle physique</div></a></li>
+            </ul>
+        </nav>
+    </div>
+   <div class="section">
+            <div class="container">
+                <div class="part" id="container">
+                    <div class="element" id="element">
+                        <p>
+                            D’après le dictionnaire Larousse, une donnée est ce (1) qui est connu ou admis comme
+                            tel, sur lequel on peut fonder un raisonnement ; (2) qui sert de point de départ pour une
+                            recherche. La donnée est un élément fondamental qui sert de matière première dans les
+                            échanges entre les humains, matériels (smartphone, ordinateur, …), etc. Quel que soit le
+                            domaine d’activités ou la science, la donnée est définie avec des nuances insignifiantes.
+                            En mathématiques, une donnée est une quantité connue dans l’énoncé d’un problème
+                            et qui sert à trouver la solution. <br><br>
+                            En informatique, une donnée est la représentation d'une information dans un
+                            programme : soit dans le texte du programme (code source), soit en mémoire durant l'exécution.
+                            Les données, souvent codées, décrivent les éléments du logiciel tels qu'une entité (chose), une
+                            interaction, une transaction, un évènement, un sous-système, etc. Il ne faut surtout pas
+                            confondre la notion de donnée et celle d’information. Une information se diffère d’une donnée
+                            par le fait que la donnée est un élément brut, dépourvue de tout raisonnement, supposition,
+                            constatation et probabilité alors qu’une information est une donnée interprétée. Pour passer de
+                            donnée à information, il faut un contexte de la donnée qui créé une valeur ajoutée. <br><br>
+                            En science des données, une donnée est ce qui est connu et qui sert de point de départ
+                            à un raisonnement ayant pour objet la détermination d'une solution à un problème en relation
+                            avec cette donnée. Cela peut être une description élémentaire d’une réalité, le résultat d'une
+                            comparaison entre deux événements du même ordre (mesure) soit en d'autres termes une
+                            observation ou une mesure. De nos jours, on parle de Big Data ou Données massives pour
+                            caractériser de grands volumes de données variées et en constante production.
+                        </p>
+                    </div>
+                </div>
+            </div>
+   </div class="section">
+   <div class="navigation" id="navigation">
+    <nav>
+        <ul class="navContent">
+            <h3>Décrire la notion de donnée</h3>
+            <li><a id="nav1" class="nav" href="#"><div class="">Définition</div></a></li>
+            <li><a id="nav2" class="nav" href="#"><div class="">Types de donnée</div></a></li>
+            <li><a id="nav3" class="nav" href="#"><div class="">Exercice 01</div></a></li>
+      
+       
+            <h3>Montrer l'intérêt d'un fichier</h3>
+            <li><a id="nav4" class="nav" href="#"><div class="">Définition</div></a></li>
+            <li><a id="nav5" class="nav" href="#"><div class="">Types de fichiers</div></a></li>
+            <li><a id="nav6" class="nav" href="#"><div class="">Exercice 02</div></a></li>
+        
+      
+            <h3>Spécifier l'intérêt de passer d'un fichier à une base de donnée</h3>
+            <li><a id="nav7" class="nav" href="#"><div class="">Définition</div></a></li>
+            <li><a id="nav8" class="nav" href="#"><div class="">Types de fichiers</div></a></li>
+            <li><a id="nav9" class="nav" href="#"><div class="">Exercice 03</div></a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
+<script>
+    var seq1=document.getElementById('seq1');
+    var container=document.getElementById('container');
+    var navigation=document.getElementById('navigation');
+    var element=document.getElementById('element');
+    var nav1=document.getElementById('nav1');
+    var nav1=document.getElementById('nav1');
+        var nav2=document.getElementById('nav2');
+        var nav3=document.getElementById('nav3');
+        var nav4=document.getElementById('nav4');
+        var nav5=document.getElementById('nav5');
+        var nav6=document.getElementById('nav6');
+        var nav7=document.getElementById('nav7');
+        var nav8=document.getElementById('nav8');
+        var nav9=document.getElementById('nav9');
+
+
+    seq1.addEventListener('click',function() {
+        var navig =`
+             <nav>
+                 <ul>
+                     <h3>Décrire la notion de donnée</h3>
+                     <li><a id="nav1" class="seq" href="#">Définition</a></li>
+                     <li><a id="nav2" class="seq" href="#">Types de donnée</a></li>
+                     <li><a id="nav3" class="seq" href="#">Exercice 01</a></li>
+                 </ul>
+                 <ul>
+                     <h3>Montrer l'intérêt d'un fichier</h3>
+                     <li><a id="nav4" class="seq" href="#">Définition</a></li>
+                     <li><a id="nav5" class="seq" href="#">Types de fichiers</a></li>
+                     <li><a id="nav6" class="seq" href="#">Exercice 02</a></li>
+                 </ul>
+                 <ul>
+                     <h3>Spécifier l'intérêt de passer d'un fichier à une base de donnée</h3>
+                     <li><a id="nav7" class="seq" href="#">Définition</a></li>
+                     <li><a id="nav8" class="seq" href="#">Types de fichiers</a></li>
+                     <li><a id="nav9" class="seq" href="#">Exercice 03</a></li>
+                 </ul>
+             </nav>
+        `;
+        var elem =`
+                <p>
+                    D’après le dictionnaire Larousse, une donnée est ce (1) qui est connu ou admis comme
+                    tel, sur lequel on peut fonder un raisonnement ; (2) qui sert de point de départ pour une
+                    recherche. La donnée est un élément fondamental qui sert de matière première dans les
+                    échanges entre les humains, matériels (smartphone, ordinateur, …), etc. Quel que soit le
+                    domaine d’activités ou la science, la donnée est définie avec des nuances insignifiantes.
+                    En mathématiques, une donnée est une quantité connue dans l’énoncé d’un problème
+                    et qui sert à trouver la solution. <br><br>
+                    En informatique, une donnée est la représentation d'une information dans un
+                    programme : soit dans le texte du programme (code source), soit en mémoire durant l'exécution.
+                    Les données, souvent codées, décrivent les éléments du logiciel tels qu'une entité (chose), une
+                    interaction, une transaction, un évènement, un sous-système, etc. Il ne faut surtout pas
+                    confondre la notion de donnée et celle d’information. Une information se diffère d’une donnée
+                    par le fait que la donnée est un élément brut, dépourvue de tout raisonnement, supposition,
+                    constatation et probabilité alors qu’une information est une donnée interprétée. Pour passer de
+                    donnée à information, il faut un contexte de la donnée qui créé une valeur ajoutée. <br><br>
+                    En science des données, une donnée est ce qui est connu et qui sert de point de départ
+                    à un raisonnement ayant pour objet la détermination d'une solution à un problème en relation
+                    avec cette donnée. Cela peut être une description élémentaire d’une réalité, le résultat d'une
+                    comparaison entre deux événements du même ordre (mesure) soit en d'autres termes une
+                    observation ou une mesure. De nos jours, on parle de Big Data ou Données massives pour
+                    caractériser de grands volumes de données variées et en constante production.
+                </p> `;
+
+        navigation.innerHTML=navig;
+        navigation.style.transitionDuration="1.5s";
+        element.innerHTML=elem;
+
+
+       
+    });
+    
+    
+    nav1.addEventListener('click',function() {
+            var elem=`
+                <p>
+                    D’après le dictionnaire Larousse, une donnée est ce (1) qui est connu ou admis comme
+                    tel, sur lequel on peut fonder un raisonnement ; (2) qui sert de point de départ pour une
+                    recherche. La donnée est un élément fondamental qui sert de matière première dans les
+                    échanges entre les humains, matériels (smartphone, ordinateur, …), etc. Quel que soit le
+                    domaine d’activités ou la science, la donnée est définie avec des nuances insignifiantes.
+                    En mathématiques, une donnée est une quantité connue dans l’énoncé d’un problème
+                    et qui sert à trouver la solution. <br><br>
+                    En informatique, une donnée est la représentation d'une information dans un
+                    programme : soit dans le texte du programme (code source), soit en mémoire durant l'exécution.
+                    Les données, souvent codées, décrivent les éléments du logiciel tels qu'une entité (chose), une
+                    interaction, une transaction, un évènement, un sous-système, etc. Il ne faut surtout pas
+                    confondre la notion de donnée et celle d’information. Une information se diffère d’une donnée
+                    par le fait que la donnée est un élément brut, dépourvue de tout raisonnement, supposition,
+                    constatation et probabilité alors qu’une information est une donnée interprétée. Pour passer de
+                    donnée à information, il faut un contexte de la donnée qui créé une valeur ajoutée. <br><br>
+                    En science des données, une donnée est ce qui est connu et qui sert de point de départ
+                    à un raisonnement ayant pour objet la détermination d'une solution à un problème en relation
+                    avec cette donnée. Cela peut être une description élémentaire d’une réalité, le résultat d'une
+                    comparaison entre deux événements du même ordre (mesure) soit en d'autres termes une
+                    observation ou une mesure. De nos jours, on parle de Big Data ou Données massives pour
+                    caractériser de grands volumes de données variées et en constante production.
+                </p> `;
+
+                nav1.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+            element.innerHTML=elem;
+    });
+
+        nav2.addEventListener('click',function() {
+            var elem=`
+                <p>
+                     Une donnée appartient toujours à un ensemble de valeurs (domaine de valeurs) que nous
+                     appelons type. On distingue des types prédéfinis (types simples) et des types composés (types
+                     complexes). <br><br> <h4>Types prédéfinis ou types simples</h4><br>
+                     ➢ Entier : nombre sans partie décimale pouvant être un entier naturel (ℕ) ou un entier
+                     relatif (ℤ). <br>
+                     ➢ Réel : nombre avec partie décimale pouvant être un nombre décimal (𝔻), un nombre
+                     rationnel (ℚ) ou un nombre réel (ℝ). <br>
+                     ➢ Caractère : la valeur est un caractère numérique (0, 1, … 9), ou un caractère
+                     alphabétique (a, b, … z), ou un caractère spécial (#, +, /, \, *, $, €, =, %, …) entre côtes. <br>
+                     ➢ Chaîne de caractères : suite de caractères entre côtes pouvant être vide. <br>
+                     ➢ Booléen : la valeur dans un ensemble à seulement 2 valeurs soit {Vrai, Faux} ou {Oui,
+                     Non} ou autres {0, 1}. <br><br>
+                     <h4>Types composés ou types complexes </h4><br>
+                     Ce sont des types composés à partir des types prédéfinis comme par exemple le nombre
+                     complexe, l’mage, le son, la vidéo, etc.
+                </p>`;
+
+                nav2.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+
+    nav3.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O11(100%)
+            </p>
+        `;
+        nav3.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+
+    nav4.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Les données sont en général créées çà et là en fonction des évènements, interactions,
+activités, … Par contre elles doivent être regroupées en des fiches en fonction de leurs liens
+sémantiques c’est-à-dire que le regroupement des données se fera selon un but bien précis pour
+avoir un ensemble cohérent. C’est ainsi que l’on peut avoir la fiche du personnel, la fiche d’une
+vente, la fiche d’un patient dans une structure sanitaire, la fiche de notes des étudiants, la fiche
+d’une leçon, la fiche d’une recette de cuisine, …<br>
+En informatique, cette fiche est appelée fichier et est définie comme un ensemble
+structuré ou organisé d’informations désigné par un nom précis et enregistré dans une unité de
+stockage comme un objet et exploité par des programmes. Sans le fichier, on aurait les données
+et/ou informations pêle-mêle sans organisation ou structuration rendant difficile leur mise en
+relation et exploitation dans des buts précis. En revanche, une donnée peut se retrouver dans
+plusieurs fichiers avec des sémantiques pouvant être différentes. <br>Par exemple, votre filiation
+(prénom, nom, date de naissance, …) peut appartenir au fichier de boursier et aussi au fichier
+de notes en base de données. Votre filiation est utilisée dans les 2 fichiers avec des sens
+différents : dans le premier cas, cela veut dire que vous êtes boursier et dans le second cas, cela
+veut dire que vous avez été évalué en base de données.<br>
+En langage naturel, les termes fichier et dossier sont utilisés souvent sans différenciation
+mais en informatique, un dossier ou répertoire est regroupement de fichiers selon un ou des
+critères.
+            </p>
+        `;
+        nav4.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav3, #nav2, #nav5, #nav6, #nav7, #nav8, #nav9");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav5.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Les fichiers informatiques sont créés à partir des logiciels (programmes) et il existe
+plusieurs types de fichiers.<br><br>
+<h4>Fichier exécutable</h4><br>
+Fichier qui contient des instructions ou commandes exécutables par l’ordinateur. Un
+fichier exécutable est un programme informatique et est caractérisé par l’une des extensions
+suivantes :<br>
+.exe : Extension d’une application (programme ou logiciel) destinée à Microsoft
+Wndows.<br>
+➢ .sh : Extension des fichiers de scripts sous Linux<br>
+➢ .bat : Extension des fichiers de commandes sous Microsoft Windows<br>
+➢ …<br><br>
+<h4>Fichier image</h4><br>
+Fichier contenant des images, dessins, pictogrammes, photos, graphismes, … et
+caractérisé par l’une des extensions suivantes :<br>
+➢ .gif : Graphics Interchange Format<br>
+➢ .bmp : BitMaP<br>
+➢ .jpeg ou .jpg : Joint Photographic Experts Group<br>
+➢ .tiff : Tag(ged) Image File Format<br>
+➢ .png : Portable Network Graphics<br>
+➢ …<br><br>
+<h4>Fichier audio</h4><br>
+Fichier contenant du son codé sous une forme exploitable par l’ordinateur et caractérisé
+par l’une des extensions suivantes :<br>
+➢ .mp3<br>
+➢ .wav<br>
+➢ .au<br>
+➢ .ram<br>
+➢ .oga<br><br>
+</h4>Fichier vidéo</h4><br>
+Fichier contenant de la vidéo (combinaison du son, image, animation, texte) codée sous
+une forme exploitable par l’ordinateur et caractérisé par l’une des extensions suivantes :<br>
+➢ .mp4<br>
+➢ .avi<br>
+➢ .mpeg<br>
+➢ .mov<br><br>
+<h4>Fichier document</h4><br>
+➢ .doc, .docx : Extensions des fichiers produits avec le logiciel Microsoft Word (Traitement de texte)<br>
+➢ .ppt, .pptx : Extensions des fichiers produits avec le logiciel Microsoft PowerPoint (Présentation Assistée par Ordinateur)<br>
+➢ .xls, .xlsx : Extensions des fichiers produits avec le logiciel Microsoft Excel (Traitement de données)<br>
+➢ .pub : Extension des fichiers produits avec le logiciel Microsoft Publisher (Publication Assistée par Ordinateur)<br>
+➢ .pdf : Extension des Fichiers Portables c’est-à-dire lisible sur n’importe quel ordinateur<br>
+➢ .html : Extension des fichiers web ouvrables avec un navigateur web (Google Chrome,Microsoft Explorer, Mozilla Firefox, …)<br>
+➢ …<br><br>
+<h4>Fichier texte</h4><br>
+Fichier contenant du texte brut sans indication typographique (pas de mise en forme ni de mise en page). Généralement utilisé dans les contextes suivants :<br>
+➢ Echange d’informations entre 2 programmes différents : .txt, .csv, …<br>
+➢ Données de configuration d’un logiciel : .ini, .conf, …<br>
+➢ Code source d’un programme : .py, .c, .pas, .java, .html, .xml, .php, .js, …<br>
+➢ Journalisation (historique des évènements) d’un logiciel : .log, …<br><br>
+<h4>Fichier compressé</h4><br>
+Fichier recodé en vue de rendre le plus petit en taille sans perte d’information que le fichier original. Le programme chargé d’assurer cette tâche s’appelle un compresseur.<br>
+➢ .zip<br>
+➢ .gz<br>
+➢ .rar<br>
+➢ .tar<br>
+            </p>
+        `;
+        nav5.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav2, #nav3, #nav4, #nav1, #nav6, #nav7, #nav8, #nav9");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav6.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O12(100%)
+            </p>
+        `;
+        nav6.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav2, #nav3, #nav4, #nav5, #nav1, #nav7, #nav8, #nav9");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav7.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Un fichier contient un ensemble de données structurées mais il n’existe pas de
+possibilités d’automatiser leur mise à jour, suppression, interrogation et ajout de nouvelles
+données.
+            </p>
+        `;
+        nav7.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav2, #nav3, #nav4, #nav5, #nav6, #nav1, #nav8, #nav9");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav8.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Citons quelques exemples de types de fichiers et leurs limites.<br><br>
+                <h4>Fichier issu d’un logiciel de traitement de texte</h4><br>
+Microsoft Word, Open Office Writer, LibreOffice Writer, Google Docs… sont des
+exemples de logiciel de traitement de texte.<br><br>
+Un fichier issu d’un logiciel de traitement contient un ensemble de données et/ou
+d’informations formatées (mise en forme, mise en page, …) et structurées généralement en
+titres (partie, chapitre, titre, sous-titre, …). Avec les logiciels de traitement de texte, les
+opérations sont réalisées ainsi :<br><br>
+➢ La suppression automatique d’une donnée est impossible ; il faut la chercher, la
+sélectionner et la supprimer manuellement.<br><br>
+➢ La modification de toutes les occurrences d’une donnée est automatisée par la fonction
+« Rechercher et Remplacer ».<br><br>
+➢ L’ajout d’une nouvelle donnée se fait manuellement car il faut chercher sa position dans
+le texte et la saisir à l’emplacement convenable.<br><br><br>
+➢ L’interrogation se fait par la fonction « Rechercher » mais ne donne pas en une liste des
+occurrences de la donnée cherchée ; il faut utiliser les boutons Suivant et Précedent pour
+parcourir les différentes occurrences trouvées.<br><br><br>
+<h4>Fichier issu d’un logiciel tableur</h4><br>
+Microsoft Excel, Open Office Calc, LibreOffice Calc, Google Sheets, … sont des
+exemples de logiciel tableur.<br><br>
+Un fichier issu d’un logiciel tableur est un classeur contenant des feuilles où chaque
+feuille est un tableau de plusieurs colonnes et lignes. L’information ou la donnée est soit une
+formule, soit une donnée brute et est contenue dans une cellule ou case (intersection entre une
+colonne et une ligne). Avec les logiciels de tableur, les opérations sont réalisées ainsi :<br><br>
+➢ La suppression automatique d’une donnée est impossible ; il faut la chercher, la
+sélectionner et la supprimer manuellement.<br><br>
+La modification de toutes les occurrences d’une donnée est automatisée par la fonction
+« Rechercher et Remplacer ».<br><br>
+➢ L’ajout d’une nouvelle donnée se fait manuellement car il faut chercher sa position dans
+le classeur et la saisir à l’emplacement convenable.<br><br>
+➢ L’interrogation se fait par la fonction « Rechercher » mais ne donne pas en une liste des
+occurrences de la donnée cherchée ; il faut utiliser les boutons Suivant et Précédent pour
+parcourir les différentes occurrences trouvées.<br><br>
+➢ Il faut toutefois noter que la plupart de logiciels tableurs permettent l’automatisation de
+certaines opérations moyennant l’écriture des macros (petits programmes embarqués).
+            </p>
+        `;
+        nav8.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav1, #nav9");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav9.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O13(100%)
+            </p>
+        `;
+        nav9.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav2, #nav3, #nav4, #nav5, #nav6, #nav2, #nav8, #nav1");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+
+</script>

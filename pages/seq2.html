@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/seq.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>SIMAC | Séquense</title>
+</head>
+<body>
+   <header>
+        <nav>
+            <ul class="logoContainer">
+                <a id="" href="#">Base de donnée</a>  
+            </ul>
+            <ul class="navContainer">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./seq1.html">Séquences</a></li>
+                <li><a id="" href="#">Exercices</a></li>
+                <li><a id="" href="#">A propos</a></li>
+                <li><a href="./pdf.html">Voir le PDF</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="part seqences">
+        <nav>
+            <ul class="seqContent">
+                <li class="liste"><a id="seq1" class="seq" href="./seq1.html"><div class="">Des données à une base de donnée</div></a></li>
+                <li class="liste"><a id="seq2" class="seq clic" href="./seq2.html"><div class="">Généralité sur les bases de donnée</div></a></li>
+                <li class="liste"><a id="seq3" class="seq" href="./seq3.html"><div class="">Modélisation conceptuelle des données : Modèle Entité-Association</div></a></li>
+                <li class="liste"><a id="seq4" class="seq" href="./seq4.html"><div class="">Modélisation logique des donnés : Modèle Relationnel</div></a></li>
+                <li class="liste"><a id="seq5" class="seq" href="./seq5.html"><div class="">Interrogation d’une base de données : Algèbre relationnelle</div></a></li>
+                <li class="liste"><a id="seq6" class="seq" href="./seq6.html"><div class="">Implémentation d’une base de données : Modèle physique</div></a></li>
+            </ul>
+        </nav>
+    </div>
+   <div class="section">
+            <div class="part container" id="container">
+                <div class="element" id="element">
+                    
+                    <p>
+                        Une base de données est un ensemble d’informations structurées, semi-structurées ou
+non structurées d’un système d’information organisé en vue de faciliter leur exploitation
+(interrogation et mise à jour) et gérer leur stockage. <br><br>
+Un système d’information est l’ensemble des moyens (organisation, acteurs,
+procédures, systèmes informatiques) nécessaires à la saisie, traitement, mémorisation,
+classement, recherche, et diffusion des informations. Il a pour objectif de restituer, aux
+différents membres de l’entreprise ou organisme, les informations sous une forme directement
+utilisable au moment opportun, afin de faciliter le bon de fonctionnement opérationnel et la
+prise de décisions aux différents niveaux. <br> <br>
+Pour obtenir une base de données, il faut modéliser une situation réelle et le représenter
+par un modèle selon un niveau d’abstraction désiré. <br><br>
+<h4>Donnée structurée</h4><br>
+Une donnée structurée est une donnée formatée ou représentée selon une structure de
+données précise. Vous avez vu dans le cours d’algorithmique et programmation la notion de
+structure de données. C’est le type de données le plus ancien ayant l’avantage de faciliter le
+contrôle et l’exploitation des données en se basant sur la structure. Par contre sa structure limite
+sa flexibilité et son usage à ce qui a été défini.
+Comme exemple, on peut citer les fiches d’étudiants, les données d’un point de vente,
+les fiches de paie des employés, …<br><br>
+<h4>Donnée non structurée</h4><br>
+Une donnée non structurée est une donnée sous sa forme brute absolue sans traitement.
+Les données non structurées peuvent être tout ce qui n’est pas dans un format ou structure
+spécifique. Comme avantage, on peut citer la liberté de spécifier le format selon le besoin ce
+qui permet un grand nombre de cas d’utilisation car la finalité des données est adaptable. Par
+contre, c’est une donnée difficile à exploiter du fait qu’il faut une expertise en science de
+données pour leur préparation et leur analyse.
+Comme exemple, on peut citer les fichiers journaux des applications, les publications
+sur les réseaux sociaux et leurs commentaires, les discussions des forums ou chats ou emails,
+…<br><br>
+<h4>Donnée semi-structurée</h4><br>
+Une donnée semi-structurée est une donnée non structurée qui comporte des
+métadonnées avec certaines caractéristiques. La métadonnée contient des informations sur les
+données permettant de mieux les cataloguées, analysées et faire faire des recherches
+efficacement par rapport aux données non structurées. Les données semi-structurées sont
+présentées comme des données intermédiaires entre les données structurées et non structurées
+et bénéficient en partie de leurs avantages. <br>
+Comme exemple, on peut citer les fichiers CSV (Comma-Separated Values) contenant
+des données séparées par un délimitateur, les fichiers de données avec des balises (html, xml,
+…), …
+                    </p>
+                </div>
+            </div>
+   </div class="section">
+   <div class="navigation" id="navigation">
+    <nav>
+        <ul class="navContent">
+            <h3>Expliquer une base de donnée</h3>
+            <li><a id="nav0" class="nav" href="#"><div class="">Définition</div></a></li>
+            <li><a id="nav1" class="nav" href="#"><div class="">Objectifs</div></a></li>
+            <li><a id="nav2" class="nav" href="#"><div class="">Typologie</div></a></li>
+            <li><a id="nav3" class="nav" href="#"><div class="">Notion de schéma de données</div></a></li>
+            <li><a id="nav4" class="nav" href="#"><div class="">Notion d'instance de donnée</div></a></li>
+            <li><a id="nav5" class="nav" href="#"><div class="">Exercice 04</div></a></li>
+      
+            <h3>Décrire le étape de la conception d'une base de données</h3>
+            <li><a id="nav6" class="nav" href="#"><div class="">Analyse de l’existant et des besoins</div></a></li>
+            <li><a id="nav7" class="nav" href="#"><div class="">Modélisation conceptuelle des données</div></a></li>
+            <li><a id="nav8" class="nav" href="#"><div class="">Modélisation logique des données</div></a></li>
+            <li><a id="nav9" class="nav" href="#"><div class="">Implémentation de la base de donnée</div></a></li>
+            <li><a id="nav10" class="nav" href="#"><div class="">Exemple d’application : e-Commerce</div></a></li>
+            <li><a id="nav11" class="nav" href="#"><div class="">Exercice 05</div></a></li>
+       
+            <h3>Décrire un système de gestion de base de données</h3>
+            <li><a id="nav12" class="nav" href="#"><div class="">Définition</div></a></li>
+            <li><a id="nav13" class="nav" href="#"><div class="">Objectifs</div></a></li>
+            <li><a id="nav14" class="nav" href="#"><div class="">Architecture fonctionnelle</div></a></li>
+            <li><a id="nav15" class="nav" href="#"><div class="">Norme ANSI/SPARC</div></a></li>
+            <li><a id="nav16" class="nav" href="#"><div class="">Quelques exemples</div></a></li>
+            <li><a id="nav17" class="nav" href="#"><div class="">Exercice 06</div></a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
+<script>
+    var seq2=document.getElementById('seq2');
+    var nav0=document.getElementById('nav0');
+    var nav1=document.getElementById('nav1');
+    var nav2=document.getElementById('nav2');
+    var nav3=document.getElementById('nav3');
+    var nav4=document.getElementById('nav4');
+    var nav5=document.getElementById('nav5');
+    var nav6=document.getElementById('nav6');
+    var nav7=document.getElementById('nav7');
+    var nav8=document.getElementById('nav8');
+    var nav9=document.getElementById('nav9');
+    var nav10=document.getElementById('nav10');
+    var nav11=document.getElementById('nav11');
+    var nav12=document.getElementById('nav12');
+    var nav13=document.getElementById('nav13');
+    var nav14=document.getElementById('nav14');
+    var nav15=document.getElementById('nav15');
+    var nav16=document.getElementById('nav16');
+    var nav17=document.getElementById('nav17');
+    var container=document.getElementById('container');
+    var navigation=document.getElementById('navigation');
+    var element=document.getElementById('element');
+
+    nav0.addEventListener('click',function () {
+        var elem =`
+        <p>
+                        Une base de données est un ensemble d’informations structurées, semi-structurées ou
+non structurées d’un système d’information organisé en vue de faciliter leur exploitation
+(interrogation et mise à jour) et gérer leur stockage. <br><br>
+Un système d’information est l’ensemble des moyens (organisation, acteurs,
+procédures, systèmes informatiques) nécessaires à la saisie, traitement, mémorisation,
+classement, recherche, et diffusion des informations. Il a pour objectif de restituer, aux
+différents membres de l’entreprise ou organisme, les informations sous une forme directement
+utilisable au moment opportun, afin de faciliter le bon de fonctionnement opérationnel et la
+prise de décisions aux différents niveaux. <br> <br>
+Pour obtenir une base de données, il faut modéliser une situation réelle et le représenter
+par un modèle selon un niveau d’abstraction désiré. <br><br>
+<h4>Donnée structurée</h4><br>
+Une donnée structurée est une donnée formatée ou représentée selon une structure de
+données précise. Vous avez vu dans le cours d’algorithmique et programmation la notion de
+structure de données. C’est le type de données le plus ancien ayant l’avantage de faciliter le
+contrôle et l’exploitation des données en se basant sur la structure. Par contre sa structure limite
+sa flexibilité et son usage à ce qui a été défini.
+Comme exemple, on peut citer les fiches d’étudiants, les données d’un point de vente,
+les fiches de paie des employés, …<br><br>
+<h4>Donnée non structurée</h4><br>
+Une donnée non structurée est une donnée sous sa forme brute absolue sans traitement.
+Les données non structurées peuvent être tout ce qui n’est pas dans un format ou structure
+spécifique. Comme avantage, on peut citer la liberté de spécifier le format selon le besoin ce
+qui permet un grand nombre de cas d’utilisation car la finalité des données est adaptable. Par
+contre, c’est une donnée difficile à exploiter du fait qu’il faut une expertise en science de
+données pour leur préparation et leur analyse.
+Comme exemple, on peut citer les fichiers journaux des applications, les publications
+sur les réseaux sociaux et leurs commentaires, les discussions des forums ou chats ou emails,
+…<br><br>
+<h4>Donnée semi-structurée</h4><br>
+Une donnée semi-structurée est une donnée non structurée qui comporte des
+métadonnées avec certaines caractéristiques. La métadonnée contient des informations sur les
+données permettant de mieux les cataloguées, analysées et faire faire des recherches
+efficacement par rapport aux données non structurées. Les données semi-structurées sont
+présentées comme des données intermédiaires entre les données structurées et non structurées
+et bénéficient en partie de leurs avantages.
+Comme exemple, on peut citer les fichiers CSV (Comma-Separated Values) contenant
+des données séparées par un délimitateur, les fichiers de données avec des balises (html, xml,
+…), …
+                    </p>
+        `;
+        nav0.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav2, #nav3, #nav4, #nav1, #nav6, #nav7, #nav8, #nav9");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+
+    nav1.addEventListener('click',function () {
+        var elem =`
+        <h4>Structuration, sauvegarde et exploitation des données d’un système d’information</h4> <br>
+La structuration est le fait qu’une base de données sert à représenter les données d’un
+système d’information et les liens sémantiques entre elles.<br>
+La sauvegarde est le fait de garder de façon pérenne les données sur une unité de
+stockage ou mémoire de masse.<br>
+L’exploitation des données est le fait de définir des moyens d’interrogation, d’ajout, de
+modification et de suppression des données.<br><br>
+<h4>Cohérence ou intégrité des données </h4><br>
+La cohérence des données est la capacité de maintenir les données dans un état correct
+après une opération d’ajout, modification ou suppression.<br>
+Pour garantir la cohérence des données, il faut définit un ensemble de règles que les
+données doivent respectées en tout temps.<br><br>
+<h4>Exemples de règles pour la cohérence des données</h4><br><br>
+➢ Dans un système d’information de gestion d’une pharmacie, la quantité en stock ne doit
+pas être négative. Cela veut dire par exemple que la vente d’un médicament ne sera
+possible que si la quantité en stock est supérieure ou égale à la quantité à vendre.
+Dans un système d’information de gestion pénitentiaire, un détenu ne doit pas avoir plus
+de 5 visites par mois.
+<h4>Non redondance des données</h4><br>
+La redondance des données est le fait de les répéter inutilement dans la base de données.
+Les données redondantes entraînent des problèmes de mise à jour des données car lors des
+modifications d’une donnée, il est possible d’oublier certaines occurrences ce qui rend les
+données incohérentes ou, il faut chercher et s’assurer de la modification de toutes les
+occurrences de la donnée, ce qui rend le traitement lent.<br><br>
+Pour éviter la redondance des données, une base de données doit définir une
+structuration rigoureuse des données afin que chacune ne soit pas répétitive inutilement.<br><br>
+<h4>Exhaustivité des données</h4>
+L’exhaustivité des données est le fait que la base de données soit complète c’est-à-dire
+doit contenir toutes les informations nécessaires afin de répondre aux besoins des utilisateurs.
+        `;
+        nav1.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+
+    nav2.addEventListener('click',function () {
+        var elem =`
+        <h4>Selon l’emplacement</h4><br>
+    <h5><br>Base de données centralisée</h5><br>
+C’est une base de données dans laquelle les données sont stockées dans un seul
+ordinateur ou serveur central. La centralisation des données facilite leur stockage et
+conservation. En outre, ça peut être un goulot d’étranglement vue de nombreux utilisateurs de
+la base de données.<br><br>
+<h5>Base de données distribuée</h5><br>
+C’est une base de données dans laquelle les données sont stockées dans plusieurs unités
+de stockage qui ne se trouvent pas au même emplacement physique. Ces différentes unités de
+stockage sont indexées et gérées par un SGBD central. L’avantage d’une base de données
+distribuée est la répartition ou l’équilibrage des charges au niveau de chaque ordinateur
+hébergeant une partie des données, évitant le goulot d’étranglement. En outre, mettre à jour les
+données est une tâche complexe et coûteuse en temps. De plus la conception d’une base de
+données distribuée est plus complexe qu’une base de données centralisée.<br><br>
+<h4>Selon l’usage</h4><br>
+<h5>Base de données opérationnelle</h5><br>
+Une base de données opérationnelle ou OLTP (OnLine Transaction Processing :
+Traitement transactionnel en ligne) est une base de données où l’accent est mis sur la capacité
+de traitement et la vitesse de réponse de plusieurs opérations simultanément pour satisfaire des
+requêtes en temps réel.<br><br>
+<h5>Base de données d’analyse</h5><br>
+Une base de données d’analyse ou OLAP (OnLine Analytical Processing :
+Traitement analytique en ligne) est une base de données où l’accent est mis sur la capacité à
+stocker et analyser de grandes masses de données complexes issues des bases de données
+opérationnelles. Cette analyse permet de donner des statistiques, des prévisions, … bref des
+informations précieuses pour la prise de décision dans le management (catastrophe, météo,
+système sanitaire, ressource humaine, approvisionnement, …). Ces bases de données sont
+généralement appelées des entrepôts de données (Data Warehouse).<br><br>
+<h4>Selon la structuration</h4><br>
+Il existe quatre types de base de données qui correspondent à l’évolution des bases de
+données.<br><br>
+<h5>Base de données hiérarchique</h5><br>
+Les premières bases de données structuraient l’information/donnée de façon
+hiérarchique où chacune dépendait (lien de parenté) d’une seule information/donnée. La
+structure de la base se présente comme un arbre. Le fait qu’une donnée ne dépende que d’une
+seule appelée donnée parent présente des limites car en général, une donnée est en relation avec
+plusieurs autres et la sémantique de leur relation n’est pas qu’une relation père-fils.
+Exemples :<br>
+➢ ADABAS (Adaptable DAta BAse System) de Software AG<br>
+➢ IMS (Information Management System) de IBM (International Business Machines Corporation) qui fut utilisé pour le programme Apollo<br>
+➢ Base de registre de Microsoft<br><br>
+<h5>Base de données réseau</h5><br>
+Pour corriger les limites des bases de données hiérarchiques où chaque donnée n’avait
+qu’un parent, Charles William Bachman créé les bases de données réseau où chaque donnée
+peut être liée à plusieurs autres. Le modèle réseau est une amélioration du modèle hiérarchique
+permettant de passer d’une structure en arbre à une structure en graphe.
+Une très forte dépendance entre les données et les programmes du modèle réseau
+empêche l’utilisation des bases de données réseau dans plusieurs systèmes informatiques.<br><br>
+<h5>Base de données relationnelle</h5><br>
+C’est le type de base de données le plus utilisé depuis les années 1980 à nos jours. Les
+bases de données relationnelles reposent sur l’algèbre relationnelle1 qui est une théorie
+mathématique inventée par Edgar Franck Codd. L’information est représentée dans les tables
+(tableaux) où chaque colonne représente une caractéristique de la donnée et une ligne représente
+une occurrence de la donnée (occurrence de toutes ses caractéristiques).<br><br>
+<h5>Base de données objet</h5><br>
+S’appuyant sur le principe de la Programmation Orientée Objet où l’objet est
+l’encapsulation des données et traitements en une seule entité, les bases de données objet sont
+encore à un stade embryonnaire car leur développement ne suit pas le modèle objet avec les
+différents concepts d’héritage, encapsulation, polymorphisme, … Beaucoup d’espoirs sont
+fondés sur ce type de base de données connaissant la plus-value de la Programmation Orientée
+Objet.<br><br>
+<h5>Autres types</h5><br>
+➢ Base de données non relationnelle ou NoSQL (Not Only SQL)<br>
+Le langage SQL (Structured Query Language) domine largement le mode des bases de
+données avec les bases de données relationnées. Mais, un courant de pensée propose le concept
+de « Not Only SQL : Pas seulement SQL » pour la gestion des bases de données. L’idée est
+de dénormaliser une base de données relationnelle pour stocker les données sous forme peu
+structurée sans suivre un schéma fixe ; des opérateurs comme la jointure entre les tables ne sont
+plus nécessaires. Le Big Data2 est un exemple typique des bases de données NoSQL.<br><br>
+➢ Base de données orientée texte ou base de données dans un fichier plat<br><br>
+➢ Base de données orientée document.
+
+        `;
+        element.innerHTML=elem;
+    });
+
+   
+
+    nav3.addEventListener('click',function () {
+        var elem =`
+        Le schéma d’une base de données est la description de la structure (sans les données)
+des objets (table, vue, champ, clé, …) et règles (contraintes d’intégrité, …) dans un langage
+formel (SQL en général) pris en charge par le Système de Gestion de Base de Données. <br>
+Une fois que le schéma est créé, il est presque statique car il change rarement durant son
+cycle de vie.<br><br>
+Il existe deux principaux types de schémas de base de données :<br><br>
+➢ Un schéma de base de données logique transmet les contraintes logiques applicables
+aux données stockées. Il peut définir des contraintes d'intégrité, des vues et des tables.<br><br>
+➢ Un schéma de base de données physique expose la manière dont les données sont
+stockées physiquement dans un système de stockage en termes de fichiers et d'index.<br><br>
+Le processus de création d’un schéma de base de données est la modélisation des
+données que nous décrirons plus loin à l’Objectif 2.2 : Décrire les étapes de la conception d’une
+base de données.
+        `;
+        element.innerHTML=elem;
+    });
+
+    nav4.addEventListener('click',function () {
+        var elem =`
+        L’instance d’une base de données est l’ensemble de données de la base à un instant
+donné. Ainsi, l’instance d’une base de données change au fil du temps puisque les utilisateurs
+ajoutent, modifient ou suppriment les données constamment.<br><br>
+L’instance d’une base de données est constituée de l’instance de chaque objet (table) de
+la base de données. Chaque donnée de l’instance doit respecter les structures des données
+définies dans le schéma de base de données.
+        `;
+        element.innerHTML=elem;
+    });
+
+    nav5.addEventListener('click',function () {
+        var elem =`
+        Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O21(100%)
+        `;
+        element.innerHTML=elem;
+    });
+
+    nav6.addEventListener('click',function () {
+        var elem =`
+        La conception d’une base de données est un processus qui obéit à une méthodologie
+rigoureuse en étapes.<br>
+    <figure>
+                <img src="../pcbdd.png" alt="Processus de conception d'une base de donnée" ti>
+                <figcaption>Processus de conception d'une base de donnée</figcaption>
+            </figure>
+            Les besoins et la description de l’existant sont contenus dans un cahier de charges qui
+est un élément fondamental du contrat qui lie le concepteur de base de données au client. Ce
+document doit être assez précis pour permettre au concepteur de comprendre le monde à
+modéliser et surtout sa délimitation.<br><br> L’analyse de l’existant et des besoins est une étape cruciale
+et délicate. Contrairement aux autres étapes où il existe des formalismes, cette étape ne repose
+que sur l’expertise et l’ingéniosité du concepteur. Durant cette étape, il faut beaucoup
+communiquer avec le client en faisant des interviews autant que nécessaire, demandant des
+documents de référence aux problèmes à résoudre, …<br><br>
+A l’issue de cette étape, on aura un document contenant les besoins, les choix (faits et à
+faire), les contraintes, la circonscription de la future base de données, …
+        `;
+        element.innerHTML=elem;
+    });
+
+    nav7.addEventListener('click',function () {
+        var elem =`
+        A partir du document d’analyse, il est question de conceptualiser une solution à partir
+des spécifications formelles non ambiguës de modélisation dans un langage "naturel". Pour cela
+on peut utiliser soit :<br><br>
+➢ Modèle Entité-Association ou Diagramme Entité-Association qui est un langage
+graphique destiné à la construction du modèle conceptuel d'une base de données,
+indépendamment du SGBD qui sera utilisé pour gérer celle-ci. Il est à la base de
+nombreuses méthodes de conception de base de données dont la méthode MERISE.<br><br>
+➢ MERISE (Méthode d'Étude et de Réalisation Informatique par les Sous-
+Ensembles ou pour les Systèmes d'Entreprise) qui est une méthode d'analyse et de
+conception des systèmes d'information basée sur le principe de la séparation des
+données et des traitements. Pour la partie conceptuelle des données, il faut utiliser le
+Modèle Conceptuel de Données (MCD).<br><br>
+➢ UML (Unified Modeling Language : Langage de Modélisation Unifié) qui est un
+langage de modélisation graphique à base de pictogrammes conçu comme une méthode
+normalisée de visualisation dans les domaines du développement logiciel et en
+conception orientée objet. Pour la partie conceptuelle des données, il faut utiliser le
+diagramme de classes.<br><br>
+A l’issue de cette étape, on aura le diagramme entité-association qui est une
+représentation simplifiée du monde réel modélisé.
+Dans le cadre de ce cours, nous utiliserons le modèle entité-association inventé par Peter
+Chen dans les années 70. C’est une représentation graphique des données modélisées facilite
+l’appréhension et la compréhension du système à modélise
+        `;
+        element.innerHTML=elem;
+    });
+
+    nav8.addEventListener('click',function () {
+        var elem =`
+        Le diagramme entité-association issu de l’étape précédente est dans un langage naturel
+or la finalité est de l’implémenter dans un ordinateur. Il est donc question de passer à une
+représentation moins naturelle mais propice pour un ordinateur. .<br><br>Cette étape consiste à traduire
+le modèle conceptuel de données en modèle logique de données en respectant les règles de
+passage ou de conversion. Les règles à appliquer doivent tenir compte du type de base de
+données ciblé sans se soucier de son implémentation. C’est une étape mécanique, peu technique
+que les précédentes ; et à ce titre, il existe plusieurs logiciels capables de le faire..<br><br>
+A cette étape, si le type de base de données choisi est relationnel, il faudra normaliser le
+modèle obtenu pour minimiser les redondances des données qui entraînent des anomalies
+sémantiques qui, à leur tour, rendent le traitement automatique des données et la maintenance
+des bases de données difficiles.
+        `;
+        element.innerHTML=elem;
+    });
+    nav9.addEventListener('click',function () {
+        var elem =`
+        L’implémentation consiste à faire des choix techniques en termes de SGBD (Système
+de Gestion de Base de Données) et décrire dans le langage du SGBD le modèle logique de
+données obtenu précédemment. Cette étape nécessite des compétences technico-informatiques
+pour l’implémentation et l’optimisation de la base de données.
+        `;
+        element.innerHTML=elem;
+    });
+    nav10.addEventListener('click',function () {
+        var elem =`
+        Cet exemple sera le fil conducteur durant ce cours. Dans cette section, il est question
+d’analyser les besoins d’une gestion de site de commerce en ligne et de délimiter le système.<br><br>
+<h4>Document d’analyse de l’existant et des besoins</h4><br>
+Il vous est demandé de concevoir une base de données pour un site de commerce en
+ligne. Chaque client doit se créer un compte d’utilisation du site composé d’un login (nom
+d’utilisateur) et d’un password (mot de passe). Pour distinguer les utilisateurs, le login doit être
+unique. Pour des raisons de sécurité, le mot de passe est obligatoire et doit avoir une longueur
+d’au moins 8 caractères. Le client est caractérisé par son nom, prénom, référence, date de
+naissance, sexe, téléphone et adresse électronique.<br><br>
+Lorsqu’un client arrive sur le site, il créé une commande (panier) devant contenir la
+quantité de chaque produit à commander. Une commande est caractérisée par un numéro et une
+date. Les produits sont classés par catégorie et un produit appartient à une seule catégorie. Un
+produit est caractérisé par son code, libellé (nom) et quantité en stock. Certaines catégories sont
+des sous-catégories.<br><br>
+Sur le site d’e-commerce, plusieurs clients achètent les mêmes produits presqu’au même
+moment et de plus un client peut stocker les produits dans son panier et l’acheter plus tard. De
+ce fait, il peut arriver qu’au moment de la facturation, la quantité commandée ne soit plus
+suffisante en stock. Le client a le choix de soit enlever ce produit de sa facturation, soit prendre
+la quantité qui existe. Il pourra sans besoin d’une nouvelle commande se faire facturer les
+produits non livrés. Dans la facture du client, la quantité livrée doit être précisée. Chaque facture
+est caractérisée par un numéro, date et appartient à un mode de règlement.<br><br>
+Pour satisfaire sa clientèle, le gestionnaire du site s’approvisionne périodiquement
+auprès de plusieurs fournisseurs. Pour automatiser le déclenchement d’approvisionnement,
+chaque produit est caractérisé par un seuil d’alerte. Un approvisionnement est fait chez un seul
+fournisseur et contient pour chaque produit, une quantité commandée. Chez les fournisseurs, toutes les quantités commandées sont livrées. Un approvisionnement est caractérisé par son
+identifiant et date. Un fournisseur est caractérisé par son NINEA (Numéro d'Identification
+National des Entreprises et des Associations), désignation, adresse, téléphone, adresse
+électronique et site web.
+        `;
+        element.innerHTML=elem;
+    });
+    nav11.addEventListener('click',function () {
+        var elem =`
+        Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O22(100%)
+        `;
+        element.innerHTML=elem;
+    });
+    nav12.addEventListener('click',function () {
+        var elem =`
+        Un Système de Gestion de Base de Données est un logiciel permettant de gérer (créer,
+modifier, supprimer, sécuriser, exploiter, …) une base de données. A cet effet, il comporte de
+nombreux modules et interfaces utilisateurs. L’exploitation d’une base de données consiste à
+réaliser les opérations suivantes sur les données : insertion, interrogation, modification et
+suppression.<br><br> La sécurisation de la base de données consiste à créer des utilisateurs et leur
+octroyer des privilèges (droits) sur les données (tables) et les opérations. Par exemple, un
+utilisateur peut avoir le droit d’interroger une table mais ne pas avoir le droit de modifier ses
+données.
+<figure>
+                <img src="../position.png" alt="Position du SGBD par rapport à la base de données" ti>
+                <figcaption>Position du SGBD par rapport à la base de données</figcaption>
+            </figure>
+        `;
+        element.innerHTML=elem;
+    });
+    nav13.addEventListener('click',function () {
+        var elem =`
+        <h4>Indépendance physique des données</h4><br>
+L’indépendance physique permet de modifier le schéma interne (niveau physique) sans
+modifier le schéma conceptuel (niveau conceptuel). Ainsi la définition des structures des
+données (niveau conceptuel) est indépendamment des structures de stockage (niveau physique
+ou interne).<br><br>
+La structure de stockage des données appartient au monde des informaticiens et n'a donc
+aucun un sens que dans l'univers du système informatique. Le schéma interne décrit un
+assemblage physique des données en articles, fichiers, chemins d'accès (organisation et
+méthode d'accès aux fichiers, modes de placement des articles dans les fichiers, critères de tri,
+chaînages…) sur des mémoires de stockage. Cet assemblage propre au monde informatique
+doit être basé sur des considérations de performance et de souplesse d'accès. On pourra par
+exemple ajouter un index, regrouper deux fichiers en un, changer l'ordre ou le codage des données dans un article, sans mettre en cause les entités et associations définies au niveau
+conceptuel.<br><br>
+<h4>Indépendance logique des données</h4><br>
+L’indépendance logique permet de modifier les schémas conceptuels (niveau interne ou
+physique) sans changer les programmes d’application (niveau externe). Ainsi l’ajout ou le
+retrait de nouveaux éléments n’a aucune influence sur les programmes qui n’y font pas
+explicitement référence.<br><br>
+<h4>Indépendance entre données et traitements</h4><br>
+L’indépendance entre les données et les traitements vise à permettre une évolution des
+structures de données sans répercussion sur les programmes d’application utilisant ces données.
+Pour atteindre cet objectif, il a été mis en place les concepts de schéma et de sous-schéma de
+données. Le sous-schéma correspond à une vue de la base de données extraite du schéma et
+intéressant un utilisateur ou un groupe d’utilisateurs. C’est l’interface entre le schéma et le sous-
+schéma qui garantit cette indépendance.<br><br>
+<h4>Sécurité des données</h4><br>
+Les données ne doivent être accessibles en partie ou en totalité qu’aux utilisateurs ayant
+des droits. L’administrateur dispose ainsi des outils pour autoriser, contrôler ou enlever les
+droits d'accès à n’importe qui.<br><br>
+<h4>Efficacité des accès aux données</h4><br>
+Le SGBD doit pouvoir fournir des réponses aux requêtes le plus rapidement possible ;
+il faut des algorithmes très rapides et des stratégies de gestion des files d’attente. Par exemple,
+il ne faut pas que la requête courte d’un utilisateur attende la fin d’une longue requête d’un autre
+utilisateur.<br><br>
+<h4>Accès concurrent aux données</h4><br>
+Le SGBD doit permettre l’accès aux données par plusieurs utilisateurs à la fois tout en
+s’assurant de la cohérence des données et la gestion des conflits en cas de mises à jour
+simultanées de la même donnée. Pour cela, il y a des mécanismes de verrouillage permettant de
+détecter et gérer les conflits.<br><br>
+<h4>Administration facilitée des données</h4><br>
+Un SGBD doit fournir des outils pour décrire les données, à la fois leurs structures de
+stockage et leurs présentations externes. Il doit permettre le suivi de l'adéquation de ces
+structures aux besoins des applications et autoriser leur évolution aisée. Ces tâches sont
+réservées à l’administrateur de la base de données.<br><br>
+<h4>Résistance aux pannes</h4><br>
+Les systèmes informations sont sujets aux pannes (électrique, matérielle, logicielle,
+réseau informatique, …) durant leur utilisation. Par exemple, vous voulez approvisionner votre
+stock dans le cas d’une boutique. D’après la structure de la base de données, il faut saisir
+l’approvisionnement (fournisseur, quantité, date, observation, …) de chaque produit et mettre
+à jour leur quantité en stock totale. Imaginez-vous qu’après la saisie des approvisionnements,
+qu’il y ait une panne ! Les données se trouveront dans un état incohérant car la quantité en stock
+totale ne reflète pas la réalité.<br><br>
+Le SGBD doit pouvoir gérer de telles situations par une transaction qui doit être soit
+validée si toutes les opérations ont été réussies ; soit détruite au cas où l’une des requêtes
+échoue. La destruction de la transaction annule les actions des précédentes requêtes qu’elle
+contient.<br><br>
+<h4>Manipulation des données</h4><br>
+Les utilisateurs doivent être capables d’écrire leurs requêtes à partir des langages
+évolués (langages proches du langage naturel) sans faire référence aux éléments techniques de
+la base de données.
+        `;
+        element.innerHTML=elem;
+    });
+    nav14.addEventListener('click',function () {
+        var elem =`
+        L’architecture fonctionnelle de référence de la plupart des SGBD contient 5 composants
+prenant en charge une requête de l’utilisateur jusqu’à son exécution.
+            <figure>
+                <img src="../archi.png" alt="Architecture d’un Système de Gestion de Base de Données" ti>
+                <figcaption>Architecture d’un Système de Gestion de Base de Données</figcaption>
+            </figure>
+            <h4>Métabase</h4><br>
+La métabase est un dictionnaire de données permettant de décrire les autres bases de
+données. Elle contient des commandes de définition du schéma des tables et la définition des
+vues. Lorsqu’une requête est écrite, c’est cette métabase qui permet de la valider en termes de
+respect de la structure des données (syntaxique et sémantique).
+<h4>L’analyseur de requêtes</h4><br>
+L’analyseur se base sur la métabase pour analyser les requêtes et s’assurer qu’elles sont
+valides syntaxiquement (respect de l’orthographe et de la grammaire) et sémantiquement
+(conformité à la vue référencée ou au schéma). Si la requête est correcte alors elle est traduite
+du langage évolué à un langage informatique où entre autres les noms des objets sont remplacés
+par des références informatiques (adresses mémoires).<br><br>
+<h4>Le contrôleur de requêtes</h4><br>
+A partir d’une requête correcte venant de l’analyseur, le contrôleur s’assure les fonctions
+suivantes :<br>
+➢ Contrôle des droits de lecture et/ou d’écriture sur les tables de la requête par l’utilisateur<br>
+➢ Contrôle d’intégrité des données lors des mises à jour<br><br>
+Au cas où la requête fait référence à une vue, cette vue doit être remplacée par la requête
+ayant permise sa création. Ainsi, la requête ne contiendra que les objets du schéma de
+la base de données<br><br>
+<h4>L’optimiseur de requêtes</h4><br>
+L’optimiseur élabore un plan d'accès optimisé pour traiter la requête. Pour se faire, il
+décompose en général la requête en opérations d'accès et choisit un ordre d'exécution optimal.<br>
+Il choisit aussi les méthodes d'accès à utiliser. Pour effectuer les meilleurs choix, l'optimiseur
+s'appuie souvent sur un modèle de coût qui permet d'évaluer le coût d'un plan d'accès avant son
+exécution. Le résultat de l'optimisation (le plan d'accès optimisé) peut être sauvegardé en
+mémoire pour des exécutions multiples ultérieures ou exécuté directement puis détruit.<br><br>
+<h4>L’exécuteur de plans</h4><br>
+L’exécuteur exécute le plan d'accès élaboré par l'optimiseur. Pour cela, il s'appuie sur
+les méthodes d'accès qui permettent d'accéder aux fichiers via des index et/ou des liens. C'est
+aussi à ce niveau que sont gérés les problèmes de concurrence d'accès et d'atomicité de
+transactions. Les techniques utilisées dépendent beaucoup de l'architecture opérationnelle du
+SGBD qui s'exprime en termes de processus et de tâches.
+        `;
+        element.innerHTML=elem;
+    });
+    nav15.addEventListener('click',function () {
+        var elem =`
+        La norme ANSI/SPARC est une architecture à 3 niveaux qui a été principalement
+définie pour permettre l'accès aux données indépendamment de leur représentation physique.
+Ses objectifs sont :<br><br>
+➢ Personnalisation des vues indépendantes : chaque utilisateur doit avoir accès aux
+mêmes données (sous réserve de droits), mais avec une vue personnalisée différente des
+données.<br><br>
+➢ Transparence des détails de stockage physiques aux utilisateurs : les utilisateurs ne
+doivent pas avoir à gérer les détails de stockage de base de données.<br><br>
+➢ Souplesse des vues par rapport au schéma de la base de données : l'administrateur
+de la base de données doit être en mesure de modifier les structures de stockage de la
+base de données sans affecter les vues des utilisateurs.
+<figure>
+                <img src="../norme.png" alt="Architecture à 3 niveaux d’ANSI/SPARC" ti>
+                <figcaption>Architecture à 3 niveaux d’ANSI/SPARC</figcaption>
+            </figure>
+        <h4>Niveau externe</h4><br>
+Il est composé des vues utilisateurs qui sont des parties de la base de données pertinentes
+pour un utilisateur ou un groupe d’utilisateurs.<br><br>
+<h4>Niveau conceptuel</h4><br>
+Il décrit la structure (schéma) générale de la base de données tout en masquant les
+structures de stockage des données.<br><br>
+<h4>Niveau interne</h4><br>
+Il décrit la structure de stockage physique de la base de données dans un système
+informatique par des systèmes de gestion de fichiers et des politiques d’accès.
+        `;
+        element.innerHTML=elem;
+    });
+    nav16.addEventListener('click',function () {
+        var elem =`
+        <table border="1">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th colspan="6">Typologie des SGBD selon la structure de la base de données</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Hiérarchique</td>
+                                <td>Réseau</td>
+                                <td>Relationnel</td>
+                                <td>Objet</td>
+                                <td>Document</td>
+                                <td>NoSQL</td>
+                            </tr>
+                            <tr>
+                                <td>Big Table</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>CouchDB</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>DB2</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>DynamoDB</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>Firebird</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>IBM Informix</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>IDS II</td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>IMS</td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>InterSystems IRIS</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MariaDB</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft Access</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft SQL Serveur</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MongoDB</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MySQL</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Oracle Database</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>OrientDB</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>PostgreSQL</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Sybase ASE</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Voldemort</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        `;
+        element.innerHTML=elem;
+    });
+    nav17.addEventListener('click',function () {
+        var elem =`
+        Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O23(100%) 
+        `;
+        element.innerHTML=elem;
+    });
+
+</script>

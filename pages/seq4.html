@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/seq.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>SIMAC | Séquense</title>
+</head>
+<body>
+   <header>
+        <nav>
+            <ul class="logoContainer">
+                <a id="" href="#">Base de donnée</a>  
+            </ul>
+            <ul class="navContainer">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./seq1.html">Séquences</a></li>
+                <li><a id="" href="#">Exercices</a></li>
+                <li><a id="" href="#">A propos</a></li>
+                <li><a href="./pdf.html">Voir le PDF</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="part seqences">
+        <nav>
+            <ul class="seqContent">
+                <li class="liste"><a id="seq1" class="seq" href="./seq1.html"><div class="">Des données à une base de donnée</div></a></li>
+                <li class="liste"><a id="seq2" class="seq" href="./seq2.html"><div class="">Généralité sur les bases de donnée</div></a></li>
+                <li class="liste"><a id="seq3" class="seq" href="./seq3.html"><div class="">Modélisation conceptuelle des données : Modèle Entité-Association</div></a></li>
+                <li class="liste"><a id="seq4" class="seq clic" href="./seq4.html"><div class="">Modélisation logique des donnés : Modèle Relationnel</div></a></li>
+                <li class="liste"><a id="seq5" class="seq" href="./seq5.html"><div class="">Interrogation d’une base de données : Algèbre relationnelle</div></a></li>
+                <li class="liste"><a id="seq6" class="seq" href="./seq6.html"><div class="">Implémentation d’une base de données : Modèle physique</div></a></li>
+            </ul>
+        </nav>
+    </div>
+   <div class="section">
+            
+            <div class="part container" id="container">
+                <div class="element" id="element">
+                    <p>
+                        Le modèle relationnel est inventé par Edgar Frank Codd dans les années 70. Il est le
+        premier modèle de bases de données sans critère de stockage. Le modèle relationnel est un
+        ensemble de relations basées sur la théorie des ensembles en mathématique qui modélisent les
+        relations existantes entre les données ou informations. C’est le modèle le plus utilisé par de
+        nombreux SGBD qui puise son origine dans la notion de relation.<br><br>
+        Mathématiquement, une relation (binaire) entre deux ensembles A et B est un sous-ensemble du produit cartésien de A et B. Le produit cartésien de A et B noté AxB est l’ensemble
+        de toutes les paires possibles constituées d’un élément de A et d’un élément de B.<br><br>
+        Une relation est une notion abstraite que l’on peut représenter de plusieurs manières.
+        Soient les ensembles Code = {1, 2, 3, 4, 5} et Nom = {X, Y, Z}. On définit une relation
+        entre les 2 ensembles telle que<br>
+        ➢ 1 soit en relation avec X et Z<br>
+        ➢ 3 soit en relation avec X<br>
+        ➢ 4 soit en relation avec Y<br><br>
+        <figure>
+            <img class="pimg" src="../fig29.png" alt="Représentation par un graphe d’une relation entre 2 ensembles">
+            <figcaption>Figure 29 : Représentation par un graphe d’une relation entre 2 ensembles</figcaption>
+        </figure>
+        <figure>
+            <img class="pimg" src="../fig30.png" alt="Représentation sous forme de tableau d’une relation entre 2 ensembles">
+            <figcaption>Figure 30 : Représentation sous forme de tableau d’une relation entre 2 ensembles</figcaption>
+        </figure>
+        Le produit cartésien étant un opérateur n-aire permet la généralisation de la notion de
+        relation entre plusieurs ensembles.<br>
+        Dans une base de données, on utilise toujours la représentation sous forme de tableau.<br><br>
+                    </p>
+                </div>
+            </div>
+            
+   </div>
+   <div class="navigation" id="navigation">
+    <nav>
+        <ul class="navContent">
+            <h3>Décrire les principes du modèle relationnel</h3>
+            <li><a id="nav0" class="nav" href="#"><div class="">Définition</div></a></li>
+            <li><a id="nav1" class="nav" href="#"><div class="">Quelques opérations sur les ensembles</div></a></li>
+            <li><a id="nav2" class="nav" href="#"><div class="">Objectifs</div></a></li>
+            <li><a id="nav3" class="nav" href="#"><div class="">Exercice 19</div></a></li>
+            
+            <h3>Décrire le notion de relation</h3>
+            <li><a id="nav4" class="nav" href="#"><div class="">Définition</div></a></li>
+            <li><a id="nav6" class="nav" href="#"><div class="">Elément du mondèle relationnel</div></a></li>
+            <li><a id="nav7" class="nav" href="#"><div class="">Quelques opérations sur les relations</div></a></li>
+            <li><a id="nav8" class="nav" href="#"><div class="">Exercice 20</div></a></li>
+
+       
+            <h3>Passer d'un Modèle Entité-Association à un Modèle Logique de DOnnées</h3>
+            <li><a id="nav9" class="nav" href="#"><div class="">Règles sur les appellations</div></a></li>
+            <li><a id="nav10" class="nav" href="#"><div class="">Règles de passage des entités à relations</div></a></li>
+            <li><a id="nav11" class="nav" href="#"><div class="">Contraintes d’intégrité</div></a></li>
+            <li><a id="nav12" class="nav" href="#"><div class="">Exemple d’application : e-Commerce</div></a></li>
+            <li><a id="nav13" class="nav" href="#"><div class="">Exercice 21</div></a></li>
+            <li><a id="nav14" class="nav" href="#"><div class="">Exercice 22</div></a></li>
+            <li><a id="nav15" class="nav" href="#"><div class="">Exercice 23</div></a></li>
+            <li><a id="nav16" class="nav" href="#"><div class="">Exercice 24</div></a></li>
+     
+            <h3>Normaliser un schéma relationnel</h3>
+            <li><a id="nav17" class="nav" href="#"><div class="">Introduction</div></a></li>
+            <li><a id="nav18" class="nav" href="#"><div class="">Première forme Normale : 1FN</div></a></li>
+            <li><a id="nav19" class="nav" href="#"><div class="">Deuxième forme Normale : 2FN</div></a></li>
+            <li><a id="nav20" class="nav" href="#"><div class="">Troisième forme Normale : 3FN</div></a></li>
+            <li><a id="nav21" class="nav" href="#"><div class="">Forme Normale de Boyce-Codd : FNBC ou 3,5FN</div></a></li>
+            <li><a id="nav22" class="nav" href="#"><div class="">Exercice 25</div></a></li>
+            
+        </ul>
+</nav> 
+</div>
+</body>
+</html>
+<script>
+    var seq4=document.getElementById('seq4');
+
+    var nav0=document.getElementById('nav0');
+    var nav1=document.getElementById('nav1');
+    var nav2=document.getElementById('nav2');
+    var nav3=document.getElementById('nav3');
+    var nav4=document.getElementById('nav4');
+    var nav5=document.getElementById('nav5');
+    var nav6=document.getElementById('nav6');
+    var nav7=document.getElementById('nav7');
+    var nav8=document.getElementById('nav8');
+    var nav9=document.getElementById('nav9');
+    var nav10=document.getElementById('nav10');
+    var nav11=document.getElementById('nav11');
+    var nav12=document.getElementById('nav12');
+    var nav13=document.getElementById('nav13');
+    var nav14=document.getElementById('nav14');
+    var nav15=document.getElementById('nav15');
+    var nav16=document.getElementById('nav16');
+    var nav17=document.getElementById('nav17');
+    var nav18=document.getElementById('nav18');
+    var nav19=document.getElementById('nav19');
+    var nav20=document.getElementById('nav20');
+    var nav21=document.getElementById('nav21');
+    var nav22=document.getElementById('nav22');
+
+    var container=document.getElementById('container');
+    var navigation=document.getElementById('navigation');
+    var element=document.getElementById('element');
+
+nav0.addEventListener('click',function () {
+        var elem=`
+        <p>
+                        Le modèle relationnel est inventé par Edgar Frank Codd dans les années 70. Il est le
+        premier modèle de bases de données sans critère de stockage. Le modèle relationnel est un
+        ensemble de relations basées sur la théorie des ensembles en mathématique qui modélisent les
+        relations existantes entre les données ou informations. C’est le modèle le plus utilisé par de
+        nombreux SGBD qui puise son origine dans la notion de relation.<br><br>
+        Mathématiquement, une relation (binaire) entre deux ensembles A et B est un sous-ensemble du produit cartésien de A et B. Le produit cartésien de A et B noté AxB est l’ensemble
+        de toutes les paires possibles constituées d’un élément de A et d’un élément de B.<br><br>
+        Une relation est une notion abstraite que l’on peut représenter de plusieurs manières.
+        Soient les ensembles Code = {1, 2, 3, 4, 5} et Nom = {X, Y, Z}. On définit une relation
+        entre les 2 ensembles telle que<br>
+        ➢ 1 soit en relation avec X et Z<br>
+        ➢ 3 soit en relation avec X<br>
+        ➢ 4 soit en relation avec Y<br><br>
+        <figure>
+            <img class="pimg" src="../fig29.png" alt="Représentation par un graphe d’une relation entre 2 ensembles">
+            <figcaption>Figure 29 : Représentation par un graphe d’une relation entre 2 ensembles</figcaption>
+        </figure>
+        <figure>
+            <img class="pimg" src="../fig30.png" alt="Représentation sous forme de tableau d’une relation entre 2 ensembles">
+            <figcaption>Figure 30 : Représentation sous forme de tableau d’une relation entre 2 ensembles</figcaption>
+        </figure>
+        Le produit cartésien étant un opérateur n-aire permet la généralisation de la notion de
+        relation entre plusieurs ensembles.<br>
+        Dans une base de données, on utilise toujours la représentation sous forme de tableau.<br><br>
+                    </p>
+        `;
+        nav0.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    
+    nav1.addEventListener('click',function () {
+    
+        var elem=`
+        <p>
+            Soient les ensembles A = {X, P} et B = {X, Y, Z}.<br><br>
+            <h4>Union</h4><br>
+L’union de A et B noté AB est l’ensemble des éléments de A et B<br>
+AB = {X, P, Y, Z}<br><br>
+<h4>Intersection</h4><br>
+L’intersection de A et B noté AB est l’ensemble des éléments appartenant à A et à B<br> 
+AB = {X}<br><br>
+<h4>Produit cartésien</h4><br>
+Le produit cartésien de A et B noté AxB est l’ensemble de toutes les paires possibles
+constituées d’un élément de A et d’un élément de B<br>
+AxB = {(X, X), (X, Y), (X, P), (P, X), (P, Y), (P, Z)}<br><br>
+<h4>Différence</h4><br>
+La différence entre A et B noté A-B est l’ensemble des éléments qui appartiennent à A
+et pas à B<br>
+A-B = {P}<br><br>
+        </p>
+        `;
+        nav1.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav0,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+       
+    });
+    nav2.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Fournir une approche méthodologique dans la construction des schémas de données<br><br>
+➢ Proposer des schémas de données faciles à utiliser<br>
+Permettre un haut degré d'indépendance des programmes d'applications et des activités
+interactives à la représentation interne des données, en particulier aux choix des ordres
+d'implantation des données dans les fichiers, des index et plus généralement des chemins
+d'accès<br><br>
+➢ Mettre à la disposition des utilisateurs des langages de haut niveau<br><br>
+➢ Permettre le développement de langages de manipulation de données non procéduraux
+basés sur des théories solides<br><br>
+➢ Optimiser les accès à la base de données<br><br>
+➢ Fournir une base solide pour traiter les problèmes de cohérence et de redondance des
+données<br><br>
+➢ Être un modèle extensible permettant de modéliser et de manipuler simplement des
+données tabulaires, mais pouvant être étendu pour modéliser et manipuler des données
+complexes<br><br>
+➢ Devenir un standard pour la description et la manipulation des bases de données<br><br>
+    </p>
+    `;
+    
+    nav2.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav0, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav3.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O41(100%)
+    </p>
+    `;
+    nav3.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav0, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    
+});
+nav4.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Une relation est un sous-ensemble du produit cartésien d'une liste de domaines
+caractérisé par un nom.<br>
+Le modèle relationnel représente l'information dans une collection de relations. Dans le
+modèle relationnel de données, on optera pour une représentation sous forme de tableau des
+relations.
+    </p>
+    `;
+    nav4.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav0, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    
+});
+nav6.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        <h4>Domaine</h4><br>
+C’est un ensemble fini de valeurs possibles auquel on définit aussi un ensemble
+d’opérateurs pouvant être appliqués aux valeurs.
+Exemple : Booléen, Entier, Réel, Caractère, Chaîne de caractères, Date, …<br><br>
+<h4>Attribut</h4><br>
+C’est un identificateur (un nom) décrivant une information stockée dans une base de
+données. En fait, c’est une donnée élémentaire Du système modélisé.
+Exemple : Pour la relation Etudiant, on a les attributs Matricule, Nom, Prénom, Date de
+naissance, Téléphone, Email, …<br><br>
+<h4>Relation</h4><br>
+C’est un sous-ensemble du produit cartésien de n domaines d'attributs (n > 0).
+Elle est représentée sous la forme d'un tableau à deux dimensions dans lequel les n
+attributs correspondent aux titres des n colonnes.<br><br>
+Exemple :<br>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Matricule</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Date de Naissance</th>
+            <th>Téléphone</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>FATI</td>
+            <td>Bamba</td>
+            <td>14/09/2000</td>
+            <td>75 345 91 98</td>
+            <td>fb@gmail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>DIAW</td>
+            <td>Jean</td>
+            <td>03/12/1998</td>
+            <td>76 036 78 93</td>
+            <td>jd@apple.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>SARR</td>
+            <td>Cheikh</td>
+            <td>08/09/2002</td>
+            <td>77 104 57 82</td>
+            <td>cs@microsoft.com</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>NDIAYE</td>
+            <td>Adama</td>
+            <td>28/02/1980</td>
+            <td>33 726 93 52</td>
+            <td>an@amazom.com</td>
+        </tr>
+    </tbody>
+</table><br><br>
+<h4>Uplet ou tuple ou enregistrement</h4><br>
+C’est une occurrence d’une relation. On dira aussi qu’elle est une ligne d’une relation.<br><br>
+<h4>Degré</h4><br>
+C’est le nombre d'attributs d’une relation.<br><br>
+<h4>Cardinalité</h4><br>
+C’est le nombre d’uplets ou tuples de la relation.<br><br>
+<h4>Clé candidate</h4><br>
+C’est un ensemble minimal des attributs de la relation dont les valeurs identifient de
+façon unique une occurrence.<br><br>
+<h4>Clé primaire</h4><br>
+C’est l’une des clés candidates choisie par le concepteur. Elle doit toujours être
+soulignée.<br><br>
+<h4>Clé étrangère ou clé secondaire</h4><br>
+C’est une clé primaire qui ne se trouve pas dans sa relation d’origine. Elle doit être
+toujours suivie du symbole #.<br><br>
+    </p>
+    `;
+    nav6.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav0, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    
+});
+nav7.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Soient les relations A et B.<br><br>
+<h4>Union</h4><br>
+L’union de A et B noté AB est l’ensemble des tuples de A et B sans tuples redondantes.
+Pour que l’union de 2 relations soient possibles, il faut qu’elles aient le même schéma.<br><br>
+<h4>Intersection</h4><br>
+L’intersection de A et B noté AB est l’ensemble des tuples appartenant à A et à B.
+Pour que l’intersection de 2 relations soient possibles, il faut qu’elles aient le même schéma.<br><br>
+<h4>Produit cartésien</h4><br>
+Le produit cartésien de A et B noté AxB est l’ensemble des tuples de A concaténés à
+ceux de B. Pour que le produit cartésien de 2 relations soient possibles, il faut qu’elles aient des
+schémas différents et qu’aucun attribut se soit commun aux 2 relations.<br><br>
+<h4>Différence</h4><br>
+La différence entre A et B noté A-B est l’ensemble des tuples qui appartiennent à A et
+pas à B. Pour que la différence de 2 relations soient possibles, il faut qu’elles aient le même
+schéma.<br><br>
+    </p>
+    `;
+    nav7.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav0, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+   
+});
+nav8.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O42(100%)
+    </p>
+    `;
+    nav8.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav0, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav9.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Le modèle relationnel de données provient du modèle entité-association. Pour cela, il
+existe des règles de passage du modèle entité-association au modèle relationnel.<br><br>
+<h4>Règles sur les appellations</h4><br>
+➢ Une propriété devient un attribut<br>
+➢ Un identifiant devient une clé<br>
+➢ Un identifiant candidat devient une clé candidate<br>
+➢ Un identifiant primaire devient une clé primaire<br>
+➢ Une entité devient une relation<br>
+➢ Certaines associations deviennent des relations et d’autres disparaissent<br><br>
+    </p>
+    `;
+    nav9.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav0, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav10.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Chaque entité devient une relation avec pour attributs, les propriétés de l’entité et pour
+clé primaire, l’identifiant primaire de l’entité.<br><br>
+<h4>Association « père-fils »</h4><br>
+L’association disparait et l’identifiant du père migre dans les attributs du fils et devient
+une clé étrangère.<br><br>
+Exemple<br>
+<figure>
+            <img  src="../fig31.png" alt="Passage d’une association « père-fils » au modèle relationnel">
+            Approvisionnement (<span>Identifiant</span>, DateA, #NINEA)<br>
+Fournisseur (<span>NINEA</span>, Désignation, Adresse, TélléphoneF, EmailF, SiteWeb)<br><br>
+            <figcaption>Figure 31 : Passage d’une association « père-fils » au modèle relationnel</figcaption>
+        </figure>
+Dans cette association, Fournisseur est considéré comme me père car sa cardinalité dans
+la relation est maximale alors que Approvisionnement est considéré comme le fils car sa
+cardinalité est minimale.<br><br>
+<h4>Association « plusieurs à plusieurs »</h4><br>
+L’association devient une relation avec pour attributs :<br>
+➢ les propriétés de l’association s’il en existait<br><br>
+➢ les identifiants des différentes entités participant à l’association<br><br>
+➢ Les identifiants des entités qui migrent dans la relation sont des clés étrangères<br><br>
+La clé primaire de la relation est la concaténation de toutes les clés étrangères<br><br>
+Exemple<br>
+<figure>
+            <img  src="../fig32.png" alt="Passage d’une association « Plusieurs à Plusieurs » au modèle relationnel">
+            Approvisionnement (<span>Identifiant</span>, DateA)<br>
+Produit (<span>CodeP</span>, LibelléP, QuantitéStock, SeuilAlerte)<br>
+FairePartie (<span>#Identifiant, #CodeP</span>, Quantité)<br><br>
+            <figcaption>Figure 32 : Passage d’une association « Plusieurs à Plusieurs » au modèle relationnel</figcaption>
+        </figure>
+    </p>
+    <h4>Association « au plus un » : (0,1) à (1,1)</h4><br>
+Ce type d’association est interprétée comme une association « père-fils » où le père est
+l’entité ayant la cardinalité (0,1) et le fils la cardinalité (1,1)<br><br>
+Exemple<br>
+Dans ce système d’orientation des bacheliers dans les universités, on suppose que l’Etat
+n’oriente pas tous les bacheliers.<br><br>
+<figure>
+            <img  src="../fig33.png" alt="Passage d’une association « au plus un : (0,1) à (1,1) » au modèle relationnel">
+            Bachelier (<span>INE</span>, Nom, Prenom, EmailPerso, Telephone)<br>
+Orientation (Numéro, Université, Filière, #INE)<br><br>
+            <figcaption>Figure 33 : Passage d’une association « au plus un : (0,1) à (1,1) » au modèle relationnel</figcaption>
+        </figure>
+<h4>Association « un à un » : (1,1) à (1,1) ou « au plus un » : (0,1) à (0,1)</h4><br>
+<h5>Cas d’indépendance existentielle entre les 2 entités</h5><br>
+Cette indépendance suppose qu’une donnée de n’importe entité peut exister sans l’autre.
+Dans ce cas, cette association est interprétée comme une association « plusieurs à plusieurs ».<br><br>
+Exemple<br>
+On se place dans un contexte où chaque personnel doit avoir une seule voiture affectée
+par l’entreprise durant sa mission. L’entreprise commande les voitures indépendamment du
+personnel et c’est un tirage au sort qui détermine leur affectation.<br><br>
+<figure>
+            <img  src="../fig34.png" alt="Passage d’une association « un à un : (1,1) à (1,1) avec indépendance existentielle entre les entités » au modèle relationnel">
+            Personnel (<span>Numéro</span>, Nom, Prenom, Email, Telephone)<br>
+CoompteUVS (<span>Code</span>, Marque, Type)<br>
+Affecter (<span>#Numéro, #Code</span>)<br><br>
+            <figcaption>Figure 34 : Passage d’une association « un à un : (1,1) à (1,1) avec indépendance existentielle entre les entités » au modèle relationnel</figcaption>
+        </figure>
+<h5>Cas de dépendance existentielle entre les 2 entités</h5><br>
+Cette dépendance suppose que la donnée d’une entité ne peut exister avant l’autre. Dans
+ce cas, cette association est interprétée comme une association « père-fils » où le fils est l’entité
+dont la donnée dépend de l’autre (le père).<br><br>
+Exemple<br>
+Dans le système de l’UVS, il faut être orienté avant la création du compte ; de ce fait le
+compte ne saurait exister sans étudiant.<br><br>
+<figure>
+    
+            <img  src="../fig35.png" alt="Passage d’une association « un à un : (1,1) à (1,1) avec dépendance existentielle entre les entités » au modèle relationnel">
+            Etudiant (<span>INE</span>, Nom, Prenom, EmailPerso, Telephone)<br>
+CoompteUVS (<span>Login</span>, Password, EmailUVS, #INE)<br><br>
+            <figcaption>Figure 35 : Passage d’une association « un à un : (1,1) à (1,1) avec dépendance existentielle entre les entités » au modèle relationnel</figcaption>
+        </figure>
+<h4>Association récursive ou réflexive</h4><br>
+En fonction des cardinalités, cette association est interprétée comme une relation « père-
+fils » ou « plusieurs à plusieurs » ou « au plus un » ou « un à un ».
+Les clés (primaires et étrangères) doivent être renommées en utilisant les noms de rôles
+pour les distinguer.<br><br>
+Exemple<br>
+<figure>
+    Système de parrainage où chaque filleul n’a qu’un seul parrain.<br>
+            <img  src="../fig351.png" alt="Passage d’une association « un à un : (1,1) à (1,1) avec dépendance existentielle entre les entités » au modèle relationnel">
+            Personne (<span>NumeroCNI</span>, Nom, Prénom, DateNaissance, #NumeroCNIParrain)<br><br>
+            <figcaption>Figure 35 : Passage d’une association « un à un : (1,1) à (1,1) avec dépendance existentielle entre les entités » au modèle relationnel</figcaption>
+        </figure>
+        <figure>
+            Système de parrainage où un filleul peut avoirs plusieurs parrains.<br>
+            <img  src="../fig36.png" alt="Passage d’une association récursive ou réflexive au modèle relationnel">
+            Personne (<span>NumeroCNI</span>, Nom, Prénom, DateNaissance, #NumeroCNIParrain)<br>
+Etre_Parrain (<span>#NumeroCNIParrain, #NumeroCNIFilleul</span>)<br><br>
+            <figcaption>Figure 36 : Passage d’une association récursive ou réflexive au modèle relationnel</figcaption>
+        </figure>
+<h4>Association d’héritage et de spécialisation</h4><br>
+<h5>Cas d’une spécialisation complète</h5><br>
+Une spécialisation est dite complète si toutes les occurrences de l’entité-mère
+appartiennent à l’instance de l’une des entités-filles.<br>
+Dans ce cas, l’entité-mère ne devient pas une relation et chaque entité-fille devient une
+relation ayant pour attributs, ses propriétés et celle de l’entité-mère et pour clé primaire,
+l’identifiant de l’entité-mère.<br><br>
+Exemple<br>
+Dans cet exemple, la spécialisation est complète car un ordinateur est soit un laptop
+(ordinateur portable), soit un desktop (ordinateur de bureau)<br><br>
+<figure>
+            <img  src="../fig37.png" alt="Passage d’une spécialisation complète au modèle relationnel">
+            Desktop (<span>Code</span>, Processeur, Mémoire, DisqueDur, TypeUnitéCentrale)<br>
+Laptop (<span>Code</span>, Processeur, Mémoire, DisqueDur, Autonomie)<br><br>
+            <figcaption>Figure 37 : Passage d’une spécialisation complète au modèle relationnel</figcaption>
+        </figure>
+<h5>Cas d’une spécialisation incomplète</h5><br>
+Une spécialisation est dite incomplète si certaines occurrences de l’entité-mère
+n’appartiennent à l’instance d’aucune des entités-filles<br>
+Dans ce cas, l’entité-mère devient une relation et chaque entité-fille devient une relation
+ayant pour attributs, ses propriétés et celles de l’entité-mère et pour clé primaire, l’identifiant
+de l’entité-mère.<br><br>
+Exemple<br>
+Dans cet exemple, la spécialisation est incomplète car un appareil peut être ni un
+ordinateur, ni une cuisinière.<br><br>
+<figure>
+            <img  src="../fig38.png" alt="Passage d’une spécialisation complète au modèle relationnel">
+            Appareil (<span>Code</span>, Nom, DateFabrication)<br>
+Ordinateur (<span>Code</span>, Nom, DateFabrication, Processeur, Mémoire, DisqueDur)<br>
+Laptop (<span>Code</span>, Nom, DateFabrication, NombreFeux)<br><br>
+            
+            <figcaption>Figure 38 : Passage d’une spécialisation complète au modèle relationnel</figcaption>
+        </figure>
+
+    `;
+    nav10.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav0, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav11.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Ces sont les mêmes contraintes vues précédemment dans le modèle entité-association.
+A cela, s’ajoute la contrainte de non nullité de la clé primaire.<br><br>
+Il existe une valeur conventionnelle NULL introduite dans le modèle relationnel pour
+représenter l’absence d’information. Elle est utilisée pour définir les valeurs des attributs
+facultatifs dans la relation.
+    </p>
+    `;
+    nav11.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav0, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+
+nav12.addEventListener('click',function () {
+    
+    var elem=`
+    <div class="sql">
+        Approvisionnement (<span>Identifiant</span>, DateA, #NINEA)<br><br>
+Catégorie (<span>CodeCat</span>, LibelléCat ; #CodeCatSup)<br><br>
+Client (<span>Reference</span>, Nom, Prénom, DateNaissance, Sexe, TéléphoneC, EmailC, Login, Password)<br><br>
+Commande (<span>NuméroCde</span>, DateCde, #Reference)<br><br>
+Contenir (<span>#NuméroCde, #CodeP</span>, QuantitéCde)<br><br>
+Facture (<span>NuméroF</span>, DateF, #NuméroCde, #CodeR)<br><br>
+FairePartie (<span>#Identifiant, #CodeP</span>, Quantité)<br><br>
+Fournisseur (<span>NINEA</span>, Désignation, Adresse, TéléphoneF, EmailF, SiteWeb)<br><br>
+Livrer (<span>#NuméroF, # CodeP</span>, QuantitéLivrée)<br><br>
+ModeReglement (<span>CodeR</span>, LibelléR)<br><br>
+Produit (<span>CodeP</span>, LibelléP, PrixUnitaire, QuantitéStock, SeuilAlerte, #CodeCat)<br>
+    </div>
+        <h5 class="centrer">Modèle relationnel de données du site d’e-commerce</h5>
+    `;
+    nav12.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav0, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav13.addEventListener('click',function () {
+    
+    var elem=`
+    <p">
+    Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O43(20%)
+    <p>    `;
+        nav13.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav0, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav14.addEventListener('click',function () {
+    
+    var elem=`
+    <p">
+    Seuil de validation : 60% Titre : Modèle Logique de Données Relationnel de la gestion d’un institut de formation Objectifs visés : O31(80%)
+    <p>    `;
+        nav14.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav0, #nav13, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav15.addEventListener('click',function () {
+    
+    var elem=`
+    <p">
+    Seuil de validation : 60% Titre : Modèle Logique de Données Relationnel de la gestion des états civils Objectifs visés : O31(80%)
+    <p>    `;
+        nav15.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav0, #nav14, #nav16, #nav13, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+    element.innerHTML=elem;
+});
+nav16.addEventListener('click',function () {
+    
+    var elem=`
+    <p">
+    Seuil de validation : 60% Titre : Modèle Logique de Données Relationnel de la gestion d’une chaîne hôtelière Objectifs visés : O31(80%)
+    <p>    `;
+        nav16.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav0, #nav14, #nav15, #nav13, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+    element.innerHTML=elem;
+});
+nav17.addEventListener('click',function () {
+    
+    var elem=`
+    <p">
+    <h4>Introduction</h4><br>
+La normalisation d’un Modèle Logique de Données Relationnel (ou un schéma de
+données relationnel ou d’une base de données) est une opération qui consiste à corriger les
+défauts de conception c’est-à-dire :<br><br>
+➢ minimiser les redondances de données : une donnée peut se retrouver inutilement
+dans plusieurs relations ;<br><br>
+➢ éliminer les incohérences des données : une occurrence d’une donnée peut être
+modifiée mais pas les autres ;<br><br>
+➢ éliminer les pertes de données : une information peut être supprimée alors qu’elle est
+une référence pour les autres ;<br><br>
+➢ améliorer la performance des traitements.<br><br>
+Ces défauts de conception sont dus au non-respect des règles de la modélisation
+conceptuelle et logique des données. La normalisation garantit la modification des donnés dans
+une relation (table plus tard) unique et une propagation de ses mises à jour dans les autres
+relations.<br><br>
+Normaliser une base de données consiste à normaliser chaque relation du MLDR en leur
+mettant en forme normale de telle enseigne que les dépendances fonctionnelles entre les
+attributs d’une relation aient pour source que les clés. Il existe 8 formes normales :<br><br>
+1. Première Forme Normale : 1FN5. Quatrième Forme Normale : 4FN<br><br>
+2. Deuxième Forme Normale : 2FN6. Cinquième Forme Normale : 5FN<br><br>
+3. Troisième Forme Normale : 3FN7. Forme Normale Domaine Clé : FNDC<br><br>
+4. Forme Normale de Boyce-Codd : FNBC8. Sixième Forme Normale :6FN<br><br>
+dont les plus utilisées sont : 1FN, 2FN ; 3FN et FNBC.<br><br>
+Ainsi une base normalisée est une base de données qui respecte les formes normales les
+plus utilisées.<br><br>
+La forme normale d’une base de données est sa forme normale la plus élevée.<br><br>
+    <p>    `;
+        nav17.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav0, #nav14, #nav15, #nav16, #nav13, #nav18, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav18.addEventListener('click',function () {
+    
+    var elem=`
+    <p">
+    Une relation est en Première Forme Normale si tous ses attributs sont atomiques c’est-
+à-dire élémentaire non décomposable. Il faut se rappeler que toute relation possède une clé
+primaire.<br><br>
+Exemple : Toutes les relations de la Figure 39 sont en 1FN<br><br>
+Contre-exemple : Soit la relation suivante<br><br>
+<div class="sql">Personne(Matricule, Nom, Adresse, DateNaissance)</div>
+<h5 class="centrer">Figure 40 : Exemple de relation qui n’est en 1FN</h5><br>
+Elle n’est pas en 1FN car les attributs Nom et Adresse ne sont pas atomiques car d’une
+part, les occurrences de l’attribut Nom contiennent le prénom et le nom de famille et d’autre
+part, les occurrences de l’attribut Adresse contiennent la boîte postale, la ville et le pays (BP
+15 126 Dakar, Sénégal)<br><br>
+Pour rendre une relation en 1FN, il faut décomposer tous les attributs non
+atomiques en attributs atomiques.
+Ainsi, la relation Personne sera :<br><br>
+<div class="sql">Personne(Matricule, Prenom, NomFamille, BoitePostale, Ville, Pays, DateNaissance)</div>
+<h5 class="centrer">Figure 41 : Normalisation en 1FN de la Figure 40</h5><br>
+Attention : L’atomicité d’une valeur dépend de son contexte d’utilisation.
+Par exemple, s’il n’est pas nécessaire de décomposer une adresse en boîte postale, ville
+et pays dans son contexte d’utilisation alors l’attribut Adresse est atomique
+    <p>    `;
+    
+        nav18.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav0, #nav14, #nav15, #nav16, #nav17, #nav13, #nav19, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });    element.innerHTML=elem;
+});
+nav19.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Une relation en Deuxième Forme Normale si :<br><br>
+➢ elle est en 1FN ;<br><br>
+➢ toute dépendance fonctionnelle entre la clé et les autres attributs n’appartenant pas à la
+clé sont élémentaires c’est-à-dire tout attribut n’appartenant pas à la clé dépend
+fonctionnellement de toute la clé et non d’une partie seulement.<br>
+Ainsi, une relation en 1FN et ayant une clé formée d’un seul attribut est donc en 2FN.<br><br>
+Exemple : Toutes les relations de la Figure 39 sont en 2FN<br><br>
+<div class="sql">R(A, B, C) avec A,B→C et B→C</div>
+<h5 class="centrer">Figure 42 : Contre-exemple typique d’une relation qui n’est pas en 2FN</h5><br>
+Contre-exemple : Soit la relation représentant l’évaluation des étudiants :<br>
+<div class="sql">Examen(INE, CodeExamen, Date, Nom, Prenom, NomMatiere, SalleExamen)</div>
+<h5 class="centrer">Figure 43 : Exemple de relation qui n’est pas en 2FN</h5><br>
+Cette relation en 2FN car SalleExamen, Nom et Prénom dépendent fonctionnellement
+d’une partie de la clé : CodeExamen → SalleExamen et INE → Nom, Prenom<br><br>
+Pour rendre une relation en 2FN, il faut :<br>
+➢ mettre la relation en 1FN ;<br><br>
+➢ décomposer la relation en plusieurs relations de telle manière à regrouper dans
+une relation tous les attributs non clés qui ne dépendent pas fonctionnellement de
+la clé entière<br><br>
+➢ ajouter à ces nouvelles relations comme clé, la partie de la clé dont dépend les
+attributs de la nouvelle relation<br><br>
+➢ ajouter dans la relation initiale comme clé étrangère, les clés des nouvelles relations
+La normalisation en 2FN de la Figure 43 donne les relations suivantes :<br><br>
+<div class="sql">Examen(#INE, #CodeExamen, Date, NomMatiere)
+Etudiant(INE, Nom, Prenom)
+Salle(CodeExamen, SalleExamen)</div>
+<h5 class="centrer">Figure 44 : Normalisation en 2FN de la Figure 43</h5><br><br>
+Le respect de la 2FN évite une redondance des données qui encombrent inutilement la
+mémoire et l’espace disque.
+    <p>    `;
+        nav19.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav0, #nav14, #nav15, #nav16, #nav17, #nav18, #nav13, #nav20, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav20.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Une relation en Troisième Forme Normale si :<br>
+➢ elle est en 2FN ;<br>
+➢ tout attribut n’appartenant pas à une clé ne dépend pas d’un autre attribut non clé c’est-
+à-dire tout attribut non-clé dépend directement d’une clé.<br><br>
+Attention : Il s’agit de toute clé candidate pas seulement de la clé primaire<br>
+Exemple : Toutes les relations de la Figure 39 sont en 3FN<br><br>
+<div class="sql">R(A, B, C) avec A→B et B→C</div>
+<h5 class="centrer">Figure 45 : Contre-exemple typique d’une relation qui n’est pas en 3FN</h5><br>
+Contre-exemple : Soit la relation représentant la fabrication des produits :<br><br>
+<div class="sql">Fabrication(CodeProduit, NomProduit, DateFabrication, CodeUsine, NomUsine)</div>
+<h5 class="centrer">Figure 46 : Exemple de relation qui n’est pas en 3FN</h5><br>
+Cette relation n’est pas en 3FN car l’attribut CodeUsine n’est ni clé primaire, ni clé
+candidate alors que CodeUsine → NomUsine.<br><br>
+Pour rendre une relation en 3FN, il faut :<br>
+➢ mettre la relation en 2FN ;<br><br>
+➢ décomposer la relation en plusieurs relations de telle manière à regrouper dans
+une relation tous les attributs non clés qui ne dépendent pas fonctionnellement de
+la clé (clé candidate)<br><br>
+➢ ajouter à ces nouvelles relations comme clé, l’attribut dont dépend les attributs de
+la nouvelle relation<br><br>
+➢ ajouter dans la relation initiale comme clé étrangère, les clés des nouvelles relations<br><br>
+La normalisation en 3FN de la Figure 46 donne les relations suivantes :<br><br>
+<div class="sql">Fabrication(CodeProduit, NomProduit, DateFabrication, #CodeUsine)<br>
+Usine(CodeUsine, NomUsine)</div>
+<h5 class="centrer">Figure 47 : Normalisation en 3FN de la Figure 43</h5>
+    <p>    `;
+        nav20.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav0, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav13, #nav21, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav21.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Une relation en Forme Normale de Boyce-Codd si :<br>
+➢ elle est en 3FN ;<br>
+➢ tout attribut qui n'appartient pas à une clé (candidate) n'est pas source d'une dépendance
+fonctionnelle vers une partie d'une clé. C'est-à-dire que les seules dépendances
+fonctionnelles élémentaires existantes sont celles dans lesquelles une clé détermine un
+attribut.<br><br>
+Exemple : Toutes les relations de la Figure 39 sont en FNBC<br>
+<div class="sql">R(A, B, C) avec A,B→C et C→B</div><br>
+<h5 class="centrer">Figure 48 : Contre-exemple typique d’une relation qui n’est pas en FNBC</h5><br><br>
+Contre-exemple : Soit la relation suivante :<br>
+<div class="sql">Transport(Itinéraire, Immatriculation, Date, Chauffeur, Rapport)<br><br>
+Avec les dépendances fonctionnelles suivantes :<br>
+NumeroItineraire, Immatriculation, Date → CodeChauffeur, Rapport
+CodeChauffeur → Immatriculation</div><br>
+<h5 class="centrer">Figure 49 : Exemple de relation qui n’est en FNBC</h5><br><br>
+Cette relation n’est pas en FNBC car une voiture est affectée à un seul chauffeur
+(CodeChauffeur → Immatriculation)<br><br>
+Pour rendre une relation en FNBC, il faut :<br>
+➢ mettre la relation en 3FN ;<br><br>
+➢ décomposer la relation en plusieurs relations de telle manière à regrouper dans
+une relation tous les attributs figurant dans la dépendance fonctionnelle dont un
+attribut non-clé détermine une partie de la clé ;<br><br>
+➢ mettre comme clé dans les relations récemment crées ; l’attribut source de la
+dépendance fonctionnelle ;<br><br>
+➢ supprimer dans la relation initiale, les attributs figurant dans les relations
+récemment créées ;<br><br>
+➢ mettre comme clé étrangère dans la relation initiale, les clés primaires des relations
+récemment crées.<br><br>
+La normalisation en FNBC de la Figure 49 donne les relations suivantes :<br>
+<div class="sql">Affectation(CodeChauffeur, Immatriculation)<br>
+Transport(Itinéraire, Date, #Chauffeur, Rapport)</div><br>
+<h5 class="centrer">Figure 50 : Normalisation en FNBC de la Figure 49</h5>
+    <p>    `;
+        nav21.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav0, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav13, #nav22");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+nav22.addEventListener('click',function () {
+    
+    var elem=`
+    <p>
+        Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O44(20%)
+    <p>    `;
+        nav22.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1,#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav0, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav13");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+});
+</script>

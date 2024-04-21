@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html body{
+    height: 100vh;
+    background-color: #171933;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom:2px solid ;
+    border-image: linear-gradient(to right, rgb(0, 255, 0), yellow, red);
+    border-bottom-left-radius:9999px;
+    border-bottom-right-radius:9999px ;
+    border-image-slice: 2;
+    backdrop-filter: blur(1.5rem);
+    z-index: 10;
+    
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul > a{
+    font-size: xx-large;
+}
+.logoContainer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 25%;
+}
+.logoContainer>a:hover{
+    background: linear-gradient(to right, rgb(0, 255, 0), yellow, red);
+    background-clip: text;
+    color: transparent;
+}
+.navContainer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 80%;
+
+}
+.navContainer>li:hover{
+    background: linear-gradient(to right, rgb(0, 255, 0), rgb(0, 255, 0), yellow,red, red);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+li{
+    margin-inline: 50px;
+    list-style-type: none;
+}
+a{
+    margin: auto;
+    text-decoration: none;
+    color: white;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-top: 60px;
+    height: auto;
+}
+.seqContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.seqPresentation{
+    color: white;
+    font-size: x-large;
+    font-style: italic;
+}
+.seqPresentation  h3 > span:nth-child(1){
+    color: rgb(0, 255, 0);
+}
+.seqPresentation  h3 > span:nth-child(2){
+    color: yellow;
+}
+.seqPresentation  h3 > span:nth-child(3){
+    color: red;
+}
+.seqPresentation{
+     background: linear-gradient(to right, rgb(0, 255, 0), yellow, red);
+  background-clip: text;
+  color: transparent;
+}
+.emoji{
+    font-size: 40px;
+    background: none;
+    color: burlywood;
+}
+.seqLink{
+    color: white;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+    height: 250px;
+    border-bottom:2px solid ;
+    border-image: linear-gradient(to right, rgb(0, 255, 0), yellow, red);
+    border-image-slice: 2;
+    border-radius:1.5%;
+    background-color: #22244d;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+    z-index: 5;
+}
+.seqLink:hover{
+    border: 2px solid ;
+    border-image: linear-gradient( rgb(0, 255, 0), yellow, red);
+    border-image-slice: 1;
+    border-radius:1.5%;
+    transform: scale(1.2);
+    backdrop-filter: blur(1rem);
+    background-color:transparent;
+    z-index: 6;
+    transition-duration: 1.5s;
+}
+.seqTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seqComment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seqComment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    width: 80%;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.666);
+}
+.seqComment{
+    font-size: small;
+    background-color: #13152c;
+    height: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.seqComment > span{
+    margin: auto;
+}
+
+.pdf{
+    height: 550px;
+    width: 95%;
+    margin: auto;
+    margin-top: 95px;
+}

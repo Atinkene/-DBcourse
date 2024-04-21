@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/seq.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>SIMAC | Séquense</title>
+</head>
+<body>
+   <header>
+        <nav>
+            <ul class="logoContainer">
+                <a id="" href="#">Base de donnée</a>  
+            </ul>
+            <ul class="navContainer">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./seq.html">Séquences</a></li>
+                <li><a id="" href="#">Exercices</a></li>
+                <li><a id="" href="#">A propos</a></li>
+                <li><a href="./pdf.html">Voir le PDF</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="part seqences">
+        <nav>
+            <ul class="seqContent">
+                <li class="liste"><a id="seq1" class="seq" href="./seq1.html"><div class="">Des données à une base de donnée</div></a></li>
+                <li class="liste"><a id="seq2" class="seq" href="./seq2.html"><div class="">Généralité sur les bases de donnée</div></a></li>
+                <li class="liste"><a id="seq3" class="seq" href="./seq3.html"><div class="">Modélisation conceptuelle des données : Modèle Entité-Association</div></a></li>
+                <li class="liste"><a id="seq4" class="seq" href="./seq4.html"><div class="">Modélisation logique des donnés : Modèle Relationnel</div></a></li>
+                <li class="liste"><a id="seq5" class="seq clic" href="./seq5.html"><div class="">Interrogation d’une base de données : Algèbre relationnelle</div></a></li>
+                <li class="liste"><a id="seq6" class="seq" href="./seq6.html"><div class="">Implémentation d’une base de données : Modèle physique</div></a></li>
+            </ul>
+        </nav>
+    </div>
+   <div class="section">
+            
+            <div class="part container" id="container">
+                <div class="element" id="element">
+                    <p>
+                        L'algèbre relationnelle est un langage de requêtes dans des bases de données
+        relationnelles. L'algèbre relationnelle a été inventée en 1970 par Edgar Frank Codd, le directeur
+        de recherche du centre IBM de San José. <br>
+        L’algèbre relationnelle fournit les opérations permettant d’interroger les bases de
+        données. C’est un support mathématique cohérent sur lequel repose le modèle relationnel.
+        En algèbre relationnelle, on dit comment obtenir un résultat. Ce dernier est généralement
+        une nouvelle relation, on dit ainsi que les opérations de l’algèbre relationnelle sont des
+        opérations ensemblistes. <br><br>
+        <h4>Les opérateurs unaires</h4><br>
+        Les opérateurs unaires sont les opérateurs qui utilisent une seule relation. En plus de la
+        relation, il est possible d’utiliser d’autres choses comme la condition ou l’attribut. Le terme
+        unaire est utilisé pour signifier le nombre de relations entrant en jeu dans l’opération.<br><br>
+        <h4>La sélection ou restriction</h4><br>
+        La sélection ou la restriction permet d’extraire d’une relation R, les données qui
+        respectent une condition P. La condition est une expression booléenne dont l’évaluation
+        donnera soit la valeur VRAI soit FAUX. La condition utilise les opérateurs relationnels ou de
+        comparaison suivants : l’égalité (=), la différence ou l’inégalité (≠), l’infériorité ou sens stricte
+        (<), l’infériorité au sens large (≤), la supériorité au sens stricte (>) et la supériorité au sens large
+        (≥). La condition peut être simple ou composée en utilisant les opérateurs logiques ou
+        booléennes suivantes : la conjonction logique (ET), la disjonction logique (OU) et la négation
+        logique (NON).<br><br>
+        L’opérateur de la sélection est  et est défini ainsi :<br><br>
+       <div class="sql">  ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐂𝐨𝐧𝐝𝐢𝐭𝐢𝐨𝐧 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧<br>
+           ___________(𝐑, 𝐏)_________⟼     R' </div><br><br>
+        Et s’écrit ainsi : 𝑹′ = 𝝈𝐏 (𝐑) ou 𝑹′ = 𝝈[𝐏] (𝐑)<br><br>
+
+        <figure>
+            <img class="pimg" src="../fig51.png" alt="Représentation graphique de l’opérateur de sélection ou restriction">
+            <figcaption>Figure 51 : Représentation graphique de l’opérateur de sélection ou restriction</figcaption>
+        </figure>
+        R’ a le même schéma de données que R mais l’instance de R’ est une partie de l’instance
+        de R dont les données vérifient la condition P.<br><br>
+        Exemple : Sélection des produits dont qu’il faut approvisionner le stock dans l’urgence
+        en se basant sur le schéma de données de la Figure 39 : Modèle relationnel de données du site
+        d’e-commerce<br><br>
+        𝑹𝒆𝒔𝒖𝒍𝒕𝒂𝒕 = 𝝈𝐐𝐮𝐚𝐧𝐭𝐢𝐭𝐞𝐒𝐭𝐨𝐜𝐤 <= 𝐒𝐞𝐮𝐢𝐥𝐀𝐥𝐞𝐫𝐭𝐞 (𝐏𝐫𝐨𝐝𝐮𝐢𝐭)<br><br>
+        
+        <figure>
+            <img class="pimg" src="../fig52.png" alt="Représentation graphique de la requête de sélection des produits à approvisionner en urgence">
+            <figcaption>Figure 52 : Représentation graphique de la requête de sélection des produits à approvisionner en urgence</figcaption>
+        </figure>
+        <h4>La projection</h4><br>
+        La projection permet de créer une nouvelle relation dont les attributs correspondent à
+        une partie des attributs de la relation initiale. Les données de la nouvelle relation sont les
+        données de la relation initiale dont les attributs sont désignés dans la nouvelle relation.
+        L’opérateur de la projection est  et est défini ainsi :<br><br>
+        <div class="sql">  ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐋𝐢𝐬𝐭𝐞 𝐝′𝐚𝐭𝐭𝐫𝐢𝐛𝐮𝐭𝐬 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧<br>
+        ___________(𝐑, 𝑨𝟏 , 𝑨𝟐 , … , 𝑨𝒏 ) ⟼ R'</div><br><br>
+        Et s’écrit ainsi : 𝑹′ = 𝝅𝑨𝟏 ,𝑨𝟐 ,… ,𝑨𝒏 (𝐑) 𝒐𝒖 𝑹′ = 𝝅[𝑨𝟏 ,𝑨𝟐 ,… ,𝑨𝒏 ] (𝐑)<br><br>
+        <figure>
+            <img class="pimg" src="../fig53.png" alt="Représentation graphique de l’opérateur de projection">
+            <figcaption>Figure 53 : Représentation graphique de l’opérateur de projection</figcaption>
+        </figure>
+        Exemple : Liste des clients avec les attributs : nom, prénom, téléphone et adresse
+        électronique en se basant sur le schéma de données de la Figure 39 : Modèle relationnel de
+        données du site d’e-commerce<br><br>
+        𝑹é𝒔𝒖𝒍𝒕𝒂𝒕 = 𝝅𝐍𝐨𝐦, 𝐏𝐫𝐞𝐧𝐨𝐦, 𝐓𝐞𝐥𝐞𝐩𝐡𝐨𝐧𝐞𝐂, 𝐄𝐦𝐚𝐢𝐥 (𝐂𝐥𝐢𝐞𝐧𝐭)<br><br>
+        <figure>
+            <img class="pimg" src="../fig54.png" alt="Représentation graphique de la requête de la projection de la relation Client sur les attributs :
+            nom, prénom, téléphone et adresse électronique">
+            <figcaption>Figure 54 : Représentation graphique de la requête de la projection de la relation Client sur les attributs : nom, prénom, téléphone et adresse électronique</figcaption>
+        </figure>
+        
+        <h4>Le renommage</h4><br>
+        Le renommage permet de changer le nom de certains attributs d’une relation sans
+        modifier la structure de la relation. La nouvelle relation obtenue après renommage de certains
+        attributs a des données identiques à celles de la relation initiale.
+        L’opérateur du renommage est  et est défini ainsi :<br><br>
+        <div class="sql">𝜶 ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐋𝐢𝐬𝐭𝐞 𝐝′ 𝐚𝐭𝐭𝐫𝐢𝐛𝐮𝐭𝐬 𝐚𝐯𝐞𝐜 𝐥𝐞 𝐧𝐨𝐮𝐯𝐞𝐚𝐮𝐮 𝐧𝐨𝐦
+        ___________→ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 <br>
+        (𝐑, 𝑨𝟏 : 𝐍𝐨𝐮𝐯𝐞𝐚𝐮𝐍𝐨𝐦𝟏 , 𝑨𝟐 : 𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝟐 , … , 𝑨𝒏 : 𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝒏 ) ⟼ R'</div><br><br>
+        Et s’écrit ainsi : 𝑹′ = 𝜶𝑨𝟏 :𝐍𝐨𝐮𝐯𝐞𝐚𝐮𝐍𝐨𝐦𝟏 , 𝑨𝟐 :𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝟐 ,… ,𝑨𝒏 :𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝒏 (𝐑) ou
+        𝑹′ = 𝜶[𝑨𝟏 :𝐍𝐨𝐮𝐯𝐞𝐚𝐮𝐍𝐨𝐦𝟏 , 𝑨𝟐 :𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝟐 ,… ,𝑨𝒏 :𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝒏 ] (𝐑)<br><br>
+        Exemple : Liste des fournisseurs où la désignation est renommée par nom du fournisseur
+        en se basant sur le schéma de données de la Figure 39 : Modèle relationnel de données du site
+        d’e-commerce<br><br>
+        𝑹′ = 𝜶𝐃𝐞𝐬𝐢𝐠𝐧𝐚𝐭𝐢𝐨𝐧 :𝐍𝐨𝐦 𝐝𝐮 𝐟𝐨𝐮𝐫𝐧𝐢𝐬𝐬𝐞𝐮𝐫 (𝐅𝐨𝐮𝐫𝐧𝐢𝐬𝐬𝐞𝐮𝐫)
+        
+        
+                    </p>
+                </div>
+            </div>
+           
+   </div>
+   <div class="navigation" id="navigation">
+    <nav>
+        <ul class="navContent">
+            <h3>Ecrire des requêtes d’interrogation de la base de données en algèbre relationnelle</h3>
+            <li><a id="nav0" class="nav" href="#"><div class="">Les opérateurs unitaires</div></a></li>
+            <li><a id="nav1" class="nav" href="#"><div class="">Les opérateurs binaires</div></a></li>
+            <li><a id="nav2" class="nav" href="#"><div class="">Les opérateurs composés : les jointures</div></a></li>
+            <li><a id="nav3" class="nav" href="#"><div class="">Exercice 26</div></a></li>
+            <li><a id="nav4" class="nav" href="#"><div class="">Exercice 27</div></a></li>
+            <li><a id="nav5" class="nav" href="#"><div class="">Exercice 28</div></a></li>
+            <li><a id="nav6" class="nav" href="#"><div class="">Exercice 29</div></a></li>
+        </ul>
+</nav>
+</div>
+</body>
+</html>
+<script>
+    var nav0=document.getElementById('nav0');
+    var nav1=document.getElementById('nav1');
+    var nav2=document.getElementById('nav2');
+    var nav3=document.getElementById('nav3');
+    var nav4=document.getElementById('nav4');
+    var nav5=document.getElementById('nav5');
+    var nav6=document.getElementById('nav6');
+    nav0.addEventListener('click',function () {
+        var elem =`
+        <p>
+                        L'algèbre relationnelle est un langage de requêtes dans des bases de données
+        relationnelles. L'algèbre relationnelle a été inventée en 1970 par Edgar Frank Codd, le directeur
+        de recherche du centre IBM de San José. <br>
+        L’algèbre relationnelle fournit les opérations permettant d’interroger les bases de
+        données. C’est un support mathématique cohérent sur lequel repose le modèle relationnel.
+        En algèbre relationnelle, on dit comment obtenir un résultat. Ce dernier est généralement
+        une nouvelle relation, on dit ainsi que les opérations de l’algèbre relationnelle sont des
+        opérations ensemblistes. <br><br>
+        <h4>Les opérateurs unaires</h4><br>
+        Les opérateurs unaires sont les opérateurs qui utilisent une seule relation. En plus de la
+        relation, il est possible d’utiliser d’autres choses comme la condition ou l’attribut. Le terme
+        unaire est utilisé pour signifier le nombre de relations entrant en jeu dans l’opération.<br><br>
+        <h4>La sélection ou restriction</h4><br>
+        La sélection ou la restriction permet d’extraire d’une relation R, les données qui
+        respectent une condition P. La condition est une expression booléenne dont l’évaluation
+        donnera soit la valeur VRAI soit FAUX. La condition utilise les opérateurs relationnels ou de
+        comparaison suivants : l’égalité (=), la différence ou l’inégalité (≠), l’infériorité ou sens stricte
+        (<), l’infériorité au sens large (≤), la supériorité au sens stricte (>) et la supériorité au sens large
+        (≥). La condition peut être simple ou composée en utilisant les opérateurs logiques ou
+        booléennes suivantes : la conjonction logique (ET), la disjonction logique (OU) et la négation
+        logique (NON).<br><br>
+        L’opérateur de la sélection est  et est défini ainsi :<br><br>
+       <div class="sql">  ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐂𝐨𝐧𝐝𝐢𝐭𝐢𝐨𝐧 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧<br>
+           ___________(𝐑, 𝐏)_________⟼     R' </div><br><br>
+        Et s’écrit ainsi : 𝑹′ = 𝝈𝐏 (𝐑) ou 𝑹′ = 𝝈[𝐏] (𝐑)<br><br>
+
+        <figure>
+            <img class="pimg" src="../fig51.png" alt="Représentation graphique de l’opérateur de sélection ou restriction">
+            <figcaption>Figure 51 : Représentation graphique de l’opérateur de sélection ou restriction</figcaption>
+        </figure>
+        R’ a le même schéma de données que R mais l’instance de R’ est une partie de l’instance
+        de R dont les données vérifient la condition P.<br><br>
+        Exemple : Sélection des produits dont qu’il faut approvisionner le stock dans l’urgence
+        en se basant sur le schéma de données de la Figure 39 : Modèle relationnel de données du site
+        d’e-commerce<br><br>
+        𝑹𝒆𝒔𝒖𝒍𝒕𝒂𝒕 = 𝝈𝐐𝐮𝐚𝐧𝐭𝐢𝐭𝐞𝐒𝐭𝐨𝐜𝐤 <= 𝐒𝐞𝐮𝐢𝐥𝐀𝐥𝐞𝐫𝐭𝐞 (𝐏𝐫𝐨𝐝𝐮𝐢𝐭)<br><br>
+        
+        <figure>
+            <img class="pimg" src="../fig52.png" alt="Représentation graphique de la requête de sélection des produits à approvisionner en urgence">
+            <figcaption>Figure 52 : Représentation graphique de la requête de sélection des produits à approvisionner en urgence</figcaption>
+        </figure>
+        <h4>La projection</h4><br>
+        La projection permet de créer une nouvelle relation dont les attributs correspondent à
+        une partie des attributs de la relation initiale. Les données de la nouvelle relation sont les
+        données de la relation initiale dont les attributs sont désignés dans la nouvelle relation.
+        L’opérateur de la projection est  et est défini ainsi :<br><br>
+        <div class="sql">  ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐋𝐢𝐬𝐭𝐞 𝐝′𝐚𝐭𝐭𝐫𝐢𝐛𝐮𝐭𝐬 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧<br>
+        ___________(𝐑, 𝑨𝟏 , 𝑨𝟐 , … , 𝑨𝒏 ) ⟼ R'</div><br><br>
+        Et s’écrit ainsi : 𝑹′ = 𝝅𝑨𝟏 ,𝑨𝟐 ,… ,𝑨𝒏 (𝐑) 𝒐𝒖 𝑹′ = 𝝅[𝑨𝟏 ,𝑨𝟐 ,… ,𝑨𝒏 ] (𝐑)<br><br>
+        <figure>
+            <img class="pimg" src="../fig53.png" alt="Représentation graphique de l’opérateur de projection">
+            <figcaption>Figure 53 : Représentation graphique de l’opérateur de projection</figcaption>
+        </figure>
+        Exemple : Liste des clients avec les attributs : nom, prénom, téléphone et adresse
+        électronique en se basant sur le schéma de données de la Figure 39 : Modèle relationnel de
+        données du site d’e-commerce<br><br>
+        𝑹é𝒔𝒖𝒍𝒕𝒂𝒕 = 𝝅𝐍𝐨𝐦, 𝐏𝐫𝐞𝐧𝐨𝐦, 𝐓𝐞𝐥𝐞𝐩𝐡𝐨𝐧𝐞𝐂, 𝐄𝐦𝐚𝐢𝐥 (𝐂𝐥𝐢𝐞𝐧𝐭)<br><br>
+        <figure>
+            <img class="pimg" src="../fig54.png" alt="Représentation graphique de la requête de la projection de la relation Client sur les attributs :
+            nom, prénom, téléphone et adresse électronique">
+            <figcaption>Figure 54 : Représentation graphique de la requête de la projection de la relation Client sur les attributs : nom, prénom, téléphone et adresse électronique</figcaption>
+        </figure>
+        
+        <h4>Le renommage</h4><br>
+        Le renommage permet de changer le nom de certains attributs d’une relation sans
+        modifier la structure de la relation. La nouvelle relation obtenue après renommage de certains
+        attributs a des données identiques à celles de la relation initiale.
+        L’opérateur du renommage est  et est défini ainsi :<br><br>
+        <div class="sql">𝜶 ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐋𝐢𝐬𝐭𝐞 𝐝′ 𝐚𝐭𝐭𝐫𝐢𝐛𝐮𝐭𝐬 𝐚𝐯𝐞𝐜 𝐥𝐞 𝐧𝐨𝐮𝐯𝐞𝐚𝐮𝐮 𝐧𝐨𝐦
+        ___________→ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 <br>
+        (𝐑, 𝑨𝟏 : 𝐍𝐨𝐮𝐯𝐞𝐚𝐮𝐍𝐨𝐦𝟏 , 𝑨𝟐 : 𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝟐 , … , 𝑨𝒏 : 𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝒏 ) ⟼ R'</div><br><br>
+        Et s’écrit ainsi : 𝑹′ = 𝜶𝑨𝟏 :𝐍𝐨𝐮𝐯𝐞𝐚𝐮𝐍𝐨𝐦𝟏 , 𝑨𝟐 :𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝟐 ,… ,𝑨𝒏 :𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝒏 (𝐑) ou
+        𝑹′ = 𝜶[𝑨𝟏 :𝐍𝐨𝐮𝐯𝐞𝐚𝐮𝐍𝐨𝐦𝟏 , 𝑨𝟐 :𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝟐 ,… ,𝑨𝒏 :𝑵𝒐𝒖𝒗𝒆𝒂𝒖𝑵𝒐𝒎𝒏 ] (𝐑)<br><br>
+        Exemple : Liste des fournisseurs où la désignation est renommée par nom du fournisseur
+        en se basant sur le schéma de données de la Figure 39 : Modèle relationnel de données du site
+        d’e-commerce<br><br>
+        𝑹′ = 𝜶𝐃𝐞𝐬𝐢𝐠𝐧𝐚𝐭𝐢𝐨𝐧 :𝐍𝐨𝐦 𝐝𝐮 𝐟𝐨𝐮𝐫𝐧𝐢𝐬𝐬𝐞𝐮𝐫 (𝐅𝐨𝐮𝐫𝐧𝐢𝐬𝐬𝐞𝐮𝐫)
+        
+        
+                    </p>
+        `;
+        nav0.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav1.addEventListener('click',function () {
+        var elem =`
+        <p>
+            Les opérateurs binaires sont les opérateurs qui utilisent deux relations. En plus des
+relations, il est possible d’utiliser d’autres choses comme la condition ou l’attribut. Le terme
+binaire est utilisé pour signifier le nombre de relations entrant en jeu dans l’opération.<br><br>
+<h4>L’union</h4><br>
+L’union de 2 relations de même schéma est une relation de même schéma dont les
+données sont les données des 2 relations. L’union est une opération commutative et associative.
+L’opérateur d’union est  et est défini ainsi :<br><br>
+<div class="sql">∪∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧<br>
+____________(𝐑 𝟏 , 𝐑 𝟐 )
+⟼ R'<br></div><br>
+Et s’écrit ainsi : 𝐑′ = 𝐑 𝟏 ∪ 𝐑 𝟐<br><br>
+<figure>
+            <img class="pimg" src="../fig55.png" alt="Représentation graphique de l’opérateur d’union">
+            <figcaption>Figure 55 : Représentation graphique de l’opérateur d’union</figcaption>
+        </figure>
+<br>
+<h4>L’intersection</h4><br>
+L’intersection de 2 relations de même schéma est une relation de même schéma dont les
+données sont celles identiques aux 2 relations. L’intersection est une opération commutative et
+associative.<br><br>
+L’opérateur d’intersection est  et est défini ainsi :<br><br>
+<div class="sql">∩∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧
+<br>____________(𝐑 𝟏 , 𝐑 𝟐 )
+⟼ R'</div><br>
+Et s’écrit ainsi : 𝐑′ = 𝐑 𝟏 ∩ 𝐑 𝟐<br><br>
+<figure>
+            <img class="pimg" src="../fig56.png" alt="Représentation graphique de l’opérateur d’intersection">
+            <figcaption>Figure 56 : Représentation graphique de l’opérateur d’intersection</figcaption>
+        </figure>
+<h4>La différence</h4><br>
+La différence de 2 relations R1 et R2 de même schéma est une relation de même schéma
+dont les données sont celles de la première relation (R1) qui ne sont pas dans la seconde (R2).
+La différence n’est ni commutative, ni associative.<br>
+L’opérateur de la différence est - et est défini ainsi :<br><br>
+<div class="sql">− ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧<br>
+_____________(𝐑 𝟏 , 𝐑 𝟐 )
+⟼ R'</div><br>
+Et s’écrit ainsi : 𝐑′ = 𝐑 𝟏 − 𝐑 𝟐<br><br>
+<figure>
+            <img class="pimg" src="../fig57.png" alt="Représentation graphique de l’opérateur de différence">
+            <figcaption>Figure 57 : Représentation graphique de l’opérateur de différence</figcaption>
+        </figure>
+<h4>Le produit cartésien</h4><br>
+Le produit cartésien de 2 relations de schémas différents avec une intersection vide des
+2 schémas est une relation dont le schéma est la concaténation des schémas des 2 relations et
+les données sont obtenues en concaténant chaque tuple de la première relation avec chaque
+tuple de la seconde relation. Le produit cartésien est une opération commutative et associative.
+L’opérateur du produit cartésien est X et est défini ainsi :<br><br>
+<div class="sql">𝑿 ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧<br>
+_____________(𝐑 𝟏 , 𝐑 𝟐 )
+⟼ R'<br></div><br>
+Et s’écrit ainsi : 𝐑′ = 𝐑 𝟏 𝐗 𝐑 𝟐<br>
+<figure>
+            <img class="pimg" src="../fig58.png" alt="Représentation graphique de l’opérateur du produit cartésien">
+            <figcaption>Figure 58 : Représentation graphique de l’opérateur du produit cartésien</figcaption>
+        </figure>
+<h4>La division</h4><br>
+La division de la relation R1 par la relation R2 est une relation dont les attributs sont
+ceux de R1 qui ne sont pas dans R2 et les données sont des valeurs correspondant aux attributs
+du résultat tels qu’en faisant le produit cartésien avec les données de R2, on obtient les tuples
+de inclus dans R1. Pour que la division soit possible, il faut que les attributs de R2 soient inclus
+dans les attributs de R1 et que R1 aient plus d’attributs que R2. La division n’est ni commutative,
+ni associative.<br><br>
+L’opérateur de la division est ÷ et est défini ainsi :<br><br>
+
+<div class="sql">÷ ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧<br>
+_____________(𝐑 𝟏 , 𝐑 𝟐 )⟼ R'</div><br>
+Et s’écrit ainsi : 𝐑′ = 𝐑 𝟏 ÷ 𝐑 𝟐
+<figure>
+            <img class="pimg" src="../fig59.png" alt=" Représentation graphique de l’opérateur de la division">
+            <figcaption>Figure 59 : Représentation graphique de l’opérateur de la division</figcaption>
+        </figure>
+        </p>
+        `;
+        nav1.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav0, #nav2, #nav3, #nav4, #nav5, #nav6");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+
+    nav2.addEventListener('click',function () {
+        var elem =`
+        <p>
+            <h4>La jointure naturelle</h4> <br>
+La jointure naturelle de 2 relations est une relation dont le schéma est la concaténation
+des 2 schémas sans répétition des attributs identiques et les données sont obtenues en
+concaténant chaque tuple de la première relation avec chaque tuple de la seconde relation ayant
+les mêmes valeurs sur les attributs communs c’est-à-dire que tous les attributs communs aux 2
+relations doivent avoir les mêmes valeurs. La jointure naturelle est une opération commutative
+et associative.<br><br>
+La jointure naturelle est généralement utilisée pour 2 relations ayant une contrainte
+d’intégrité référentielle entre elles c’est-à-dire que l’une des 2 relations comporte une clé
+étrangère venant de l’autre relation. La jointure naturelle se fera selon la condition que la clé
+étrangère soit égale à la clé primaire de l’autre relation.<br><br>
+L’opérateur de la jointure naturelle est ⋈ et est défini ainsi :<br><br>
+<div class="sql">⋈ ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 <br>
+_____________(𝐑 𝟏 , 𝐑 𝟐 )
+⟼ R'<br></div><br>
+Et s’écrit ainsi : 𝐑′ = 𝐑 𝟏 ⋈ 𝐑 𝟐<br><br>
+<figure>
+            <img class="pimg" src="../fig60.png" alt=" Représentation graphique de l’opérateur de la jointure naturelle">
+            <figcaption>Figure 60 : Représentation graphique de l’opérateur de la jointure naturelle</figcaption>
+        </figure>
+La jointure naturelle peut être obtenue par :<br><br>
+
+➢un produit cartésien des 2 relations. Pour faire le produit cartésien, il faut renommer l’un
+des attributs identiques.<br><br>
+➢ une restriction sur les attributs communs (sachant que certains attributs ont été
+renommés)<br><br>
+➢ une projection pour éliminer les attributs renommés<br><br>
+<h4>La théta-jointure ou inéqui-jointure</h4><br>
+La théta-jointure naturelle de 2 relations est une relation dont le schéma est la
+concaténation des 2 schémas et les données sont obtenues en concaténant chaque tuple de la
+première relation avec chaque tuple de la seconde relation vérifiant la condition P. Dans la
+condition P, les opérateurs de comparaison possibles ne peuvent être que <, ≤, >, ≥, et ≠. La
+théta-jointure est une opération commutative et associative.<br><br>
+L’opérateur de la théta-jointure est ⋈ et est défini ainsi :<br><br>
+<div class="sql">⋈𝛉 ∶ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧 𝐱 𝐂𝐨𝐧𝐝𝐢𝐭𝐢𝐨𝐧 → 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧<br>
+_________________________(𝐑 𝟏 , 𝐑 𝟐 , 𝑷) ⟼ R'<br></div><br>
+Et s’écrit ainsi : 𝐑′ = 𝐑 𝟏 ⋈θ[P] 𝐑 𝟐<br><br>
+<figure>
+            <img class="pimg" src="../fig61.png" alt="Représentation graphique de l’opérateur de la théta-jointure ou inéqui-jointure">
+            <figcaption>Figure 61 : Représentation graphique de l’opérateur de la théta-jointure ou inéqui-jointure</figcaption>
+        </figure>
+La théta-jointure peut être obtenue en calculant le produit cartésien des 2 relations suivi
+d’une restriction vérifiant la condition.<br><br>
+<h4>L’équi-jointure</h4><br>
+L’équi-jointure est une théta-jointure ou le seul opérateur de comparaison est l’égalité
+(=).
+        </p>
+        `;
+        nav2.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav0, #nav3, #nav4, #nav5, #nav6");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav3.addEventListener('click',function () {
+        var elem =`
+        <p>
+            Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O51(20%)
+        </p>
+        `;
+        nav3.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav0, #nav4, #nav5, #nav6");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav4.addEventListener('click',function () {
+        var elem =`
+        <p>
+            Seuil de validation : 60% Titre : Requêtes d’interrogation de la gestion d’un institut de formation Objectifs visés : O51(80%)
+        </p>
+        `;
+        nav4.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav0, #nav5, #nav6");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav5.addEventListener('click',function () {
+        var elem =`
+        <p>
+            Seuil de validation : 60% Titre : Requêtes d’interrogation de la gestion des états civils Objectifs visés : O51(80%)
+        </p>
+        `;
+        nav5.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav0, #nav6");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav6.addEventListener('click',function () {
+        var elem =`
+        <p>
+            Seuil de validation : 60% Titre : Requêtes d’interrogation de la gestion d’une chaîne hôtelière Objectifs visés : O51(80%
+        </p>
+        `;
+        nav6.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav0");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    
+</script>

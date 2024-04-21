@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/seq.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>SIMAC | Séquense</title>
+</head>
+<body>
+   <header>
+        <nav>
+            <ul class="logoContainer">
+                <a id="" href="#">Base de donnée</a>  
+            </ul>
+            <ul class="navContainer">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./seq.html">Séquences</a></li>
+                <li><a id="" href="#">Exercices</a></li>
+                <li><a id="" href="#">A propos</a></li>
+                <li><a href="./pdf.html">Voir le PDF</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="part seqences">
+        <nav>
+            <ul class="seqContent">
+                <li class="liste"><a id="seq1" class="seq" href="./seq1.html"><div class="">Des données à une base de donnée</div></a></li>
+                <li class="liste"><a id="seq2" class="seq" href="./seq2.html"><div class="">Généralité sur les bases de donnée</div></a></li>
+                <li class="liste"><a id="seq3" class="seq clic" href="./seq3.html"><div class="">Modélisation conceptuelle des données : Modèle Entité-Association</div></a></li>
+                <li class="liste"><a id="seq4" class="seq" href="./seq4.html"><div class="">Modélisation logique des donnés : Modèle Relationnel</div></a></li>
+                <li class="liste"><a id="seq5" class="seq" href="./seq5.html"><div class="">Interrogation d’une base de données : Algèbre relationnelle</div></a></li>
+                <li class="liste"><a id="seq6" class="seq" href="./seq6.html"><div class="">Implémentation d’une base de données : Modèle physique</div></a></li>
+            </ul>
+        </nav>
+    </div>
+   <div class="section">
+            
+            <div class="part container" id="container">
+                <div class="element" id="element">
+                    <p>
+                        Le document issu de l’analyse de l’existant et des besoins a permis comprendre le
+        système d’information du monde ou du phénomène à modéliser. De ce document, il faut extraire
+        de multiples données qu’il faut répertorier dans un dictionnaire de données.<br><br>
+        <h4>Définition du dictionnaire de données</h4><br>
+        Un dictionnaire de données est un recueil de données élémentaires manipulées dans le
+        système d’information en précisant pour chaque donnée son code ou symbole, sa signification,
+        son type, sa taille et une observation si nécessaire.<br><br>
+        Une donnée élémentaire est une donnée non décomposable comme nom, prénom, date,
+        prix, âge, poids, longueur, … Comme contre-exemple, ordinateur est une donnée décomposable
+        en capacité de la mémoire, vitesse du processeur, capacité du disque dur, …<br><br>
+        Le nom d’une donnée élémentaire peut être assez long et dans ce cas, le concepteur doit
+        le codifier : code ou symbole. Et comme tout ce qui est codifié n’est pas universellement
+        compréhensible, il faut lui adjoindre une désignation. Exemple de code : « VProc » avec pour
+        désignation « vitesse du processeur ».<br><br>
+        Le type de la donnée est un ensemble de valeurs ou domaine de valeurs que nous avons
+        défini à l’Objectif 1.1 : 2 - Types de données. Bien que la date soit une donnée décomposable
+        en jour, mois et année, elle est considérée en système d’information comme une donnée
+        élémentaire.<br><br>
+        La taille de la donnée est la limitation de la plage des valeurs. Par exemple pour une
+        donnée de type chaîne de caractères, si taille est fixée à 200 cela veut dire que la donnée aura
+        au plus 200 caractères.<br><br>
+        Un commentaire est toute information jugée utile pour mieux cerner les contours de la
+        donnée. Ça peut être des contraintes (exemple : l’âge doit être supérieur à 18 ans), la formule
+        de calcul de la dite donnée (exemple : Prix total = Prix unitaire x Quantité), le format de la
+        donnée (exemple : date au format JJ/MM/AAAA),
+                    </p>
+                </div>
+            </div>
+   </div>
+
+   <div class="navigation" id="navigation">
+    <nav>
+        <ul class="navContent">
+            <h3>Recencer les données élémentaires du monde à modéliser un dictionnaire de données</h3>
+            <li><a class="nav" id="nav1" href="#"><div class="">Définition du dictionnaire de données</div></a></li>
+            <li><a class="nav" id="nav2" href="#"><div class="">Epuration du dictionnaire de données</div></a></li>
+            <li><a class="nav" id="nav3" href="#"><div class="">Formalisme du dictionnaire de données</div></a></li>
+            <li><a class="nav" id="nav4" href="#"><div class="">Exemple de dictionnaire de données du système d’information de gestion d’inscription des étudiants dans une université</div></a></li>
+            <li><a class="nav" id="nav5" href="#"><div class="">Exemple d’application : e-Commerce</div></a></li>
+            <li><a class="nav" id="nav6" href="#"><div class="">Exercice 07</div></a></li>
+            <li><a class="nav" id="nav7" href="#"><div class="">Exercice 08</div></a></li>
+            <li><a class="nav" id="nav8" href="#"><div class="">Exercice 09</div></a></li>
+            <li><a class="nav" id="nav9" href="#"><div class="">Exercice 10</div></a></li>
+    
+            <h3>Constituer les entités à partir des données élémentaires</h3>
+            <li><a class="nav" id="nav10" href="#"><div class="">Entité</div></a></li>
+            <li><a class="nav" id="nav11" href="#"><div class="">Dépendance fonctionnelle</div></a></li>
+            <li><a class="nav" id="nav12" href="#"><div class="">Identifiant d’entité</div></a></li>
+            <li><a class="nav" id="nav13" href="#"><div class="">Exemple d’application : e-Commerce</div></a></li>
+            <li><a class="nav" id="nav14" href="#"><div class="">Exercice 11</div></a></li>
+            <li><a class="nav" id="nav15" href="#"><div class="">Exercice 12</div></a></li>
+            <li><a class="nav" id="nav16" href="#"><div class="">Exercice 13</div></a></li>
+            <li><a class="nav" id="nav17" href="#"><div class="">Exercice 14</div></a></li>
+
+            <h3>Mettre les entités en relation pour constituer le mode Entité-Association</h3>
+            <li><a class="nav" id="nav18" href="#"><div class="">Association</div></a></li>
+            <li><a class="nav" id="nav19" href="#"><div class="">Détermination des associations</div></a></li>
+            <li><a class="nav" id="nav20" href="#"><div class="">Cardinalité d’une association</div></a></li>
+            <li><a class="nav" id="nav21" href="#"><div class="">Typologie des associations</div></a></li>
+            <li><a class="nav" id="nav22" href="#"><div class="">Contraintes d’intégrité</div></a></li>
+            <li><a class="nav" id="nav23" href="#"><div class="">Quelques logiciels pour concevoir le modèle entité-association</div></a></li>
+            <li><a class="nav" id="nav24" href="#"><div class="">Exemple d'application : e-commerce</div></a></li>
+            <li><a class="nav" id="nav25" href="#"><div class="">Exercice 15</div></a></li>
+            <li><a class="nav" id="nav26" href="#"><div class="">Exercice 16</div></a></li>
+            <li><a class="nav" id="nav27" href="#"><div class="">Exercice 17</div></a></li>
+            <li><a class="nav" id="nav28" href="#"><div class="">Exercice 18</div></a></li>
+
+        </ul>
+</nav>
+</div>
+</body>
+</html>
+<script>
+    var seq3=document.getElementById('seq3');
+
+    var nav1=document.getElementById('nav1');
+    var nav2=document.getElementById('nav2');
+    var nav3=document.getElementById('nav3');
+    var nav4=document.getElementById('nav4');
+    var nav5=document.getElementById('nav5');
+    var nav6=document.getElementById('nav6');
+    var nav7=document.getElementById('nav7');
+    var nav8=document.getElementById('nav8');
+    var nav9=document.getElementById('nav9');
+    var nav10=document.getElementById('nav10');
+    var nav11=document.getElementById('nav11');
+    var nav12=document.getElementById('nav12');
+    var nav13=document.getElementById('nav13');
+    var nav14=document.getElementById('nav14');
+    var nav15=document.getElementById('nav15');
+    var nav16=document.getElementById('nav16');
+    var nav17=document.getElementById('nav17');
+    var nav18=document.getElementById('nav18');
+    var nav19=document.getElementById('nav19');
+    var nav20=document.getElementById('nav20');
+    var nav21=document.getElementById('nav21');
+    var nav22=document.getElementById('nav22');
+    var nav23=document.getElementById('nav23');
+    var nav24=document.getElementById('nav24');
+    var nav25=document.getElementById('nav25');
+    var nav26=document.getElementById('nav26');
+    var nav27=document.getElementById('nav27');
+    var nav28=document.getElementById('nav28');
+    var nav29=document.getElementById('nav29');
+
+    
+    var container=document.getElementById('container');
+    var navigation=document.getElementById('navigation');
+    var element=document.getElementById('element');
+    var seq11=document.getElementById('seq11');
+
+    seq3.addEventListener('click',function () {
+        var navig =`
+        <nav>
+        <ul class="navContent">
+            <h3>Recencer les données élémentaires du monde à modéliser un dictionnaire de données</h3>
+            <li><a class="nav" id="nav1" href="#"><div class="">Définition du dictionnaire de données</div></a></li>
+            <li><a class="nav" id="nav2" href="#"><div class="">Epuration du dictionnaire de données</div></a></li>
+            <li><a class="nav" id="nav3" href="#"><div class="">Formalisme du dictionnaire de données</div></a></li>
+            <li><a class="nav" id="nav4" href="#"><div class="">Exemple de dictionnaire de données du système d’information de gestion d’inscription des étudiants dans une université</div></a></li>
+            <li><a class="nav" id="nav5" href="#"><div class="">Exemple d’application : e-Commerce</div></a></li>
+            <li><a class="nav" id="nav6" href="#"><div class="">Exercice 07</div></a></li>
+            <li><a class="nav" id="nav7" href="#"><div class="">Exercice 08</div></a></li>
+            <li><a class="nav" id="nav8" href="#"><div class="">Exercice 09</div></a></li>
+            <li><a class="nav" id="nav9" href="#"><div class="">Exercice 10</div></a></li>
+    
+            <h3>Constituer les entités à partir des données élémentaires</h3>
+            <li><a class="nav" id="nav10" href="#"><div class="">Entité</div></a></li>
+            <li><a class="nav" id="nav11" href="#"><div class="">Dépendance fonctionnelle</div></a></li>
+            <li><a class="nav" id="nav12" href="#"><div class="">Identifiant d’entité</div></a></li>
+            <li><a class="nav" id="nav13" href="#"><div class="">Exemple d’application : e-Commerce</div></a></li>
+            <li><a class="nav" id="nav14" href="#"><div class="">Exercice 11</div></a></li>
+            <li><a class="nav" id="nav15" href="#"><div class="">Exercice 12</div></a></li>
+            <li><a class="nav" id="nav16" href="#"><div class="">Exercice 13</div></a></li>
+            <li><a class="nav" id="nav17" href="#"><div class="">Exercice 14</div></a></li>
+
+            <h3>Mettre les entités en relation pour constituer le mode Entité-Association</h3>
+            <li><a class="nav" id="nav18" href="#"><div class="">Association</div></a></li>
+            <li><a class="nav" id="nav19" href="#"><div class="">Détermination des associations</div></a></li>
+            <li><a class="nav" id="nav20" href="#"><div class="">Cardinalité d’une association</div></a></li>
+            <li><a class="nav" id="nav21" href="#"><div class="">Typologie des associations</div></a></li>
+            <li><a class="nav" id="nav22" href="#"><div class="">Contraintes d’intégrité</div></a></li>
+            <li><a class="nav" id="nav23" href="#"><div class="">Quelques logiciels pour concevoir le modèle entité-association</div></a></li>
+            <li><a class="nav" id="nav24" href="#"><div class="">Exemple d'application : e-commerce</div></a></li>
+            <li><a class="nav" id="nav25" href="#"><div class="">Exercice 14</div></a></li>
+            <li><a class="nav" id="nav26" href="#"><div class="">Exercice 15</div></a></li>
+            <li><a class="nav" id="nav27" href="#"><div class="">Exercice 16</div></a></li>
+            <li><a class="nav" id="nav28" href="#"><div class="">Exercice 17</div></a></li>
+            <li><a class="nav" id="nav29" href="#"><div class="">Exercice 18</div></a></li>
+
+        </ul>
+</nav>
+        `;
+        navigation.innerHTML=navig;
+    });
+    nav1.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Le document issu de l’analyse de l’existant et des besoins a permis comprendre le
+système d’information du monde ou du phénomène à modéliser. De ce document, il faut extraire
+de multiples données qu’il faut répertorier dans un dictionnaire de données.<br><br>
+<h4>Définition du dictionnaire de données</h4><br>
+Un dictionnaire de données est un recueil de données élémentaires manipulées dans le
+système d’information en précisant pour chaque donnée son code ou symbole, sa signification,
+son type, sa taille et une observation si nécessaire.<br><br>
+Une donnée élémentaire est une donnée non décomposable comme nom, prénom, date,
+prix, âge, poids, longueur, … Comme contre-exemple, ordinateur est une donnée décomposable
+en capacité de la mémoire, vitesse du processeur, capacité du disque dur, …<br><br>
+Le nom d’une donnée élémentaire peut être assez long et dans ce cas, le concepteur doit
+le codifier : code ou symbole. Et comme tout ce qui est codifié n’est pas universellement
+compréhensible, il faut lui adjoindre une désignation. Exemple de code : « VProc » avec pour
+désignation « vitesse du processeur ».<br><br>
+Le type de la donnée est un ensemble de valeurs ou domaine de valeurs que nous avons
+défini à l’Objectif 1.1 : 2 - Types de données. Bien que la date soit une donnée décomposable
+en jour, mois et année, elle est considérée en système d’information comme une donnée
+élémentaire.<br><br>
+La taille de la donnée est la limitation de la plage des valeurs. Par exemple pour une
+donnée de type chaîne de caractères, si taille est fixée à 200 cela veut dire que la donnée aura
+au plus 200 caractères.<br><br>
+Un commentaire est toute information jugée utile pour mieux cerner les contours de la
+donnée. Ça peut être des contraintes (exemple : l’âge doit être supérieur à 18 ans), la formule
+de calcul de la dite donnée (exemple : Prix total = Prix unitaire x Quantité), le format de la
+donnée (exemple : date au format JJ/MM/AAAA),
+            </p>
+        `;
+        nav1.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav2.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Certaines données doivent enlever du dictionnaire de données<br><br>
+                <h4>Suppression des synonymes</h4><br>
+Ce sont des données avec des codes différents mais avec la même sémantique ou
+signification.<br><br>
+Exemple : Dans un système d’information de gestion du personnel, Matricule et Numéro
+sont des synonymes.<br><br>
+<h4>Reformulation des polysèmes</h4><br>
+Ce sont des données qui ont le même code mais avec des sémantiques ou significations
+différentes. Dans ce cas, il faut reformuler l’un des codes ou les deux.
+Exemple : Dans un système d’information de gestion de ventes, la donnée « quantité »
+peut exister 2 fois pour représenter la « quantité commandée » et la « quantité vendue ». Il
+faudra renommer les 2 en Quantité_Commande et Quantité_Vente.<br><br>
+<h4>Suppression des redondances</h4><br>
+Ce sont des données qui ont le même code et la même signification ou sémantique. Ça
+peut apparaître souvent lorsqu’on parcoure le document d’analyse pour reporter les données et
+qu’une donnée apparaisse plus d’une fois dans le document.<br><br>
+<h4>Suppression des données calculées</h4><br>
+Ce sont des données qui sont obtenues par calcul à partir des données existantes.
+Exemple : Dans un système d’information de gestion des notes, la moyenne d’un
+étudiant à une matière est une donnée calculée à base de ses différentes notes de devoirs et
+d’examens affectées de leur coefficient.<br><br>
+Attention : Plus loin dans la modélisation, vous pourriez voir des données calculées et
+stockées dans le système d’information ; cela doit être des exceptions et peut se justifier par des
+soucis d’optimisation car le calcul prend trop de temps.<br><br>
+<h4>Ajout des données détectées dans les règles de calcul</h4><br>
+Parfois, on remarque dans les formules de calcul des données qui ne sont pas dans le
+dictionnaire de données. Dans ce cas, il faut les ajouter.<br><br>
+Exemple : Dans un système d’information de gestion de vente, on se rend compte qu’à
+chaque produit, il faut ajouter 18% du prix d’achat sur le prix de vente. Cela veut dire que la
+TVA est de 18% qu’il faudra insérer dans le dictionnaire de données sachant qu’elle peut
+changer si la législation venait à changer. Or si elle était figée dans le système, il faudrait
+reprendre le système<br><br>
+<h4>Décomposition des données concaténées ou non élémentaires</h4><br>
+Ce sont des données contenant plusieurs données existantes ou pas dans le dictionnaire
+de données.<br><br>
+Exemple : Adresse est une donnée concaténée qu’il faut décomposer en Rue, Ville,
+Pays, Code postal, Boite postale, …
+            </p>
+        `;
+        nav2.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav3.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Le dictionnaire de données est formalisé par un tableau à 5 colonnes et autant de lignes
+que de données à y inscrire.<br><br>
+<table border="1">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Signification</th>
+                                <th>Type</th>
+                                <th>Taille</th>
+                                <th>Observation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+            </p>
+        `;
+        nav3.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav4.addEventListener('click',function() {
+        var elem=`
+            <p>
+                <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Signification</th>
+                                <th>Type</th>
+                                <th>Taille</th>
+                                <th>Observation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>INE</td>
+                                <td>Numéro d'Identification National de l'Etudiant</td>
+                                <td>Entier</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>NomE</td>
+                                <td>Nom de l'étudiant</td>
+                                <td>Chaîne de caractères</td>
+                                <td>150</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>DateInscription</td>
+                                <td>Date d'inscription</td>
+                                <td>Date</td>
+                                <td></td>
+                                <td>JJ/MM/AA</td>
+                            </tr>
+                            <tr>
+                                <td>NomF</td>
+                                <td>Nom de la formation ou de la filière</td>
+                                <td>Chaîne de caractères</td>
+                                <td>50</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+                    A vous de compléter ce dictionnaire de données !
+            </p>
+        `;
+        nav4.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav5.addEventListener('click',function() {
+        var elem=`
+            <p>
+                <table border="1">
+    <thead>
+        <tr>
+            <td>Code</td>
+            <th>Signification</th>
+            <th>Type</th>
+            <th>Taille</th>
+            <th>Observation</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CodeCat</td>
+            <td>Code de la catégorie des produits</td>
+            <td>Chaîne de caractères</td>
+            <td>20</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>CodeP</td>
+            <td>Code du produit</td>
+            <td>Chaîne de caractères</td>
+            <td>20</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>CodeR</td>
+            <td>Code du mode de règlement de la facture</td>
+            <td>Chaîne de caractères</td>
+            <td>20</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>DateA</td>
+            <td>Date de l'approvisionnement</td>
+            <td>Date</td>
+            <td></td>
+            <td>JJ/MM/AAAA</td>
+
+        </tr>
+        <tr>
+            <td>DateC</td>
+            <td>Date de la commande</td>
+            <td>Date</td>
+            <td></td>
+            <td>JJ/MM/AAAA</td>
+
+        </tr>
+        <tr>
+            <td>DateF</td>
+            <td>Date de la facture</td>
+            <td>Date</td>
+            <td></td>
+            <td>JJ/MM/AAAA</td>
+
+        </tr>
+        <tr>
+            <td>DateNaiss</td>
+            <td>Date de naissance du client</td>
+            <td>Date</td>
+            <td></td>
+            <td>JJ/MM/AAAA</td>
+
+        </tr>
+        <tr>
+            <td>Désignation</td>
+            <td>Nom du fournisseur</td>
+            <td>Chaîne de caractères</td>
+            <td>150</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>EmailC</td>
+            <td>Adresse électronique du client</td>
+            <td>Chaîne de caractères</td>
+            <td>70</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>EmailF</td>
+            <td>Adresse électronique du fournisseur</td>
+            <td>Chaîne de caractères</td>
+            <td>70</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>Identifiant</td>
+            <td>Numéro d'identification de l'approvisionnement</td>
+            <td>Entier</td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>LibelléCat</td>
+            <td>Nom de la catégorie des produits</td>
+            <td>Chaîne de caractères</td>
+            <td>100</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>LibelléP</td>
+            <td>Nom du produit</td>
+            <td>Chaîne de caractères</td>
+            <td>100</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>LibelléR</td>
+            <td>Nom du mode de règlement de la facture</td>
+            <td>Chaîne de caractères</td>
+            <td>100</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>Login</td>
+            <td>Nom d'utilisateur du client pour se connecter au site</td>
+            <td>Chaîne de caractères</td>
+            <td>30</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>NINEA</td>
+            <td>Numéro d'Identification National des Entreprises et des Associations</td>
+            <td>Entier</td>
+            <td>15</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nom</td>
+            <td>Nom du client</td>
+            <td>Chaîne de caractères</td>
+            <td>100</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>NuméroCde</td>
+            <td>Numéro de la commande </td>
+            <td>Chaîne de caractères</td>
+            <td>20</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>NuméroF</td>
+            <td>Numéro de la facture </td>
+            <td>Chaîne de caractères</td>
+            <td>20</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>Mot de passe du client</td>
+            <td>Chaîne de caractères</td>
+            <td>25</td>
+            <td>La longueur doit être supérieure ou égale à 8</td>
+        </tr>
+        <tr>
+            <td>Prénom</td>
+            <td>Prénom du client</td>
+            <td>Chaîne de caractères</td>
+            <td>200</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>PrixUnitaire</td>
+            <td>Prix unitaire de vente du Entier produt</td>
+            <td>Chaîne de caractères</td>
+            <td>200</td>
+            <td>La longueur doit être supérieure ou égale à 8</td>
+        </tr>
+        <tr>
+            <td>Quantité</td>
+            <td>Quantité de approvisionnésproduits</td>
+            <td>Entier</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>QuantitéCde</td>
+            <td>Quantité de produits commandés</td>
+            <td>Entier</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>QuantitéStock</td>
+            <td>Quantité e stock du produit</td>
+            <td>Entier</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Référence</td>
+            <td>Référence du client</td>
+            <td>Chaîne de caractères</td>
+            <td>20</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>SeuilAlerte</td>
+            <td>Seuil d’alerte du produit</td>
+            <td>Entier</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Sexe</td>
+            <td>Sexe du client</td>
+            <td>Caractères</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>TéléphoneC</td>
+            <td>Téléphone du client</td>
+            <td>Chaîne de caractères</td>
+            <td>10</td>
+            <td>Le numéro peut contenir l’indicateur téléphonique du pays</td>
+        </tr>
+        <tr>
+            <td>TéléphoneF</td>
+            <td>Téléphone du fournisseur</td>
+            <td>Chaîne de caractères</td>
+            <td>10</td>
+            <td>Le numéro peut contenir l’indicateur téléphonique du pays</td>
+        </tr>
+        </tbody>
+ </table>
+            </p>
+        `;
+        nav5.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav6.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O31(20%)
+            </p>
+        `;
+        nav6.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav7.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 60% Titre : Dictionnaire de données de la gestion d’un institut de formation Objectifs visés : O31(80%)
+            </p>
+        `;
+        nav7.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav8.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 60% Titre : Dictionnaire de données de la gestion des états civils Objectifs visés : O31(80%)
+            </p>
+        `;
+        nav8.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav9.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 60% Titre : Dictionnaire de données de la gestion d’une chaîne hôtelière Objectifs visés : O31(80%)
+            </p>
+        `;
+        nav9.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav10.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Le dictionnaire de données décrit toutes les données élémentaires manipulées dans le
+système d’information. Or dans le monde réel les données manipulées au premier plan sont
+rarement élémentaires. Par exemple, dans un système d’information de gestion d’une
+université, on vous parlera d’étudiants, formations, unités d’enseignement, enseignants, tuteurs,
+filière, facultés, pôles, unité de formation et de recherche, … Toutes ces informations sont
+composées des données élémentaires contenues dans le dictionnaire de données.<br><br>
+Une entité est la représentation d’un élément matériel (concret) ou immatériel (abstrait)
+ayant un rôle dans le monde ou phénomène modélisé. Les entités sont des macro-données du
+système d’information comme étudiant, enseignant, tuteur, cours, formation, …<br><br>
+<h4>Propriétés d’entité</h4><br>
+Une entité n’est pas une donnée élémentaire et est caractérisée par des données
+élémentaires q1.4 - qu’on appelle propriété provenant du dictionnaire de données.
+Une propriété permet de caractériser une entité et appartient seulement à cette entité.
+Une entité possède un certain nombre de propriétés pour la caractériser.
+Exemples :<br><br>
+➢ L’entité riz local est caractérisée par les propriétés : R76, riz, 4500, 23, 25/11/2025, …<br><br>
+➢ L’entité Loi sur le LMD est caractérisée par les propriétés : TS035, 12/09/2007, Loi
+d’organisation du LMD dans l’enseignement supérieur, "contenu de la loi", Abdoulaye
+WADE, …<br><br>
+➢ L’entité Algorithmique est caractérisée par les propriétés LSIMAC1121,Algorithmique, 6 et 3.<br><br>
+
+<h4>Entité-type ou type d’entité</h4><br>
+Une entité-type est un ensemble d’entités qui possèdent une sémantique et des propriétés
+communes.<br><br>
+Exemples :<br>
+➢ L’entité-type produit caractérisée par les propriétés numéro, nom, prix unitaire, quantité
+en stock, date de péremption, …<br><br>
+➢ L’entité-type loi caractérisée par les propriétés numéro, date de promulgation, objet,
+contenu, signataire, …<br><br>
+➢ L’entité-type unité d’enseignement caractérisée par les propriétés code, libellé, crédit
+et coefficient.<br><br>
+Attention : Par abus de langage et ça sera le cas dans le cadre de ce cours, l’entité-type
+est appelé entité pour simplifier l’appel et l’écriture.<br><br>
+<h4>Formalisme</h4><br>
+<h5>Selon le modèle entité-association défini par Peter Chen</h5><br>
+Le modèle entité-association créé par Peter Chen dans les années 70 propose de
+représenter l’entité-type dans un rectangle et la propriété dans une ellipse. Chaque propriété
+d’une entité est formalisée par un trait le liant à son entité.<br><br>
+<figure>
+                <img src="../formalisme.png" alt="Formalisme d’une entité-type selon Peter Chen">
+                <figcaption>Figure 5 : Formalisme d’une entité-type selon Peter Chen</figcaption>
+            </figure>
+            <figure>
+                <img src="../exEnt.png" alt="Exemple d’une entité-type selon Peter Chen">
+                <figcaption>Figure 6 : Exemple d’une entité-type selon Peter Chen</figcaption>
+            </figure>
+<h5>Selon la méthode MERISE</h5><br>
+Dans les années 80, la méthode MERISE a été largement utilisée pour modéliser les
+systèmes d’information tant du point de vue des données que des traitements.<br>
+Une entité-type est formalisée par un rectangle à 2 parties avec la partie supérieure
+(entête) contenant le nom de l’entité-type et la partie inférieure (corps) la liste des propriétés,
+chacune sur une ligne.<br><br>
+<figure>
+                <img class="pimg" src="../entite.png" alt="Formalisme d’une entité-type selon la méthode MERISE">
+                <figcaption>Figure 7 : Formalisme d’une entité-type selon la méthode MERISE</figcaption>
+            </figure>
+            <figure>
+                <img class="pimg" src="../entMer.png" alt="Exemple d’une entité-type selon MERISE">
+                <figcaption>Figure 8 : Exemple d’une entité-type selon MERISE</figcaption>
+            </figure>
+
+<h4>Occurrence d’entité-type</h4><br>
+Une occurrence d’une entité-type est en réalité l’entité définit ci-dessus et est définie
+par une valeur pour chacune de ses propriétés.
+<figure>
+                <img src="../occu.png" alt="Occurrence de l’entité-type produit selon Peter Chen">
+                <figcaption>Figure 9 : Occurrence de l’entité-type produit selon Peter Chen</figcaption>
+            </figure>
+            <figure>
+                <img class="pimg" src="../occuEnt.png" alt="Occurrence de l’entité-type produit selon MERISE">
+                <figcaption>Figure 10 : Occurrence de l’entité-type produit selon MERISE </figcaption>
+            </figure>
+
+            </p>
+        `;
+        nav10.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav11.addEventListener('click',function() {
+        var elem=`
+            <p>
+                <h4>Définition</h4><br>
+Une dépendance fonctionnelle entre 2 propriétés A et B et notée A → B est un lien
+fonctionnel qui décrit la dépendance de B à A.
+Une propriété B dépend fonctionnellement de la propriété A et notée A → B si et
+seulement si à une valeur de A, il n’est possible d’associer qu’une et une seule valeur de B ; la
+réciproque est fausse.<br><br>
+Exemples :<br>
+➢ INE → Nom_Etudiant<br>
+➢ Numero_Extrait_Naissance → Date_Naissance<br><br>
+La partie gauche d’une dépendance fonctionnelle est appelée source et la partie droite
+est appelée but.<br>
+Une dépendance fonctionnelle dont la source est composée d’une seule propriété est
+appelée dépendance fonctionnelle simple.<br>
+Une dépendance fonctionnelle dont la source est composée de plusieurs propriétés est
+appelée dépendance fonctionnelle composée.<br><br>
+Exemple : Matricule_Etudiant, Code_Matière → Note<br><br>
+Une dépendance fonctionnelle directe est une dépendance fonctionnelle dont le but
+dépend de la source sans autre propriété intermédiaire. On dira également qu’une dépendance
+fonctionnelle A → B est directe s’il n’existe pas de propriété C tel que les dépendances
+fonctionnelles A → C et C → B soient correctes.<br><br>
+Exemple de dépendance fonctionnelle indirecte : Numero_Facture → Nom_Magasin.<br><br>
+Elle est indirecte car Numero_Facture→Numero_Magasin et Numero_Magasin→Nom_Magasin.<br><br>
+Une dépendance fonctionnelle élémentaire est une dépendance fonctionnelle dont la
+source ne contient pas de propriété superflue c’est-à-dire, en l’éliminant, la dépendance reste
+correcte. On dira également qu’une dépendance fonctionnelle A, B → C est non élémentaire si
+A → C est une dépendance correcte ; dans ce cas, B est une propriété superflue.<br><br>
+<h4>Axiomes d'Armstrong</h4><br>
+Les axiomes d’Armstrong sont des propriétés mathématiques que respectent les
+dépendances fonctionnelles.<br><br>
+<h5>Réflexivité</h5><br>
+Tout attribut se détermine lui-même : X → X<br>
+Tout groupe d’attributs qui se détermine lui-même : X,Y → X,Y<br>
+Tout groupe d’attributs détermine chacun de ses attributs ou partie de ses attributs :<br>
+X,Y,Z → X et X,Y,Z → Y et X,Y,Z → Z et X,Y,Z → X,Y et X,Y,Z → X,Z et X,Y,Z → Y,Z<br><br>
+<h5>Augmentation</h5><br>
+Si X → Y alors X,Z → Y,Z<br>
+X, Y et Z sont des attributs ou des groupes d’attributs<br><br>
+<h5>Transitivité</h5><br>
+Si X→ Y et Y→ Z alors X → Z<br>
+X, Y et Z sont des attributs ou des groupes d’attributs<br>
+Une dépendance fonctionnelle transitive est une dépendance fonctionnelle indirecte.<br><br>
+<h4>Autres propriétés déduites des axiomes d'Armstrong</h4><br>
+<h5>Union</h5><br>
+Si X → Y et X → Z alors X → X,Z<br>
+Cette propriété est déduite de la réflexivité, de l'augmentation et de la transitivité<br><br>
+<h5>Pseudo-Transitivité</h5><br>
+Si X → Y et WY → Z alors X,W → Z<br>
+Cette propriété est déduite de l'augmentation et de la réflexivité<br><br>
+<h5>Décomposition</h5><br>
+Si X → Y,Z alors X → Y et X → Z<br>
+Cette propriété est déduite de la réflexivité et de la transitivité<br><br>
+<h4>Graphe de dépendances fonctionnelles</h4><br>
+Un graphe de dépendances fonctionnelles est un graphe contenant l’ensemble des
+dépendances fonctionnelles entre les propriétés tout en éliminant les dépendances
+fonctionnelles indirectes ou obtenues par transitivité.
+            </p>
+        `;
+        nav11.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav12.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Un identifiant d’entité est une propriété qui a une valeur unique pour chaque occurrence
+de cette entité.<br><br>
+Exemples :<br>
+➢ Le matricule est une valeur unique pour un étudiant dont c’est un identifiant<br>
+➢ L’adresse électronique est propre à chaque étudiant, de même que son téléphone ; donc
+email et téléphone sont des identifiants.<br><br>
+Contre-exemple : Le nom de l’étudiant n’est pas unique à un seul étudiant ; donc il ne
+peut pas être un identifiant.<br>
+Le Graphe des Dépendances Fonctionnelles est un bon outil pour déterminer les
+identifiants<br><br>
+<h4>Identifiant candidat</h4><br>
+Un identifiant candidat est une propriété d’une entité susceptible de la représenter de
+façon unique. Une entité a forcément un identifiant candidat et peut en avoir plusieurs.
+Exemple : Identification nationale de l’Etudiant, Email, Téléphone sont des identifiants
+candidats de l’entité Etudiant.<br><br>
+<h4>Identifiant primaire</h4><br>
+Un identifiant primaire d’une entité est un identifiant candidat choisi par le concepteur
+de la base de données pour représenter de façon unique l’entité.
+Un identifiant primaire d’une entité est une propriété dont dépend toutes les autres
+propriétés de l’entité.<br><br>
+Attention : Par abus de langage, on utilise le terme identifiant pour faire allusion à
+l’identifiant primaire.<br><br>
+
+<h4>Formalisme</h4><br>
+Un identifiant primaire est souligné.<br><br>
+<figure>
+                <img src="../forma.png" alt="Exemple d’une entité avec identifiant selon Peter Chen">
+                <figcaption>Figure 11 : Exemple d’une entité avec identifiant selon Peter Chen</figcaption>
+            </figure>
+            <figure>
+                <img class="pimg" src="../formaEx.png" alt="Exemple d’une entité avec identifiant selon MERISE">
+                <figcaption>Figure 12 : Exemple d’une entité avec identifiant selon MERISE</figcaption>
+            </figure>
+Remarque : Il peut arriver que dans le dictionnaire de données, aucune propriété ne
+puisse permettre l’identification d’une entité de façon unique. 2 cas de figure se présente :<br><br>
+➢ Il est possible que la combinaison de plusieurs propriétés d’une entité représente son
+identifiant<br>
+➢ Si aucune combinaison de propriétés ne puisse représenter l’identifiant de l’entité, il
+faudra créer une propriété qui sera l’identifiant.
+            </p>
+        `;
+        nav12.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav13.addEventListener('click',function() {
+        var elem=`
+            <p>
+                <figure>
+                <img src="../ListEn.png" alt="Liste des entités du site d’e-commerce représentées selon la méthode MERISE">
+                <figcaption>Figure 13 : Liste des entités du site d’e-commerce représentées selon la méthode MERISE</figcaption>
+            </figure>
+            </p>
+        `;
+        nav13.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav14.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O32(20%)
+            </p>
+        `;
+        nav14.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav15.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 60% Titre : Entités de la gestion d’un institut de formation Objectifs visés : O31(80%)
+            </p>
+        `;
+        nav15.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav16.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 60% Titre : Entités de la gestion des états civils Objectifs visés : O31(80%)
+            </p>
+        `;
+        nav16.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav17.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 60% Titre : Entités de la gestion d’une chaîne hôtelière Objectifs visés : O31(80%)
+            </p>
+        `;
+        nav17.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav18.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Les entités du monde ou du phénomène à modéliser ne sont pas des objets isolés auquel
+cas ça ne sera plus un système ! Elles sont en relation entre-elles en fonction de leur utilité dans
+le système.<br><br>
+<h4>Définition</h4><br>
+Une association est une relation ou lien sémantique entre deux ou plusieurs entités. Elle
+est définie par le concepteur de la base de données en fonction de sa compréhension du
+problème posé.<br><br>
+Une association-type ou type d’association est un ensemble d’associations qui
+possèdent une sémantique et des propriétés communes.<br>
+Comme dans le cas des entités, l’association est une occurrence pour une association-
+type ou type d’association.<br><br>
+<h4>Caractéristiques</h4><br>
+Une association possède :<br>
+➢ Des propriétés si nécessaire<br>
+➢ Des rôles si nécessaire pour certaines précisions<br>
+➢ Des cardinalités entre parenthèses<br><br>
+<h4>Formalisme</h4><br>
+Le nom de l’association est un verbe à l’infinitif.<br><br>
+<h5>Selon le modèle entité-association défini par Peter Chen</h5><br>
+L’association est représentée par un losange contenant le nom de l’association. Le lien
+est représenté par un trait entre l’association et l’entité dont figurera les cardinalités et
+éventuellement le nom de rôles.<br><br>
+<figure>
+                <img src="../EntAss.png" alt="Formalisme d’une association-type selon Peter Chen">
+                <figcaption>Figure 14 : Formalisme d’une association-type selon Peter Chen</figcaption>
+            </figure>
+
+<h5>Selon le modèle MERISE</h5><br>
+L’association est représentée par une ellipse à 2 parties dont un entête (partie supérieure)
+contenant le nom de l’association et un corps (partie inférieure) contenant ses propriétés. Le
+lien est représenté par un trait entre l’association et l’entité dont figurera les cardinalités et
+éventuellement le nom de rôles.<br><br>
+<figure>
+                <img src="../FormaEntAss.png" alt="Formalisme d’une association-type selon la méthode MERISE">
+                <figcaption>Figure 15 : Formalisme d’une association-type selon la méthode MERISE</figcaption>
+            </figure>
+<h4>Dimension ou degré ou arité d’une association</h4><br>
+La dimension ou degré ou arité d’une association est le nombre d’entités participant à
+l’association.
+            </p>
+        `;
+        nav18.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav19.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Elle peut se faire de façon intuitive et par expérience en ayant bien compris le problème
+posé.<br><br>
+Exemple : Soit un système d’information de vente de produits. De façon intuitive et par
+expérience, je sais qu’il y aura une association nommée « acheter » entre les entités Produit et
+Client.<br><br>
+La façon la plus sûre est l’utilisation du Graphe de Dépendances Fonctionnelles.<br><br>
+<h4>Dépendance fonctionnelle directe entre identifiants primaires</h4><br>
+Lorsqu’il y’a une dépendance fonctionnelle directe entre les identifiants primaires de 2
+entités cela veut dire que ces 2 entités sont en association sans propriété.
+C’est au concepteur de trouver le verbe sui va le mieux pour exprimer l’association.<br><br>
+Exemple : Soit les dépendances fonctionnelles suivantes
+Matricule → Nom, Prénom, DateNaissance<br>
+CodeF → NomF<br>
+Matricule → CodeF<br><br>
+Leur interprétation donne l’association « Inscrire » représentée ainsi :<br><br>
+<figure>
+                <img src="../depend.png" alt="Exemple d’association déterminée à partir une dépendance fonctionnelle entre les identifiants de 2 entités et représentée selon Peter Chen">
+                <figcaption>Figure 16 : Exemple d’association déterminée à partir une dépendance fonctionnelle entre les identifiants de 2 entités et représentée selon Peter Chen</figcaption>
+            </figure>
+            <figure>
+                <img src="../ExDepend.png" alt="Exemple d’association déterminée à partir une dépendance fonctionnelle entre les identifiants
+de 2 entités et représentée la méthode MERISE">
+                <figcaption>Figure 17 : Exemple d’association déterminée à partir une dépendance fonctionnelle entre les identifiants de 2 entités et représentée la méthode MERISE</figcaption>
+            </figure>
+<h4>Dépendance fonctionnelle directe avec une source composée des identifiants primaires</h4><br>
+Lorsque la source d’une dépendance fonctionnelle est composée des identifiants
+primaires des entités cela veut dire que ces entités sont en association et les propriétés de
+l’association sont le but de la dépendance fonctionnelle.<br><br>
+C’est au concepteur de trouver le verbe sui va le mieux pour exprimer l’association.
+Exemple : Soit les dépendances fonctionnelles suivantes
+Matricule → Nom, Prénom, DateNaissance<br>
+CodeC → NomC, Coefficient<br>
+Matricule, CodeC → DateExamen, Note<br>
+Leur interprétation donne l’association « Inscrire » représentée ainsi :<br><br>
+<figure>
+                <img src="../depend1.png" alt="Exemple d’association déterminée à partir une dépendance fonctionnelle avec une source composée des identifiants primaires et représentée selon Peter Chen">
+                <figcaption>Figure 18 : Exemple d’association déterminée à partir une dépendance fonctionnelle avec une source composée des identifiants primaires et représentée selon Peter Chen</figcaption>
+            </figure>
+            <figure>
+                <img src="../depend1Ex.png" alt="Exemple d’association déterminée à partir une dépendance fonctionnelle avec une source composée des identifiants primaires et représentée selon le modèle MERISE">
+                <figcaption>Figure 19 : Exemple d’association déterminée à partir une dépendance fonctionnelle avec une source composée des identifiants primaires et représentée selon le modèle MERISE</figcaption>
+            </figure>
+            </p>
+        `;
+        nav19.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav20.addEventListener('click',function() {
+        var elem=`
+            <p>
+                <h4>Définition</h4><br>
+La cardinalité d’une association est le nombre minimal et maximal de fois qu’une
+occurrence d’une entité associée est en liaison avec l’autre entité. Une association possède une
+paire de cardinalités (Cardinalité minimale et cardinalité maximale) à chacune de ses extrémités
+(portées par les entités) et décrit le nombre de participation de cette entité à l’association.<br><br>
+La cardinalité minimale (généralement 0 ou 1) est le nombre minimal de fois que l’entité doit participer à l’association.
+La cardinalité maximale (généralement 0, 1 ou n) est le nombre maximal de fois que l’entité doit participer à l’association.<br><br>
+<h4>Détermination des cardinalités</h4><br>
+Les cardinalités sont déterminées à partir des règles de gestion énoncées dans le
+document d’analyse.<br><br>
+Exemple 1 : Un étudiant s’inscrit dans une seule formation.<br>
+<figure>
+                <img src="../card.png" alt="Exemple 1 de cardinalités représentées selon la méthode MERISE">
+                <figcaption>Figure 20 : Exemple 1 de cardinalités représentées selon la méthode MERISE</figcaption>
+            </figure>
+            <figure>
+                <img src="../cardEx.png" alt="Exemple 1 de cardinalités représentées selon la Peter Chen">
+                <figcaption>Figure 21 : Exemple 1 de cardinalités représentées selon la Peter Chen</figcaption>
+            </figure>
+Cette association se lit ainsi :<br>
+➢ Un étudiant s’inscrit au minimum à 1 et au maximum à 1 formation. Autrement dit, un
+étudiant s’inscrit dans une et une seule formation<br>
+➢ Une formation contient au minimum 1 et au maximum n (plusieurs) étudiants<br><br>
+Exemple 2 : Un étudiant fait de plusieurs examens pour un cours à des dates différentes.
+Cette association se lit ainsi :<br>
+➢ Un étudiant compose au minimum à 1 et au maximum dans plusieurs cours<br>
+➢ Un cours est composé au minimum par 1 et au maximum par plusieurs étudiants<br><br>
+<figure>
+                <img src="../card1.png" alt="Exemple 2 de cardinalités représentées selon la méthode MERISE">
+                <figcaption>Figure 22 : Exemple 2 de cardinalités représentées selon la méthode MERISE</figcaption>
+            </figure>
+            <figure>
+                <img src="../card1Ex.png" alt="Exemple 2 de cardinalités représentées selon Peter Chen">
+                <figcaption>Figure 23 : Exemple 2 de cardinalités représentées selon Peter Chen</figcaption>
+            </figure>
+Si par hasard, le système prévoit que les étudiants ne puissent pas composer à l’ensemble des examens d’un cours, il faudra mettre la cardinalité minimale du côté étudiant à 0.<br>
+De même si un cours peut ne jamais subir des évaluations, il faudra également mettre à 0 la cardinalité minimale du côté du cours.<br><br>
+<h4>Typologie des cardinalités</h4><br>
+Soient les associations représentées dans le formalisme à la Figure 14 : Formalisme
+d’une association-type selon Peter Chen et la Figure 15 : Formalisme d’une association-type
+selon la méthode MERISE.<br><br>
+<h5>Cardinalité « père-fils »</h5><br>
+Une cardinalité « père-fils » est une cardinalité dont les valeurs potentielles sont les
+suivantes :<br><br>
+<table border="1">
+    <thead>
+        <tr>
+            <td>CardMin1</td>
+            <th>CardMax1</th>
+            <th></th>
+            <th>CardMin2</th>
+            <th>CardMax2</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
+            <td>1</td>
+            <td>N</td>
+
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
+            <td>0</td>
+            <td>N</td>
+
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td></td>
+            <td>1</td>
+            <td>N</td>
+
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td></td>
+            <td>0</td>
+            <td>N</td>
+
+        </tr>
+    </tbody>
+    </table><br><br>
+<h5>Cardinalité plusieurs à plusieurs</h5><br>
+Une cardinalité « plusieurs à plusieurs » est une cardinalité dont les valeurs potentielles
+sont les suivantes :<br><br>
+<table border="1">
+    <thead>
+        <tr>
+            <td>CardMin1</td>
+            <th>CardMax1</th>
+            <th></th>
+            <th>CardMin2</th>
+            <th>CardMax2</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>N</td>
+            <td></td>
+            <td>1</td>
+            <td>N</td>
+
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>N</td>
+            <td></td>
+            <td>0</td>
+            <td>N</td>
+
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>N</td>
+            <td></td>
+            <td>1</td>
+            <td>N</td>
+
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>N</td>
+            <td></td>
+            <td>0</td>
+            <td>N</td>
+
+        </tr>
+    </tbody>
+    </table><br><br>
+<h5>Cardinalité « au plus un »</h5><br>
+Une cardinalité « au plus un » est une cardinalité dont les valeurs potentielles sont les
+suivantes :<br><br>
+<table border="1">
+    <thead>
+        <tr>
+            <td>CardMin1</td>
+            <th>CardMax1</th>
+            <th></th>
+            <th>CardMin2</th>
+            <th>CardMax2</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
+            <td>0</td>
+            <td>1</td>
+
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td></td>
+            <td>1</td>
+            <td>1</td>
+
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td></td>
+            <td>1</td>
+            <td>1</td>
+
+        </tr>
+        
+    </tbody>
+    </table><br><br>
+<h5>Cardinalité « un à un »</h5>
+Une cardinalité « un à un » est une cardinalité dont les valeurs potentielles sont les
+suivantes: <br><br>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>CardMin1</td>
+            <th>CardMax1</th>
+            <th></th>
+            <th>CardMin2</th>
+            <th>CardMax2</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
+            <td>1</td>
+            <td>1</td>
+
+        </tr>
+    </tbody>
+    </table>
+            </p>
+        `;
+        nav20.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav21.addEventListener('click',function() {
+        var elem=`
+            <p>
+                <h4>Association réflexive</h4><br>
+Une association est réflexive lorsque l’entité est en relation avec elle-même. Il est
+important de donner les noms de rôles de l’association pour mieux la lire.<br><br>
+<figure>
+                <img src="../Typo.png" alt="Exemple d’association réflexive représentée selon Peter Chen">
+                <figcaption>Figure 24 : Exemple d’association réflexive représentée selon Peter Chen</figcaption>
+            </figure>
+            <figure>
+                <img src="../Typo1.png" alt="Exemple d’association réflexive représentée selon la méthode MERISE">
+                <figcaption>Figure 25 : Exemple d’association réflexive représentée selon la méthode MERISEExemple 1 de cardinalités représentées selon la Peter Chen</figcaption>
+            </figure>
+L’association se lit ainsi :<br>
+➢ Un parrain parraine 1 ou plusieurs filleuls<br>
+➢ Un filleul est parrainé par un et un seul parrain<br><br>
+<h4>Association n-aire</h4><br>
+Une association n-aire est une association avec n (n2) entités.<br>
+Lorsque n = 2, on parle d’association binaire<br>
+Lorsque n = 3, on parle d’association ternaire<br>
+Lorsque n > 3, on parle d’association n-aire<br><br>
+<h4>Autres associations issues de la méthode MERISE 2</h4><br>
+La seconde version de MERISE étend la première version en introduisant des concepts
+permettant de mieux exprimer les relations entre les entités.<br><br>
+<h5>Lien spécialisation ou de généralisation</h5><br>
+Certaines entités sémantiquement proches peuvent avoir certaines propriétés identiques.
+Dans ce cas, on créé une entité dont ses propriétés seront les propriétés communes aux entités.
+Cette nouvelle entité appelée « entité-mère » est reliée aux autres (entités-filles) par un lien de
+spécialisation et il faut supprimer des entités-filles les propriétés appartenant à l’entité-mère.<br><br>
+<figure>
+                <img src="../Typo2.png" alt="Formalisme du lien de spécialisation ou généralisation">
+                <figcaption>Figure 26 : Formalisme du lien de spécialisation ou généralisation</figcaption>
+            </figure>
+
+La spécialisation est l’extraction des propriétés communes de plusieurs entités (entités-
+filles) sémantiquement proches pour en constituer une nouvelle entité (entité-mère) qu’on
+reliera avec les autres entités-filles.<br><br>
+<h5>Lien d’héritage</h5><br>
+Durant la modélisation, il peut arriver qu’une nouvelle entité E1 à ajouter au modèle ait
+des propriétés incluant toutes les propriétés d’une autre entité E2. Dans ce cas, on considère
+l’entité E2 comme entité-mère et pas besoin de créer cette nouvelle entité E2 avec les propriétés
+appartenant déjà à entité E1. Il faut juste créer la nouvelle entité E2 avec ses propriétés
+spécifiques n’appartenant pas à l’entité E1 et les relier par un lien d’héritage. Le formalisme du
+lien d’héritage est identique à celui de la spécialisation ou généralisation.<br><br>
+L’héritage est le fait de créer une entité-fille avec moins de propriétés (propriétés
+spécifique) qui bénéficie des propriétés appartenant à l’entité-mère par un lien entre les deux.<br><br>
+<figure>
+                <img src="../Typo3.png" alt="Exemple de représentation des liens d’héritage et spécialisation">
+                <figcaption>Figure 27 : Exemple de représentation des liens d’héritage et spécialisation</figcaption>
+            </figure>
+Remarque : Les liens d’héritage et de spécialisation ne porte pas de cardinalité.
+            </p>
+        `;
+        nav21.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav22.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Le monde réel ou le phénomène à modéliser obéit à des règles de gestion figurant dans
+le document d’analyse. De même votre base de données doit respecter ses règles pour garantir
+la représentation du monde réel ou du phénomène modélisé. De plus, il y a des règles découlant
+du modèle entité-association (théorie des bases de données) à respecter. Toutes ces règles sont
+appelées les contraintes d’intégrité et concourent à créer une base de données respectant ses
+objectifs notamment la structuration, la cohérence et la non-redondance des données.
+Une contrainte d'intégrité est toute règle implicite ou explicite que doivent respecter
+les données.<br><br>
+<h4>Contrainte d’entité</h4><br>
+➢ Toute entité doit avoir au moins une propriété<br>
+➢ Deux entités différentes ne peuvent pas avoir le même nom<br>
+➢ Deux propriétés d'une même entité ne peuvent pas avoir le même nom<br><br>
+<h4>Contrainte de domaine</h4><br>
+Chaque propriété doit avoir un domaine de valeurs et les occurrences de cette propriété
+doivent appartenir à ce domaine.<br><br>
+<h4>Contrainte d’unicité</h4><br>
+Toute entité doit avoir un identifiant unique et son occurrence est aussi unique.<br><br>
+<h4>Contrainte d’intégrité référentielle</h4><br>
+Certaines données ne peuvent exister sans d’autres ; cela se traduit par des associations
+entre les entités. Par exemple, dans une association « composer » de type plusieurs à plusieurs
+représentant l’évaluation entre une entité « Etudiant » et une entité « Matière », on ne doit pas
+trouver dans cette association un étudiant ayant composé alors qu’il n’existe pas dans l’entité
+« Etudiant » ; il en est de même pour l’entité « Matière ».<br><br>
+<h4>Autres contraintes</h4><br>
+Il existe des contraintes difficilement exprimables au niveau du modèle entité-
+association. Il s’agit en général de certaines règles logiques et de gestion. Par exemple, on ne
+peut vendre un produit dont la quantité en stock est inférieure à la quantité demandée.
+            </p>
+        `;
+        nav22.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav23.addEventListener('click',function() {
+        var elem=`
+            <p>
+                ➢ Draw.io : <br> <a href="https://draw-io.fr.softonic.com/telecharger"> <h4> https://draw-io.fr.softonic.com/telecharger </h4> </a><br>
+➢ Wondershare EdrawMax :  <br>  <a href="https://www.edrawsoft.com/download.html"><h4>https://www.edrawsoft.com/download.html</h4></a> 
+            </p>
+        `;
+        nav23.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav24, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav24.addEventListener('click',function() {
+        var elem=`
+            <p>
+                <figure>
+                    <img src="../Ecom.png" alt="Modèle Entité-Association du site d’e-commerce représenté selon la méthode MERISE">
+                    <figcaption>Figure 28 : Modèle Entité-Association du site d’e-commerce représenté selon la méthode MERISE</figcaption>
+               </figure>
+            </p>
+        `;
+        nav24.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav25, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav25.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O33(20%)
+            </p>
+        `;
+        nav25.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav26, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav26.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 60% Titre : Modèle Entité-Association de la gestion d’un
+institut de formation Objectifs visés : O31(80%)
+            </p>
+        `;
+        nav26.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav27, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav27.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 60% Titre : Modèle Entité-Association de la gestion des états
+civils Objectifs visés : O31(80%)
+            </p>
+        `;
+        nav27.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav28.addEventListener('click',function() {
+        var elem=`
+            <p>
+                Seuil de validation : 60% Titre : Modèle Entité-Association de la gestion d’une
+chaîne hôtelière Objectifs visés : O31(80%)
+            </p>
+        `;
+        nav28.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav18, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+</script>

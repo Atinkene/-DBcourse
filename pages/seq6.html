@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/seq.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>SIMAC | Séquense</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="logoContainer">
+                <a id="" href="#">Base de donnée</a>  
+            </ul>
+            <ul class="navContainer">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./seq1.html">Séquences</a></li>
+                <li><a id="" href="#">Exercices</a></li>
+                <li><a id="" href="#">A propos</a></li>
+                <li><a href="./pdf.html">Voir le PDF</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="part seqences">
+        <nav>
+            <ul class="seqContent">
+                <li class="liste"><a id="seq1" class="seq" href="./seq1.html"><div class="">Des données à une base de donnée</div></a></li>
+                <li class="liste"><a id="seq2" class="seq" href="./seq2.html"><div class="">Généralité sur les bases de donnée</div></a></li>
+                <li class="liste"><a id="seq3" class="seq" href="./seq3.html"><div class="">Modélisation conceptuelle des données : Modèle Entité-Association</div></a></li>
+                <li class="liste"><a id="seq4" class="seq" href="./seq4.html"><div class="">Modélisation logique des donnés : Modèle Relationnel</div></a></li>
+                <li class="liste"><a id="seq5" class="seq" href="./seq5.html"><div class="">Interrogation d’une base de données : Algèbre relationnelle</div></a></li>
+                <li class="liste"><a id="seq6" class="seq clic" href="./seq6.html"><div class="">Implémentation d’une base de données : Modèle physique</div></a></li>
+            </ul>
+        </nav>
+    </div>
+   <div class="section">
+            <div class="part container" id="container">
+                <div class="element" id="element">
+                    
+                    <p>
+                        Le modèle relationnel des données produit un schéma de données relationnel qui faut
+écrire dans un langage compréhensible par les SGBD relationnelles. Le langage le plus utilisé
+est SQL : Structured Query Language (Langage de requêtes structurées) qui sert à : <br><br>
+➢ implémenter la base de données<br>
+➢ sécuriser la base de données<br>
+➢ manipuler les données<br>
+➢ réaliser un ensemble de requêtes en une transaction<br><br>
+<h4>Le langage SQL (Structured Query Language)</h4> <br>
+SQL est un langage d’interrogation structurée de données conçu dans les années 70. Il
+est devenu au travers de ses différentes versions, un langage complet de gestion de bases de
+données relationnelles. Pour gérer la base de données, SQL dispose de 4 catégories de langages.<br><br>
+<h4>Le Langage de Définition des Données (LDD) : Data Definition Language (DDL)</h4> <br>
+Il comporte l’ensemble des commandes SQL de gestion de la structure de chaque objet
+(table, vue, …) de la base de données notamment :<br><br>
+➢ la création (CREATE) des objets<br>
+➢ la modification (ALTER) des objets<br>
+➢ la suppression (DROP) des objets<br>
+➢ le renommage (RENAME) des objets<br>
+➢ …<br><br>
+<h4>Le Langage de Manipulation des Données (LMD) : Data Manipulation Language
+(DML)</h4> <br>
+Il comporte l’ensemble des commandes SQL réalisant les opérations suivantes sur les
+données :<br><br>
+➢ l’ajout (INSERT) des données dans une table<br>
+➢ la mise à jour (UPDATE) des données d’une table<br>
+➢ la suppression (DELETE) des données d’une table<br>
+➢ la visualisation (SELECT) des données d’une ou plusieurs tables<br><br>
+
+<h4>Le Langage de Contrôle des Données (LCD) : Data Control Language (DCL)</h4> <br>
+Il comporte l’ensemble des commandes SQL de gestion des droits d’accès aux tables et
+vues :<br><br>
+➢ l’autorisation (GRANT) d’accès<br>
+➢ l’interdiction (REVOKE) d’accès<br><br>
+<h4>Le Langage de Contrôle des Transactions (LCT) : Transaction Control Language
+(TCL)</h4> <br>
+Une transaction est un ensemble de requêtes SQL indivisible qui met à jour une base de
+données en garantissant sa cohérence. Elle comporte un début, une suite de requêtes SQL et
+une fin. Les transactions doivent respecter les principes résumés par l'acronyme ACID :<br><br>
+<h5>Atomicité</h5><br>
+Une transaction doit être complètement exécutée ou totalement annulée. Dans ce sens,
+une transaction constitue une unité d'exécution dont les opérations doivent être annulées lorsque
+la transaction est interrompue. L'atomicité obéit au principe du « tout ou rien »<br><br>
+<h5>Cohérence</h5><br>
+Il est possible qu'une transaction en cours d'exécution transgresse temporairement
+certaines contraintes de cohérence. Mais quand la transaction est terminée, le résultat final doit
+respecter de nouveau toutes les contraintes. Par conséquent, une transaction fait passer une base
+de données d'un état cohérent à un autre état cohérent et garantit l'absence de données
+contradictoires. La transaction représente donc une unité d'exécution qui doit maintenir la
+cohérence d'une base de données. La cohérence signifie l'absence de données contradictoires.<br><br>
+<h5>Isolation</h5><br>
+Le principe de l'isolation exige que les modifications apportées à la base de données par
+les opérations d’une transaction en cours ne doivent être visibles qu’après leur validation. Ainsi,
+une donnée en cours de modification ne doit pas être accessible. L'isolation protège la base de
+données contre les effets de bord.<br><br>
+<h5>Durabilité</h5><br>
+Une base de données doit être maintenue dans un état cohérent jusqu'à la validation des
+modifications effectuées par une transaction. Lors d'incidents (erreurs de programmation,
+interruptions du système ou pannes d'unités de stockage externes), la durabilité garantit que
+seule une transaction correctement exécutée et validée permet de valider de façon durable les
+modifications faites sur la base de données par les différentes opérations de la transaction.<br><br>
+Le principe ACID, fondamental aux SGBD garantit que chaque utilisateur transforme
+une base de données d'un état cohérent à un autre état cohérent. Les états intermédiaires
+incohérents restent invisibles depuis l'extérieur (à la transaction) et sont annulés en cas
+d'incident.<br><br>
+Une transaction n'a que deux issues possibles : le succès (COMMIT) ou l'échec
+(ROLLBACK). Il n'y a pas de situation intermédiaire.<br>
+Seuls les requêtes SQL qui modifient des données interviennent dans une transaction.<br>
+Une requête SELECT qui n'effectue qu'une lecture n'influe pas sur la cohérence des données.<br><br>
+                    </p>
+                </div>
+            </div>
+   </div class="section">
+   <div class="navigation" id="navigation">
+    <nav>
+        <ul class="navContent">
+            <h3>Décrire le principes de la gestion informatisée d'une base de donnée</h3>
+            <li><a id="nav1" class="nav" href="#"><div class="">Le langage SQL (Structured Query Language)</div></a></li>
+            <li><a id="nav2" class="nav" href="#"><div class="">Les différentes étapes d’implémentation d’une base de données</div></a></li>
+            <li><a id="nav3" class="nav" href="#"><div class="">Exploitation d’une base de données</div></a></li>
+            <li><a id="nav4" class="nav" href="#"><div class="">Exercice 30</div></a></li>
+        
+            <h3>Implémenter une base de données</h3>
+            <li><a id="nav5" class="nav" href="#"><div class="">Téléchargement et installation du SGBD</div></a></li>
+            <li><a id="nav6" class="nav" href="#"><div class="">Création de la base de données</div></a></li>
+            <li><a id="nav7" class="nav" href="#"><div class="">Exemple d’application : e-Commerce</div></a></li>
+            <li><a id="nav8" class="nav" href="#"><div class="">Insertion des données dans la base de données</div></a></li>
+            <li><a id="nav9" class="nav" href="#"><div class="">Modification des données dans la base de données</div></a></li>
+            <li><a id="nav10" class="nav" href="#"><div class="">Suppression des données dans la base de données</div></a></li>
+            <li><a id="nav11" class="nav" href="#"><div class="">Exercice 31</div></a></li>
+            <li><a id="nav12" class="nav" href="#"><div class="">Exercice 32</div></a></li>
+            <li><a id="nav13" class="nav" href="#"><div class="">Exercice 33</div></a></li>
+            <li><a id="nav14" class="nav" href="#"><div class="">Exercice 34</div></a></li>
+            <li><a id="nav15" class="nav" href="#"><div class="">Exercice 35</div></a></li>
+            <li><a id="nav16" class="nav" href="#"><div class="">Exercice 36</div></a></li>
+            <li><a id="nav17" class="nav" href="#"><div class="">Exercice 37</div></a></li>
+      
+            <h3>Interroger une base de données en langage SQL</h3>
+            <li><a id="nav181" class="nav" href="#"><div class="">Rappel</div></a></li>
+            <li><a id="nav182" class="nav" href="#"><div class="">La sélection ou restriction</div></a></li>
+            <li><a id="nav19" class="nav" href="#"><div class="">La projection</div></a></li>
+            <li><a id="nav20" class="nav" href="#"><div class="">Le renommage</div></a></li>
+            <li><a id="nav21" class="nav" href="#"><div class="">L’union</div></a></li>
+            <li><a id="nav22" class="nav" href="#"><div class="">L’intersection</div></a></li>
+            <li><a id="nav23" class="nav" href="#"><div class="">La différence</div></a></li>
+            <li><a id="nav24" class="nav" href="#"><div class="">Le produit cartésien</div></a></li>
+            <li><a id="nav25" class="nav" href="#"><div class="">La jointure</div></a></li>
+            <li><a id="nav26" class="nav" href="#"><div class="">Exercice 38</div></a></li>
+            <li><a id="nav27" class="nav" href="#"><div class="">Exercice 39</div></a></li>
+            <li><a id="nav28" class="nav" href="#"><div class="">Exercice 40</div></a></li>
+            <li><a id="nav29" class="nav" href="#"><div class="">Exercice 41</div></a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
+<script>
+    var container=document.getElementById('container');
+    var navigation=document.getElementById('navigation');
+    var element=document.getElementById('element');
+
+        var nav1=document.getElementById('nav1');
+        var nav2=document.getElementById('nav2');
+        var nav3=document.getElementById('nav3');
+        var nav4=document.getElementById('nav4');
+        var nav5=document.getElementById('nav5');
+        var nav6=document.getElementById('nav6');
+        var nav7=document.getElementById('nav7');
+        var nav8=document.getElementById('nav8');
+        var nav9=document.getElementById('nav9');
+        var nav10=document.getElementById('nav10');
+        var nav11=document.getElementById('nav11');
+        var nav12=document.getElementById('nav12');
+        var nav13=document.getElementById('nav13');
+        var nav14=document.getElementById('nav14');
+        var nav15=document.getElementById('nav15');
+        var nav16=document.getElementById('nav16');
+        var nav17=document.getElementById('nav17');
+        var nav18=document.getElementById('nav18');
+        var nav19=document.getElementById('nav19');
+        var nav181=document.getElementById('nav181');
+        var nav182=document.getElementById('nav182');
+        var nav20=document.getElementById('nav20');
+        var nav21=document.getElementById('nav21');
+        var nav22=document.getElementById('nav22');
+        var nav23=document.getElementById('nav23');
+        var nav24=document.getElementById('nav24');
+        var nav25=document.getElementById('nav25');
+        var nav26=document.getElementById('nav26');
+        var nav27=document.getElementById('nav27');
+        var nav28=document.getElementById('nav28');
+        var nav29=document.getElementById('nav29');
+
+
+   nav1.addEventListener('click',function () {
+        var elem =`
+                <p>
+                        Le modèle relationnel des données produit un schéma de données relationnel qui faut
+écrire dans un langage compréhensible par les SGBD relationnelles. Le langage le plus utilisé
+est SQL : Structured Query Language (Langage de requêtes structurées) qui sert à : <br><br>
+➢ implémenter la base de données<br>
+➢ sécuriser la base de données<br>
+➢ manipuler les données<br>
+➢ réaliser un ensemble de requêtes en une transaction<br><br>
+<h4>Le langage SQL (Structured Query Language)</h4> <br>
+SQL est un langage d’interrogation structurée de données conçu dans les années 70. Il
+est devenu au travers de ses différentes versions, un langage complet de gestion de bases de
+données relationnelles. Pour gérer la base de données, SQL dispose de 4 catégories de langages.<br><br>
+<h4>Le Langage de Définition des Données (LDD) : Data Definition Language (DDL)</h4> <br>
+Il comporte l’ensemble des commandes SQL de gestion de la structure de chaque objet
+(table, vue, …) de la base de données notamment :<br><br>
+➢ la création (CREATE) des objets<br>
+➢ la modification (ALTER) des objets<br>
+➢ la suppression (DROP) des objets<br>
+➢ le renommage (RENAME) des objets<br>
+➢ …<br><br>
+<h4>Le Langage de Manipulation des Données (LMD) : Data Manipulation Language
+(DML)</h4> <br>
+Il comporte l’ensemble des commandes SQL réalisant les opérations suivantes sur les
+données :<br><br>
+➢ l’ajout (INSERT) des données dans une table<br>
+➢ la mise à jour (UPDATE) des données d’une table<br>
+➢ la suppression (DELETE) des données d’une table<br>
+➢ la visualisation (SELECT) des données d’une ou plusieurs tables<br><br>
+
+<h4>Le Langage de Contrôle des Données (LCD) : Data Control Language (DCL)</h4> <br>
+Il comporte l’ensemble des commandes SQL de gestion des droits d’accès aux tables et
+vues :<br><br>
+➢ l’autorisation (GRANT) d’accès<br>
+➢ l’interdiction (REVOKE) d’accès<br><br>
+<h4>Le Langage de Contrôle des Transactions (LCT) : Transaction Control Language
+(TCL)</h4> <br>
+Une transaction est un ensemble de requêtes SQL indivisible qui met à jour une base de
+données en garantissant sa cohérence. Elle comporte un début, une suite de requêtes SQL et
+une fin. Les transactions doivent respecter les principes résumés par l'acronyme ACID :<br><br>
+<h5>Atomicité</h5><br>
+Une transaction doit être complètement exécutée ou totalement annulée. Dans ce sens,
+une transaction constitue une unité d'exécution dont les opérations doivent être annulées lorsque
+la transaction est interrompue. L'atomicité obéit au principe du « tout ou rien »<br><br>
+<h5>Cohérence</h5><br>
+Il est possible qu'une transaction en cours d'exécution transgresse temporairement
+certaines contraintes de cohérence. Mais quand la transaction est terminée, le résultat final doit
+respecter de nouveau toutes les contraintes. Par conséquent, une transaction fait passer une base
+de données d'un état cohérent à un autre état cohérent et garantit l'absence de données
+contradictoires. La transaction représente donc une unité d'exécution qui doit maintenir la
+cohérence d'une base de données. La cohérence signifie l'absence de données contradictoires.<br><br>
+<h5>Isolation</h5><br>
+Le principe de l'isolation exige que les modifications apportées à la base de données par
+les opérations d’une transaction en cours ne doivent être visibles qu’après leur validation. Ainsi,
+une donnée en cours de modification ne doit pas être accessible. L'isolation protège la base de
+données contre les effets de bord.<br><br>
+<h5>Durabilité</h5><br>
+Une base de données doit être maintenue dans un état cohérent jusqu'à la validation des
+modifications effectuées par une transaction. Lors d'incidents (erreurs de programmation,
+interruptions du système ou pannes d'unités de stockage externes), la durabilité garantit que
+seule une transaction correctement exécutée et validée permet de valider de façon durable les
+modifications faites sur la base de données par les différentes opérations de la transaction.<br><br>
+Le principe ACID, fondamental aux SGBD garantit que chaque utilisateur transforme
+une base de données d'un état cohérent à un autre état cohérent. Les états intermédiaires
+incohérents restent invisibles depuis l'extérieur (à la transaction) et sont annulés en cas
+d'incident.<br><br>
+Une transaction n'a que deux issues possibles : le succès (COMMIT) ou l'échec
+(ROLLBACK). Il n'y a pas de situation intermédiaire.<br>
+Seuls les requêtes SQL qui modifient des données interviennent dans une transaction.<br>
+Une requête SELECT qui n'effectue qu'une lecture n'influe pas sur la cohérence des données.<br><br>
+                    </p>
+        `;
+        nav1.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav2, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    
+    nav2.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    L’implémentation de la base de données est la transcription du modèle relationnel de
+données dans un SGBD pour obtenir un modèle physique de données. Pour y arriver, il y a des
+étapes à respecter.<br><br>
+<h4>Choix du Système de Gestion de Bases de Données Relationnelles (SGBDR)</h4><br>
+Il faut choisir un SGBD relationnel car le modèle à transcrire est de type relationnel. Il
+en existe plusieurs :<br><br>
+➢ SGBD propriétaire (payant) : Microsoft Access, Oracle Database, Microsoft SQL
+Server, DB2, MaxDB, 4D, dBase, Informix, Sybase<br><br>
+➢ SGBD libre ("gratuit") : MySQL, PostgreSQL, MariaDB, Open Office Base, Firebird,
+Ingres, HSQLDB, Derby, Apache Derby, …<br><br>
+<h4>La création de la base de données</h4><br>
+Elle se fait en utilisant le Langage de Définition des Données pour transcrire les
+différentes relations du modèle relationnel.<br><br>
+Certains SGBD apportent des spécificités au langage SQL. Si vous utilisez le SQL
+standard alors vos requêtes seront exécutables sur toutes les SGBD.<br><br>
+<h4>La sécurisation de la base de données</h4><br>
+Il est question de créer des utilisateurs de la base de données et leur attribuer des droits
+d’accès aux tables et vues. Elle se fait en utilisant le Langage de Contrôle de Données.
+                </p>
+        `;
+        nav2.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav3, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav3.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Une fois que le schéma de la base de données est mis sur place, les utilisateurs doivent
+y insérer des données, les mettre à jour, les visualiser voire les supprimer.<br> Cette exploitation se
+fait en utilisant le Langage de Manipulation de Données et le Langage de Contrôle de
+Transactions.
+                </p>
+        `;
+        nav3.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav4, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav4.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O61(100%)
+                </p>
+        `;
+        nav4.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav5.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Dans le cadre de ce cours, nous utiliserons le SGBD Microsoft Access ou Open Office
+Base ou MySQL.<br><br>
+<h4>Téléchargement et installation du SGBD</h4><br>
+Je vous recommande d’utiliser Microsoft Access mais vous pouvez utiliser les autres
+SGBD.<br><br>
+<h4>Installation de Microsoft Access</h4><br>
+
+<div class="sql"><a href="https://www.youtube.com/watch?v=VkLUyZMIjC8">https://www.youtube.com/watch?v=VkLUyZMIjC8</a></div><br><br>
+<h4>Installation de Open Office Base</h4><br>
+<div class="sql"><a href="https://www.youtube.com/watch?v=BLzAKwlz2KQ">https://www.youtube.com/watch?v=BLzAKwlz2KQ</a></div><br><br>
+<h4>Installation de MySQL</h4><br>
+<div class="sql"><a href="https://www.youtube.com/watch?v=K1SOagDC3Xg">https://www.youtube.com/watch?v=K1SOagDC3Xg</a></div>
+        `;
+        nav5.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav4, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav6.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Pour des raisons de volume horaire affecté à ce cours, nous n’écrirons pas les requêtes
+(Langage de Définition des Données) de création de la base de données. Nous utiliserons les
+interfaces graphiques des SGBD à cet effet. Un prochain cours insistera sur le Langage de
+Définition de Données.<br><br>
+La vidéo suivante vous présentera la création de la base de données, ses tables et ses
+contraintes d’intégrité référentielle avec le SGBD Microsoft Access.<br><br>
+<div class="sql"><a href="https://www.youtube.com/watch?v=WAqDtyx-Ny4">https://www.youtube.com/watch?v=WAqDtyx-Ny4</a></div>
+                </p>
+        `;
+        nav6.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav4, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav7.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    <figure>
+            <img  src="../fig62.png" alt="Représentation du Modèle Physique de Données du site e-Commerce réalisé avec le logiciel Microsoft Access">
+            <figcaption>Figure 62 : Représentation du Modèle Physique de Données du site e-Commerce réalisé avec le logiciel Microsoft Access</figcaption>
+        </figure>
+                </p>
+        `;
+        nav7.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav4, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav8.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    L’insertion des données se fait en utilisant la commande INSERT du Langage de
+Manipulation des Données (LMD) dont la syntaxe est la suivante :<br><br>
+<div class="sql">
+INSERT INTO nom_table(colonne1, colonne2, …) VALUES(valeur1, valeur2, …) ;</div><br>
+<h5 class="centrer">Figure 63 : Syntaxe SQL pour l’insertion des données dans une table</h5><br<br
+La liste des colonnes et les parenthèses en rouge peuvent être omises à condition que
+toutes les valeurs des colonnes soient citées et qu’elles respectent l’ordre des colonnes dans la
+table.<br><br>
+Exemple : Insertion des données dans la table Fournisseur<br><br>
+<div class="sql">
+INSERT INTO Fournisseur (NINEA, Désignation, Adresse, TéléphoneF, EmailF, SiteWeb) VALUES
+(456321, "Ets Bon Marché", "Kafountine", "+221 33 694 12 00", "bon.marche@commerce.sn",
+"http://www.bonmarche.sn") ;<br><br>
+INSERT INTO Fournisseur VALUES (345680, "Ets Meilleur Choix", "Lac Rose", "+221 33 994 56 37",
+"meilleur.choix@commerce.sn", " http://www.meilleurchoix.sn") ;</div><br>
+<h5 class="centrer">Figure 64 : Exemples d’insertion des données dans la table Fournisseur</h5><br><br>
+Il est possible d’insérer plusieurs lignes ou tuples de données à la fois dans une table.
+Les lignes sont séparées par des virgules.<br>
+
+Exemple : Insertion de plusieurs tuples dans la table Fournisseur<br><br>
+<div class="sql">INSERT INTO Fournisseur (NINEA, Désignation, Adresse, TéléphoneF, EmailF, SiteWeb) VALUES
+(456321, "Ets Bon Marché", "Kafountine", "+221 33 694 12 00", "bon.marche@commerce.sn",
+"http://www.bonmarche.sn"),<br><br>
+(783245, "Quincaillerie Quincaillerie des experts", "Sindone", "+221 33 012 56 37", "venez@commerce.sn",
+"https://www.avous.sn")<br><br>
+(345680, "Ets Meilleur Choix", "Lac Rose", "+221 33 994 56 37", "meilleur.choix@commerce.sn",
+"http://www.meilleurchoix.sn") ;</div><br>
+<h5 class="centrer">Figure 65 : Exemple d’insertion de plusieurs lignes ou tuples dans la table Fournisseur</h5><br><br>
+    <table>
+        <style>
+            table{
+                font-size : small;
+                width : 750px;
+                height : 300px;
+                border : 3px solid;
+                border-radius : 25px;
+                background-color : #282a47;
+                padding: 5px;
+            }
+            th,td{
+                border : 1px solid;
+                border-radius : 25px;
+            }
+        </style>
+        <thead>
+            <tr>
+                <th colspan="6">Fournisseur</th>
+            <tr>
+            <tr>
+                <th>NINEA</th>
+                <th>Désignation</th>
+                <th>Adresse</th>
+                <th>Téléphone</th>
+                <th>Email</th>
+                <th>Site Web</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>345680</td>
+                <td>Ets Meilleur Choix</td>
+                <td>Lac Rose</td>
+                <td>+221 33 994 56 37</td>
+                <td>meilleur.choix@commerce.sn</td>
+                <td><a href="http://www.meilleurchoix.sn">www.meilleurchoix.sn</a></td>
+            </tr>
+            <tr>
+                <td>456321</td>
+                <td>Ets Bon Marché</td>
+                <td>Kafountine</td>
+                <td>+221 33 694 12 00</td>
+                <td>bon.marche@commerce.sn</td>
+                <td><a href="http://www.bonmarche.sn">www.bonmarche.sn</a></td>
+            </tr>
+            <tr>
+                <td>783245</td>
+                <td>Quincaillerie Sindone</td>
+                <td>Quincaillerie des experts</td>
+                <td>+221 33 012 56 37</td>
+                <td>venez@commerce.sn</td>
+                <td><a href="https://www.avous.sn">www.avous.sn</a></td>
+            </tr>
+        </tbody>
+    </table><br>
+<h5 class="centrer">Figure 66 : Résultat de l’insertion multiple dans la table Fournisseur</h5>
+                </p>
+        `;
+        nav8.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav4, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav9.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    La modification des données se fait en utilisant la commande UPDATE du Langage de
+Manipulation des Données (LMD) dont la syntaxe est la suivante :<br><br>
+<div class="sql">UPDATE nom_table SET Colonne1=Valeur1, …, ColonneN=ValeurN WHERE condition ;</div><br>
+<h5 class="centrer">Figure 67 : Syntaxe SQL pour la modification des données d’une table</h5><br><br>
+Dans la modification, il faut préciser les colonnes à modifier et les valeurs.
+La clause WHERE et la condition sont optionnelles et dans ce cas, toutes les données
+de la table seront modifiées.<br><br>
+Exemple : Modification de données de la table Fournisseur<br><br>
+<div class="sql">UPDATE Fournisseur SET Adresse="Rosso" WHERE NINEA=456321 ;</div><br>
+<h5 class="centrer">Figure 68 : Exemple de modification des données de table Fournisseur</h5><br><br>
+<table>
+        <style>
+            table{
+                font-size : small;
+                width : 750px;
+                height : 300px;
+                border : 3px solid;
+                border-radius : 25px;
+                background-color : #282a47;
+                padding: 5px;
+            }
+            th,td{
+                border : 1px solid;
+                border-radius : 25px;
+            }
+        </style>
+        <thead>
+            <tr>
+                <th colspan="6">Fournisseur</th>
+            <tr>
+            <tr>
+                <th>NINEA</th>
+                <th>Désignation</th>
+                <th>Adresse</th>
+                <th>Téléphone</th>
+                <th>Email</th>
+                <th>Site Web</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>345680</td>
+                <td>Ets Meilleur Choix</td>
+                <td>Lac Rose</td>
+                <td>+221 33 994 56 37</td>
+                <td>meilleur.choix@commerce.sn</td>
+                <td><a href="http://www.meilleurchoix.sn">www.meilleurchoix.sn</a></td>
+            </tr>
+            <tr>
+                <td>456321</td>
+                <td>Ets Bon Marché</td>
+                <td>Rosso</td>
+                <td>+221 33 694 12 00</td>
+                <td>bon.marche@commerce.sn</td>
+                <td><a href="http://www.bonmarche.sn">www.bonmarche.sn</a></td>
+            </tr>
+            <tr>
+                <td>783245</td>
+                <td>Quincaillerie Sindone</td>
+                <td>Quincaillerie des experts</td>
+                <td>+221 33 012 56 37</td>
+                <td>venez@commerce.sn</td>
+                <td><a href="https://www.avous.sn">www.avous.sn</a></td>
+            </tr>
+        </tbody>
+    </table><br>
+<h5 class="centrer">Figure 69 : La table Fournisseur après modification de l’adresse du fournisseur de NINEA 456321</h5><br><br>
+Dans la requête ci-dessus, il est question de modifier par Rosso toutes les lignes dont le
+NINEA est 456321.
+                </p>
+        `;
+        nav9.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav4, #nav10, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav10.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    La suppression des données se fait en utilisant la commande DELETE du Langage de
+Manipulation des Données (LMD) dont la syntaxe est la suivante :<br><br>
+<div class="sql">DELETE FROM nom_table WHERE condition ;</div><br>
+<h5 class="centrer">Figure 70 : Syntaxe SQL pour la suppression des données d’une table</h5><br>
+La clause WHERE et la condition sont optionnelles et dans ce cas, toutes les données
+de la table seront supprimées.<br><br>
+Exemple : Suppression de données de la table Fournisseur<br><br>
+<div class="sql">DELETE FROM Fournisseur WHERE NINEA=456321 ;</div><br>
+<h5 class="centrer">Figure 71 : Exemple de suppression des données de table Fournisseur</h5><br><br>
+<table>
+        <style>
+            table{
+                font-size : small;
+                width : 750px;
+                height : 300px;
+                border : 3px solid;
+                border-radius : 25px;
+                background-color : #282a47;
+                padding: 5px;
+            }
+            th,td{
+                border : 1px solid;
+                border-radius : 25px;
+            }
+        </style>
+        <thead>
+            <tr>
+                <th colspan="6">Fournisseur</th>
+            <tr>
+            <tr>
+                <th>NINEA</th>
+                <th>Désignation</th>
+                <th>Adresse</th>
+                <th>Téléphone</th>
+                <th>Email</th>
+                <th>Site Web</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>345680</td>
+                <td>Ets Meilleur Choix</td>
+                <td>Lac Rose</td>
+                <td>+221 33 994 56 37</td>
+                <td>meilleur.choix@commerce.sn</td>
+                <td><a href="http://www.meilleurchoix.sn">www.meilleurchoix.sn</a></td>
+            </tr>
+            <tr>
+                <td>783245</td>
+                <td>Quincaillerie Sindone</td>
+                <td>Quincaillerie des experts</td>
+                <td>+221 33 012 56 37</td>
+                <td>venez@commerce.sn</td>
+                <td><a href="https://www.avous.sn">www.avous.sn</a></td>
+            </tr>
+        </tbody>
+    </table><br>
+    <h5 class="centrer">Figure 72 : La table Fournisseur après suppression du fournisseur de NINEA 456321</h5>
+                </p>
+        `;
+        nav10.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav4, #nav11, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav11.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O62(25%)
+                </p>
+        `;
+        nav11.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav4, #nav12, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav12.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 60% Titre : Modèle Physique de Données de la gestion d’un institut de formation Objectifs visés : O52(20%)
+                </p>
+        `;
+        nav12.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav4, #nav13, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav13.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 60% Titre : Modèle Physique de Données de la gestion des états civils Objectifs visés : O62(20%)
+                </p>
+        `;
+        nav13.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav4, #nav14, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav14.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 60% Titre : Modèle Physique de Données de la gestion d’une chaîne hôtelière Objectifs visés : O62(20%)
+                </p>
+        `;
+        nav14.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav4, #nav15, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav15.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 60% Titre : Manipulation des données de la gestion d’un institut de formation Objectifs visés : O62(60%)
+                </p>
+        `;
+        nav15.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav16.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 60% Titre : Manipulation des données de la gestion des états civils Objectifs visés : O62(60%)
+                </p>
+        `;
+        nav16.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav15, #nav17, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav17.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 60% Titre : Manipulation des données de la gestion d’une chaîne hôtelière Objectifs visés : O62(60%)
+                </p>
+        `;
+        nav17.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav181.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    L’interrogation d’une base de données consiste à extraire des données respectant un
+ensemble de conditions. La commande permettant d’interroger la base de données est SELECT
+et à la syntaxe générale suivante :<br><br>
+<div class="sql">SELECT ensemble de colonnes séparées par une virgule<br><br>
+FROM ensemble de tables<br><br>
+WHERE conditions sur les colonnes<br><br>
+GROUP BY ensemble de colonnes<br><br>
+HAVING conditions sur les colonnes figurant dans la clause GROUP BY<br><br>
+ORDER BY ensemble de colonnes séparées par une virgule ;</div><br><br>
+➢ SELECT permet de lister les colonnes à afficher. Il est possible de mettre seulement
+une étoile (*) et dans ce cas, toutes les colonnes de toutes les tables concernées par la
+requête seront affichées.<br><br>
+➢ FROM permet de lister les tables concernées par la requête. Il faudra tenir compte des
+contraintes d’intégrité référentielles (liaisons ou jointures) entre les tables<br><br>
+➢ WHERE permet de lister des conditions que doivent respecter les données à extraire<br><br>
+➢ GROUP BY permet de faire des regroupements de données en fonction des colonnes
+précises. Le regroupement est utilisé lorsqu’on utilise dans le SELECT des fonctions
+d’agrégation comme la somme (sum), la moyenne (avg), le comptage (count), etc.<br><br>
+➢ HAVING permet de lister des conditions que doivent respecter les données regroupées
+(figurant dans le GROUP BY)<br><br>
+➢ ORDER BY permet d’ordonner les données en fonction des colonnes par ordre
+croissant (ASC) ou décroissant (DESC)<br><br>
+Remarque : Une requête SQL se termine toujours par un point-virgule ( ;).<br>
+Dans WHERE et HAVING, les conditions sont exprimées avec les opérateurs suivants :<br><br>
+➢ Opérateurs arithmétiques : +, -, *, /<br><br>
+➢ Opérateurs logiques : NOT, AND, OR<br><br>
+➢ Opérateurs de comparaison : =, <>, <, <=, >, >=, IN, BETWEEN, LIKE, EXISTS<br><br>
+Il existe en langage SQL, un ensemble d’opérateurs issus de l’algèbre relationnelle
+permettant interrogation d’une base de données.<br>
+Avant de continuer, il faut remplir les différentes tables de la base de données et y tester
+les requêtes qui seront données en exemple.
+                </p>
+        `;
+        nav181.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav17,#nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav182.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    La sélection ou restriction permet d’extraire dans une ou plusieurs tables des données
+qui respectent une ou plusieurs conditions.<br><br>
+Exemple 1 : Sélection des clients<br><br>
+<div class="sql">SELECT * FROM Client ;</div><br><br>
+Exemple 2 : Sélection des produits dont qu’il faut approvisionner le stock dans l’urgence<br><br>
+<div class="sql">SELECT * FROM Produit WHERE QuantiteStock <= SeuilAlerte ;</div><br><br>
+Dans le résultat d’une requête, il peut exister un tuple (ligne ou enregistrement) en
+plusieurs occurrences. Ainsi, juste après le SELECT, il est possible de mettre :<br><br>
+➢ DISTINCT : pour afficher une seule occurrence de chaque tuple<br><br>
+➢ ALL : pour afficher toutes les occurrences de chaque tuple<br><br>
+Exemple 3 : Sélection de toutes livraisons des produits facturés<br><br>
+<div class="sql">SELECT ALL * FROM Livrer ;</div><br><br>
+Exemple 4 : Sélection distincte (unique)de toutes livraisons des produits facturés<br><br>
+<div class="sql">SELECT DISTINCT * FROM Livrer ;</div<br><br>
+                </p>
+        `;
+        nav182.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav17, #nav19, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav19.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    La projection permet de préciser les colonnes à afficher dans les résultats de la requête.<br>
+Exemple 1 : Sélection des noms et prénoms des clients<br><br>
+<div class="sql">SELECT DISTINCT Nom, Prenom FROM Client ;</div><br><br>
+Exemple 2 : Sélection des noms et prénoms des clients de sexe féminin<br><br>
+<div class="sql">SELECT DISTINCT Nom, Prenom FROM Client WHERE Sexe="F" ;</div>
+                </p>
+        `;
+        nav19.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav17, #nav20, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav20.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Le renommage permet de renommer les colonnes dans une requête. On le fait
+généralement pour des colonnes obtenues par calcul ou pour des colonnes dont le nom n’est pas
+assez expressif. Pour renommer une colonne, il faut la suivre du mot-cle AS puis du nouveau
+nom. Si le nouveau nom contient de l’espace, il faudra le mettre entre côtes. <br><br>
+Exemple 1 : Sélection des produits et préciser la valeur marchande de chaque produit<br><br>
+(Quantité en stock X Prix unitaire)<br><br>
+<div class="sql">SELECT *, QuantiteStock * PrixUnitaire AS "Valeur Marchande" FROM Produit ;</div><br><br>
+Exemple 2 : Sélection des factures de janvier 2021<br><br>
+<div class="sql">SELECT NumeroF AS Numéro, DateF AS "Date Facture", NuméroCde AS "Numéro<br>
+Commande", CodeR AS "Code Règlement"<br>
+FROM Facture<br>
+WHERE DateF BETWEEN 01/01/20201 AND 31/01/2021 ; </div>
+                </p>
+        `;
+        nav20.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav17, #nav21, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav21.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    L’union permet de fusionner (combiner) les tuples de 2 requêtes à condition qu’elles
+aient le même schéma (les mêmes colonnes dans le même ordre). Le résultat aura le même
+schéma que les 2 requêtes et les éventuels doublons seront supprimés.<br><br>
+Exemple : Liste des téléphones et emails des clients et des fournisseurs<br><br>
+<div class="sql">(SELECT TelephoneC AS Telephone, EmailC AS Email FROM Client)<br><br>
+UNION<br><br>
+(SELECT TelephoneF AS Telephone, EmailF AS Email FROM Fournisseur) ;</div>
+                </p>
+        `;
+        nav21.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav20, #nav17, #nav22, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav22.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    L’intersection permet de sélectionner des tuples identiques à 2 requêtes à condition
+qu’elles aient le même schéma. Le résultat aura le même schéma que les 2 requêtes
+Exemple : Liste des téléphones et emails de ceux qui sont clients et fournisseurs à la fois
+<div class="sql">(SELECT TelephoneC AS Telephone, EmailC AS Email FROM Client)<br><br>
+INTERSECT<br><br>
+(SELECT TelephoneF AS Telephone, EmailF AS Email FROM Fournisseur) ;</div><br><br>
+Attention : INTERSECT n’est pas implémenté dans les SGBD MySQL et Microsoft
+Access. Dans ce cas, il faut utiliser l’opérateur EXISTS ou IN.
+                </p>
+        `;
+        nav22.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav20, #nav21, #nav17, #nav23, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav23.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    La différence permet de sélectionner les tuples de la première requête qui ne sont pas
+dans la seconde à condition que les 2 requêtes aient le même schéma. Le résultat aura le même
+schéma que les 2 requêtes<br><br>
+Exemple : Liste des téléphones et emails des clients qui ne sont pas des fournisseurs<br><br>
+<div class="sql">(SELECT TelephoneC AS Telephone, EmailC AS Email FROM Client)<br><br>
+MINUS<br><br>
+(SELECT TelephoneF AS Telephone, EmailF AS Email FROM Fournisseur) ; </div><br><br>
+Attention : MINUS n’est pas implémenté dans le SGBD Microsoft Access. Dans ce
+cas, il faut utiliser l’opérateur NOT EXISTS ou NOT IN.
+                </p>
+        `;
+        nav23.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav17, #nav24, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav24.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Le produit cartésien permet d’obtenir tous les tuples tels que chaque tuple de la première
+table est concaténé à chaque tuple de la seconde table. Le schéma du résultat sera le schéma de
+la première table concaténé au schéma de la seconde table.<br><br>
+Exemple : Liste des catégories et des modes de règlement concaténés<br><br>
+<div class="sql">SELECT * FROM Catégorie, ModeReglement ;</div>
+                </p>
+        `;
+        nav24.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav17, #nav25, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav25.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    La jointure est une opération binaire qui s’appuie sur le produit cartésien de 2 tables ou
+vues pour extraire des données correspondantes à un ensemble de conditions. Le schéma du
+résultat sera le schéma de la première table concaténée au schéma de la seconde table. En
+fonction des conditions, on a plusieurs types de jointure.<br><br>
+<h4>La jointure interne : INNER JOIN</h4><br>
+La jointure interne est une opération qui permet d’extraire les tuples ou enregistrements
+qui satisfont une condition dans les 2 tables.<br><br>
+<h5>L’équi-jointure</h5><br>
+L’équi-jointure est une jointure sur 2 tables avec une condition d’égalité. Elle permet
+d’extraire les tuples des 2 tables qui satisfont la condition d’égalité (pas forcément sur les clés
+primaire et étrangère).<br><br>
+Exemple 1 : Equi-jointure entre les tables Produit et Contenir<br><br>
+<div class="sql">SELECT * FROM Produit INNER JOIN Contenir ON Produit.CodeP = Contenir.CodeP ;</div><br><br>
+L’qui-jointure peut aussi s’écrire sans le terme « INNER JOIN ». En fait, on fait un
+produit cartésien des 2 tables puis une restriction sur l’égalité de 2 colonnes.<br><br>
+<div class="sql">SELECT * FROM Produit, Contenir WHERE Produit.CodeP = Contenir.CodeP ;</div><br><br>
+L’exemple 1 n’a aucun sens puisque nous ne faisons pas la théorie des bases de données.
+En fait, il ne vous sera presque jamais demandé de faire l’équi-jointure de 2 tables mais vous devez interpréter la question pour comprendre qu’il faut une équijointure ou autre. L’exemple
+2 est plus concret et proche de la réalité.<br><br>
+Exemple 2 : Liste des produits commandés<br><br>
+<div class="sql">SELECT * FROM (Produit INNER JOIN Contenir ON Produit.CodeP = Contenir.CodeP)<br><br>
+INNER JOIN Commande ON Commande.NuméroCde = Contenir.NuméroCde ;</div><br><br>
+Le « SELECT * » n’est pas correct car il est demandé la liste des produits et non la liste
+des Produit, Contenir et Commande. Il faut donc faire une projection sur les colonnes de la table
+Produit.<br><br>
+<div class="sql">SELECT Produit.* FROM (Produit INNER JOIN Contenir ON Produit.CodeP = Contenir.CodeP)<br><br>
+INNER JOIN Commande ON Commande.NuméroCde = Contenir.NuméroCde ;</div><br><br>
+L’exemple 2 serait plus réaliste si on devait extraire les produits appartenant à une
+commande particulière.<br><br>
+Exemple 3 : Liste des produits (Code et libellé) appartenant à la commande numéro A48<br><br>
+Dans cet exemple, on fera une projection sur les colonnes CodeP et LibelleP puis faire
+une restriction sur la colonne NuméroCde = "A48"<br><br>
+<div class="sql">SELECT Produit.CodeP, LibelléP<br><br>
+FROM (Produit INNER JOIN Contenir ON Produit.CodeP = Contenir.CodeP)<br><br>
+INNER JOIN Commande ON Commande.NuméroCde = Contenir.NuméroCde<br><br>
+WHERE Commande.NuméroCde = "A48" ;</div><br><br>
+<h5>La théta-jointure ou la non-équijointure ou l’inéqui-jointure</h5><br>
+La théta-jointure est une jointure sur 2 tables avec une condition d’inégalité (>, >=, <,
+<=, <>, IN, LIKE, BETWEEN … AND …, EXISTS). Elle permet d’extraire les tuples des 2
+tables qui satisfont la condition d’inégalité.<br><br>
+Exemple 1 : Liste des clients dont leur nom est contenu dans la désignation du
+fournisseur<br><br>
+<div class="sql">SELECT * FROM Cleint INNER JOIN Fournisseur ON Désignation LIKE "*" & Nom & "*" ;</div><br><br>
+La théta-jointure n’est pas supportée par le SGBD Microsoft Access. Il faudra faire un
+produit cartésien puis une restriction.<br><br>
+<h5>La jointure naturelle : NATURAL JOIN</h5><br>
+La jointure naturelle entre 2 tables est possible s’il y a au moins une colonne qui porte
+le même nom entre les 2 tables. La jointure naturelle est une équi-jointure entre les 2 tables 
+avec des conditions d’égalité sur les différentes colonnes identiques des 2 tables. Elle permet
+de faire une jointure sans préciser les colonnes concernées.<br><br>
+Exemple : Jointure naturelle entre les tables Produit et Contenir<br><br>
+<div class="sql">SELECT * FROM Produit NATURAL JOIN Contenir ;</div><br><br>
+La jointure naturelle n’est pas supportée par le SGBD Microsoft Access<br><br>
+<h4>La jointure externe : OUTER JOIN</h4><br>
+La jointure externe est une opération qui permet d’extraire les tuples ou enregistrements
+d’une part qui satisfont la condition dans les 2 tables et d’autre part certains tuples qui ne
+satisfont pas la condition dans les 2 tables.<br><br>
+<h5>La jointure externe gauche : LEFT JOIN ou LEFT OUTER JOIN</h5><br>
+La jointure externe gauche permet d’extraire tous les enregistrements de la table de
+gauche (LEFT) même si la condition n’est pas vérifiée dans l’autre table tout en mettant à
+NULL les valeurs des colonnes de la table de droite.<br><br>
+Exemple : Liste de tous les Produits avec les quantités commandées<br><br>
+<div class="sql">SELECT Produit.*, QuantitéCde<br><br>
+FROM Produit LEFT JOIN Contenir ON Produit.CodeP = Contenir.CodeP ;</div><br><br>
+<h5>La jointure externe droite : RIGHT JOIN ou RIGHT OUTER JOIN</h5><br>
+La jointure externe droite permet d’extraire tous les enregistrements de la table de droite
+(RIGHT) même si la condition n’est pas vérifiée dans l’autre table tout en mettant à NULL les
+valeurs des colonnes de la table de gauche.<br><br>
+Exemple : Liste des commandes avec les clients y compris ceux qui n’ont pas
+commandés<br><br>
+<div class="sql">SELECT *<br><br>
+FROM Commande RIGHT JOIN Client ON Commande.Reference = Client.Reference ;</div><br><br>
+La jointure externe droite peut être obtenue à partie de la jointure externe gauche en
+permutant juste l’ordre des 2 tables.<br><br>
+<div class="sql">SELECT *<br><br>
+FROM Client LEFT JOIN Commande ON Commande.Reference = Client.Reference ;</div><br><br>
+La jointure externe complète : FULL JOIN ou FULL OUTER JOIN<br><br>
+La jointure externe complète permet d’extraire les enregistrements quand la condition
+est vraie dans au moins une des 2 tables tout en mettant à NULL les valeurs des colonnes de
+table qui ne respecte pas la condition.<br><br>
+Exemple : Jointure externe complète entre les tables Commande et Client<br><br>
+<div class="sql">SELECT *<br><br>
+FROM Commande FULL JOIN Client ON Commande.Reference = Client.Reference ;</div><br><br>
+La jointure externe complète peut être obtenue en faisant l’union du résultat de la
+jointure externe gauche avec le résultat de la jointure externe droite.<br>
+La jointure externe complète n’est pas supportée par le SGBD Microsoft Access.<br><br>
+<h4>La jointure croisée : CROSS JOIN</h4><br>
+La jointure croisée permet de faire le produit cartésien de 2 tables.<br>
+Exemple : Liste des Produits concaténés aux Clients<br><br>
+<div class="sql">SELECT * FROM Produit CROSS JOIN Client ;</div><br><br>
+<h4>L’auto-jointure</h4><br>
+L’auto-jointure permet d’effectuer une jointure (interne, externe ou croisée) d’une table
+avec elle-même comme si c’était une autre table. Pour y parvenir, il faut créer des alias de la
+table<br><br>
+Exemple : Liste des sous-catégories de la catégorie Informatique<br><br>
+<div class="sql">SELECT SousCat.CodeCAt, SousCat.LibelléCat<br><br>
+FROM Catégorie SupCat<br><br>
+INNER JOIN Catégorie SousCat ON SupCat.CodeCatSup = SousCat.CodeCat ;</div><br><br>
+SupCat est un alias de la table Catégorie qui représente les catégories supérieures.
+SousCat est également un alias de la table Catégorie qui représente les sous-catégories.
+L’alias d’une table se créé juste en mettant le nom de l’alias devant cette table. Si vous
+le désirez, vous pouvez créer des alias de table dans toutes vos requêtes ; son avantage est
+d’avoir des noms plus courts ou simplifiés.
+                </p>
+        `;
+        nav25.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav17, #nav24, #nav26, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav26.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 80% Titre : Test de connaissance Objectifs visés : O63(20%)
+                </p>
+        `;
+        nav26.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav17, #nav25, #nav24, #nav27, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav27.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 60% Titre : Interrogation des données de la gestion d’un
+institut de formation Objectifs visés : O63(60%)
+                </p>
+        `;
+        nav27.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav17, #nav25, #nav26, #nav24, #nav28, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav28.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 60% Titre : Interrogation des données de la gestion des états
+civils Objectifs visés : O63(60%)
+                </p>
+        `;
+        nav28.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav17, #nav25, #nav26, #nav27, #nav24, #nav29");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+    nav29.addEventListener('click',function () {
+        var elem =`
+                <p>
+                    Seuil de validation : 60% Titre : Interrogation des données de la gestion d’une
+chaîne hôtelière Objectifs visés : O63(60%)
+                </p>
+        `;
+        nav29.classList.add("clic");
+                var unclik =document.querySelectorAll("#nav1, #nav2, #nav3, #nav5, #nav6, #nav7, #nav8, #nav9, #nav10, #nav11, #nav12, #nav13, #nav14, #nav4, #nav16, #nav15, #nav181, #nav182, #nav19, #nav20, #nav21, #nav22, #nav23, #nav17, #nav25, #nav26, #nav27, #nav24, #nav28");
+                unclik.forEach(function(unclick)  {
+                    unclick.classList.remove("clic");
+                });
+        element.innerHTML=elem;
+    });
+</script>
